@@ -2,7 +2,7 @@
  * DIO.c
  *
  * Created: 24/08/2015 12:51:22 ص
- *  Author: hossam
+ *  Author: hossam & Amr Tarek
  */ 
 #include "DIO.h"
 // write a macro to write a register with a certain value on specific bits locations

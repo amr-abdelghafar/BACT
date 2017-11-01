@@ -2,7 +2,7 @@
  * GYRO.h
  *
  * Created: 5/2/2016 7:30:33 PM
- *  Author: hossam
+ *  Author: hossam & Amr Tarek
  */ 
 
 

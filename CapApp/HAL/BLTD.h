@@ -2,14 +2,14 @@
  * BLTD.h
  *
  * Created: 5/11/2016 9:05:02 AM
- *  Author: hossam
+ *  Author: hossam & Amr Tarek
  */ 
 
 
 #ifndef BLTD_H_
 #define BLTD_H_
 
-#include "BasicTypes.h"
+#include "../Config/BasicTypes.h"
 #define BLTD_NUM_OF_COMMANDS 0x0d
 
 #define SELF_TEST_CMD_ID     0x00

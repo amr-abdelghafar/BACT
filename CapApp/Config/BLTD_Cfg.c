@@ -1,7 +1,7 @@
 #include "BasicTypes.h"
-#include "BLTD.h"
+#include "../HAL/BLTD.h"
+#include "../HAL/WMGR.h"
 #include "BLTD_Cfg.h"
-#include "WMGR.h"
 #include "WMGR_Cfg.h"
 #if (MODULE_TYPE == MODULE_TYPE_M10)
  BLTD_CmdType BLTD_CmdList[BLTD_NUM_OF_COMMANDS] = 

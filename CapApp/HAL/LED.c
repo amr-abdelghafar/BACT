@@ -2,11 +2,11 @@
  * LED.c
  *
  * Created: 4/16/2016 3:04:05 PM
- *  Author: hossam
+ *  Author: hossam & Amr Tarek
  */ 
-#include "BasicTypes.h"
+#include "../Config/BasicTypes.h"
 #include "DIO.h"
-#include "LED_Cfg.h"
+#include "../Config/LED_Cfg.h"
 /*Is a function to initialize direction of all connected LEDs and turn them all off*/
 void LED_Init(void)
 {

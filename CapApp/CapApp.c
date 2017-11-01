@@ -2,23 +2,23 @@
 * GccApplication1.c
 *
 * Created: 5/11/2016 8:54:23 AM
-*  Author: hossam
+*  Author: hossam & Amr Tarek
 */
-#include "WMGR_Cfg.h"
-#include "BasicTypes.h"
+#include "Config/WMGR_Cfg.h"
+#include "Config/BasicTypes.h"
 #include <util/delay.h>
-#include "WMGR.h"
-#include "DIO.h"
-#include "UART_Drv.h"
+#include "HAL/WMGR.h"
+#include "HAL/DIO.h"
+#include "HAL/UART_Drv.h"
 #include <avr/interrupt.h>
-#include "GPT.h"
-#include "UART_Drv.h"
-#include "Debug.h"
-#include "L3G4200D.h"
-#include "GYRO.h"
-#include "LED.h"
-#include "BTN.h"
-#include "MOTOR.h"
+#include "HAL/GPT.h"
+#include "HAL/UART_Drv.h"
+#include "Debug/Debug.h"
+#include "HAL/L3G4200D.h"
+#include "HAL/GYRO.h"
+#include "HAL/LED.h"
+#include "HAL/BTN.h"
+#include "HAL/MOTOR.h"
 //#define BUZZER_INIT()  DIO_InitPortDirection(BUZZER_PORT,0xff,1<<BUZZER_PIN_NUM)
 //#define BUZZER_ON() DIO_WritePort(BUZZER_PORT,0xff,1<<BUZZER_PIN_NUM)
 //#define BUZZER_OFF() DIO_WritePort(BUZZER_PORT,0x00,1<<BUZZER_PIN_NUM)

@@ -2,11 +2,11 @@
  * WMGR_CFG.c
  *
  * Created: 5/12/2016 12:02:32 AM
- *  Author: hossam
+ *  Author: hossam & Amr Tarek
  */ 
 #include "BasicTypes.h"
 #include "WMGR_Cfg.h"
-#include "BLTD.h"
+#include "../HAL/BLTD.h"
 #include "BLTD_Cfg.h"
 #if(DEVICE_ROLE == DEVICE_ROLE_SLAVE)
 const u8 WMGR_StartScriptCommands[WMGR_START_SCRIPT_SIZE] = 

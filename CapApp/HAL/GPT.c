@@ -2,9 +2,9 @@
  * GPT.c
  *
  * Created: 06/02/2016 10:44:10 ص
- *  Author: hossam
+ *  Author: hossam & Amr Tarek
  */ 
-#include "BasicTypes.h"
+#include "../Config/BasicTypes.h"
 #include "GPT.h"
 #include <avr/io.h>
 #include <avr/interrupt.h>

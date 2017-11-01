@@ -32,34 +32,37 @@ LIB_DEP:=
 LINKER_SCRIPT_DEP:=
 
 # Every subdirectory with source files must be described here
-SUBDIRS := 
+SUBDIRS :=  \
+../Config/ \
+../Debug/ \
+../HAL/
 
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
-../BLTD.c \
-../BLTD_Cfg.c \
-../BTN.c \
-../BTN_CFG.c \
 ../CapApp.c \
-../Debug.c \
-../DIO.c \
-../GPT.c \
-../GYRO.c \
-../L3G4200D.c \
-../L3G4200D_Lcfg.c \
-../LED.c \
-../LED_Cfg.c \
-../ModukeTemp.c \
-../MOTOR.c \
-../PWM.c \
-../SPI.c \
-../SPI_Lcfg.c \
-../UART_Drv.c \
-../UART_Lcg.c \
-../UTL.c \
-../WMGR.c \
-../WMGR_CFG.c
+../Config/BLTD_Cfg.c \
+../Config/BTN_CFG.c \
+../Config/L3G4200D_Lcfg.c \
+../Config/LED_Cfg.c \
+../Config/SPI_Lcfg.c \
+../Config/UART_Lcg.c \
+../Config/WMGR_CFG.c \
+../Debug/Debug.c \
+../HAL/BLTD.c \
+../HAL/BTN.c \
+../HAL/DIO.c \
+../HAL/GPT.c \
+../HAL/GYRO.c \
+../HAL/L3G4200D.c \
+../HAL/LED.c \
+../HAL/MOTOR.c \
+../HAL/PWM.c \
+../HAL/SPI.c \
+../HAL/UART_Drv.c \
+../HAL/UTL.c \
+../HAL/WMGR.c \
+../ModukeTemp.c
 
 
 PREPROCESSING_SRCS += 
@@ -69,104 +72,104 @@ ASM_SRCS +=
 
 
 OBJS +=  \
-BLTD.o \
-BLTD_Cfg.o \
-BTN.o \
-BTN_CFG.o \
 CapApp.o \
-Debug.o \
-DIO.o \
-GPT.o \
-GYRO.o \
-L3G4200D.o \
-L3G4200D_Lcfg.o \
-LED.o \
-LED_Cfg.o \
-ModukeTemp.o \
-MOTOR.o \
-PWM.o \
-SPI.o \
-SPI_Lcfg.o \
-UART_Drv.o \
-UART_Lcg.o \
-UTL.o \
-WMGR.o \
-WMGR_CFG.o
+Config/BLTD_Cfg.o \
+Config/BTN_CFG.o \
+Config/L3G4200D_Lcfg.o \
+Config/LED_Cfg.o \
+Config/SPI_Lcfg.o \
+Config/UART_Lcg.o \
+Config/WMGR_CFG.o \
+Debug/Debug.o \
+HAL/BLTD.o \
+HAL/BTN.o \
+HAL/DIO.o \
+HAL/GPT.o \
+HAL/GYRO.o \
+HAL/L3G4200D.o \
+HAL/LED.o \
+HAL/MOTOR.o \
+HAL/PWM.o \
+HAL/SPI.o \
+HAL/UART_Drv.o \
+HAL/UTL.o \
+HAL/WMGR.o \
+ModukeTemp.o
 
 OBJS_AS_ARGS +=  \
-BLTD.o \
-BLTD_Cfg.o \
-BTN.o \
-BTN_CFG.o \
 CapApp.o \
-Debug.o \
-DIO.o \
-GPT.o \
-GYRO.o \
-L3G4200D.o \
-L3G4200D_Lcfg.o \
-LED.o \
-LED_Cfg.o \
-ModukeTemp.o \
-MOTOR.o \
-PWM.o \
-SPI.o \
-SPI_Lcfg.o \
-UART_Drv.o \
-UART_Lcg.o \
-UTL.o \
-WMGR.o \
-WMGR_CFG.o
+Config/BLTD_Cfg.o \
+Config/BTN_CFG.o \
+Config/L3G4200D_Lcfg.o \
+Config/LED_Cfg.o \
+Config/SPI_Lcfg.o \
+Config/UART_Lcg.o \
+Config/WMGR_CFG.o \
+Debug/Debug.o \
+HAL/BLTD.o \
+HAL/BTN.o \
+HAL/DIO.o \
+HAL/GPT.o \
+HAL/GYRO.o \
+HAL/L3G4200D.o \
+HAL/LED.o \
+HAL/MOTOR.o \
+HAL/PWM.o \
+HAL/SPI.o \
+HAL/UART_Drv.o \
+HAL/UTL.o \
+HAL/WMGR.o \
+ModukeTemp.o
 
 C_DEPS +=  \
-BLTD.d \
-BLTD_Cfg.d \
-BTN.d \
-BTN_CFG.d \
 CapApp.d \
-Debug.d \
-DIO.d \
-GPT.d \
-GYRO.d \
-L3G4200D.d \
-L3G4200D_Lcfg.d \
-LED.d \
-LED_Cfg.d \
-ModukeTemp.d \
-MOTOR.d \
-PWM.d \
-SPI.d \
-SPI_Lcfg.d \
-UART_Drv.d \
-UART_Lcg.d \
-UTL.d \
-WMGR.d \
-WMGR_CFG.d
+Config/BLTD_Cfg.d \
+Config/BTN_CFG.d \
+Config/L3G4200D_Lcfg.d \
+Config/LED_Cfg.d \
+Config/SPI_Lcfg.d \
+Config/UART_Lcg.d \
+Config/WMGR_CFG.d \
+Debug/Debug.d \
+HAL/BLTD.d \
+HAL/BTN.d \
+HAL/DIO.d \
+HAL/GPT.d \
+HAL/GYRO.d \
+HAL/L3G4200D.d \
+HAL/LED.d \
+HAL/MOTOR.d \
+HAL/PWM.d \
+HAL/SPI.d \
+HAL/UART_Drv.d \
+HAL/UTL.d \
+HAL/WMGR.d \
+ModukeTemp.d
 
 C_DEPS_AS_ARGS +=  \
-BLTD.d \
-BLTD_Cfg.d \
-BTN.d \
-BTN_CFG.d \
 CapApp.d \
-Debug.d \
-DIO.d \
-GPT.d \
-GYRO.d \
-L3G4200D.d \
-L3G4200D_Lcfg.d \
-LED.d \
-LED_Cfg.d \
-ModukeTemp.d \
-MOTOR.d \
-PWM.d \
-SPI.d \
-SPI_Lcfg.d \
-UART_Drv.d \
-UART_Lcg.d \
-UTL.d \
-WMGR.d \
-WMGR_CFG.d
+Config/BLTD_Cfg.d \
+Config/BTN_CFG.d \
+Config/L3G4200D_Lcfg.d \
+Config/LED_Cfg.d \
+Config/SPI_Lcfg.d \
+Config/UART_Lcg.d \
+Config/WMGR_CFG.d \
+Debug/Debug.d \
+HAL/BLTD.d \
+HAL/BTN.d \
+HAL/DIO.d \
+HAL/GPT.d \
+HAL/GYRO.d \
+HAL/L3G4200D.d \
+HAL/LED.d \
+HAL/MOTOR.d \
+HAL/PWM.d \
+HAL/SPI.d \
+HAL/UART_Drv.d \
+HAL/UTL.d \
+HAL/WMGR.d \
+ModukeTemp.d
 
 OUTPUT_FILE_PATH +=CapApp.elf
 
@@ -230,6 +233,27 @@ LINKER_SCRIPT_DEP+=
 
 
 ./%.o: .././%.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.132\include"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega8 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.132\gcc\dev\atmega8" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+Config/%.o: ../Config/%.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.132\include"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega8 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.132\gcc\dev\atmega8" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+Debug/%.o: ../Debug/%.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.132\include"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega8 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.132\gcc\dev\atmega8" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+HAL/%.o: ../HAL/%.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.132\include"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega8 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.132\gcc\dev\atmega8" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

@@ -1,9 +1,9 @@
 #ifndef _BLTD_CFG_
 #define _BLTD_CFG_
 #include "BasicTypes.h"
-#include "UART_Drv.h"
-#include "BLTD.h"
-#include "DIO.h"
+#include "../HAL/UART_Drv.h"
+#include "../HAL/BLTD.h"
+#include "../HAL/DIO.h"
 #include "WMGR_Cfg.h"
 #define MAX_CMD_SIZE 40
 #define MAX_RESP_SIZE 40

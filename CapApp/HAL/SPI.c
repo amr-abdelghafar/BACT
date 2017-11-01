@@ -2,11 +2,11 @@
  * SPI.c
  *
  * Created: 18/09/2015 02:13:40 م
- *  Author: hossam
+ *  Author: hossam & Amr Tarek
  */ 
 #include "SPI.h"
 #include "DIO.h"
-#include "SPI_Lcfg.h"
+#include "../Config/SPI_Lcfg.h"
 typedef struct  
 {
 	u32 u32TempFreq;

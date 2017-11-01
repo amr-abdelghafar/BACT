@@ -2,10 +2,10 @@
 * CFile1.c
 *
 * Created: 08/03/2016 08:48:00 م
-*  Author: hossam
+*  Author: hossam & Amr Tarek
 */
 
-#include "BasicTypes.h"
+#include "../Config/BasicTypes.h"
 #include <avr/io.h>
 
 void PWM_Init(void)

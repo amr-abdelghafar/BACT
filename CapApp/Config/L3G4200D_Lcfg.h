@@ -2,7 +2,7 @@
  * L3G4200D_Lcfg.h
  *
  * Created: 27/09/2015 02:11:15 م
- *  Author: hossam
+ *  Author: hossam & Amr Tarek
  */ 
 
 

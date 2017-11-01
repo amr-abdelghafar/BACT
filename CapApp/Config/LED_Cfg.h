@@ -2,7 +2,7 @@
  * LED_Cfg.h
  *
  * Created: 4/16/2016 3:04:28 PM
- *  Author: hossam
+ *  Author: hossam & Amr Tarek
  */ 
 
 

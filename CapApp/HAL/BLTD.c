@@ -1,8 +1,8 @@
-#include "BasicTypes.h"
+#include "../Config/BasicTypes.h"
 #include "UART_Drv.h"
 #include "DIO.h"
-#include "Debug.h"
-#include "BLTD_Cfg.h"
+#include "../Debug/Debug.h"
+#include "../Config/BLTD_Cfg.h"
 #include "BLTD.h"
 #include "UTL.h"
 

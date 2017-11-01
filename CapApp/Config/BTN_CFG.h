@@ -2,7 +2,7 @@
  * BTN_CFG.h
  *
  * Created: 28/02/2016 02:24:08 م
- *  Author: hossam
+ *  Author: hossam & Amr Tarek
  */ 
 
 

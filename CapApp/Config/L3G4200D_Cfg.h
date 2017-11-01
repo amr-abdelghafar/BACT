@@ -2,15 +2,15 @@
  * L3G4200D_Cfg.h
  *
  * Created: 24/09/2015 09:13:50 م
- *  Author: hossam
+ *  Author: hossam & Amr Tarek
  */ 
 
 
 #ifndef L3G4200D_CFG_H_
 #define L3G4200D_CFG_H_
 #include "BasicTypes.h"
-#include "DIO.h"
-#include "SPI.h"
+#include "../HAL/DIO.h"
+#include "../HAL/SPI.h"
 
 /*SPI Communication Configuration*/
 #define GYHD_INIT_SLAVE_SELECT() DIO_InitPortDirection(PB,0xff,1<<2);\

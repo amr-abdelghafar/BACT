@@ -2,12 +2,12 @@
  * L3G4200D_Lcfg.c
  *
  * Created: 27/09/2015 02:11:03 م
- *  Author: hossam
+ *  Author: hossam & Amr Tarek
  */ 
 #include "L3G4200D_Lcfg.h"
 #include "BasicTypes.h"
 #include "L3G4200D_Lcfg.h"
-#include "L3G4200D.h"
+#include "../HAL/L3G4200D.h"
 
 const L3G4200D_CfgType L3G4200D_ConfigParam = {.u8FullScaleValue                       = u8FS_250,
                                                .strAxisActivation.u8XAxisActivation    = u8X_AXIS_ACTIVE,

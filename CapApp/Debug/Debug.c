@@ -2,11 +2,11 @@
  * Debug.c
  *
  * Created: 5/17/2016 2:36:44 PM
- *  Author: hossam
+ *  Author: hossam & Amr Tarek
  */ 
-#include "BasicTypes.h"
-#include "DIO.h"
-#include "Debug.h"
+#include "../Config/BasicTypes.h"
+#include "../HAL/DIO.h"
+#include "../Debug/Debug.h"
 #include <util/delay.h>
 void DBG_InsertBreakPoint1(void)
 {

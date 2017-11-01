@@ -2,14 +2,14 @@
  * SPI_Lcfg.h
  *
  * Created: 19/09/2015 11:01:20 ص
- *  Author: hossam
+ *  Author: hossam & Amr Tarek
  */ 
 
 
 #ifndef SPI_LCFG_H_
 #define SPI_LCFG_H_
 #include "BasicTypes.h"
-#include "DIO.h"
+#include "../HAL/DIO.h"
 
 #define u8MODE_0 0x00
 #define u8MODE_1 0x04

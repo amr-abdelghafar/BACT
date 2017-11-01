@@ -1,5 +1,7 @@
-CapApp.d CapApp.o: .././CapApp.c .././WMGR_Cfg.h .././BasicTypes.h \
- .././BLTD.h .././WMGR.h .././DIO.h \
+CapApp.d CapApp.o: .././CapApp.c .././Config/WMGR_Cfg.h \
+ .././Config/BasicTypes.h .././Config/../HAL/BLTD.h \
+ .././Config/../HAL/../Config/BasicTypes.h .././Config/../HAL/WMGR.h \
+ .././Config/../HAL/DIO.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
@@ -11,23 +13,28 @@ CapApp.d CapApp.o: .././CapApp.c .././WMGR_Cfg.h .././BasicTypes.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\version.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h \
- .././BLTD_Cfg.h .././UART_Drv.h \
+ .././Config/BLTD_Cfg.h .././Config/../HAL/UART_Drv.h \
+ .././Config/WMGR_Cfg.h .././Config/BasicTypes.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
+ .././HAL/WMGR.h .././HAL/DIO.h .././HAL/UART_Drv.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h \
- .././GPT.h .././Debug.h .././L3G4200D.h .././GYRO.h .././LED.h \
- .././BTN.h .././MOTOR.h
+ .././HAL/GPT.h .././Debug/Debug.h .././Debug/../Config/WMGR_Cfg.h \
+ .././HAL/L3G4200D.h .././HAL/../Config/BasicTypes.h .././HAL/GYRO.h \
+ .././HAL/LED.h .././HAL/BTN.h .././HAL/MOTOR.h .././HAL/DIO.h
 
-.././WMGR_Cfg.h:
+.././Config/WMGR_Cfg.h:
 
-.././BasicTypes.h:
+.././Config/BasicTypes.h:
 
-.././BLTD.h:
+.././Config/../HAL/BLTD.h:
 
-.././WMGR.h:
+.././Config/../HAL/../Config/BasicTypes.h:
 
-.././DIO.h:
+.././Config/../HAL/WMGR.h:
+
+.././Config/../HAL/DIO.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
 
@@ -51,9 +58,13 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h:
 
-.././BLTD_Cfg.h:
+.././Config/BLTD_Cfg.h:
 
-.././UART_Drv.h:
+.././Config/../HAL/UART_Drv.h:
+
+.././Config/WMGR_Cfg.h:
+
+.././Config/BasicTypes.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h:
 
@@ -61,18 +72,30 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h:
 
+.././HAL/WMGR.h:
+
+.././HAL/DIO.h:
+
+.././HAL/UART_Drv.h:
+
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h:
 
-.././GPT.h:
+.././HAL/GPT.h:
 
-.././Debug.h:
+.././Debug/Debug.h:
 
-.././L3G4200D.h:
+.././Debug/../Config/WMGR_Cfg.h:
 
-.././GYRO.h:
+.././HAL/L3G4200D.h:
 
-.././LED.h:
+.././HAL/../Config/BasicTypes.h:
 
-.././BTN.h:
+.././HAL/GYRO.h:
 
-.././MOTOR.h:
+.././HAL/LED.h:
+
+.././HAL/BTN.h:
+
+.././HAL/MOTOR.h:
+
+.././HAL/DIO.h:

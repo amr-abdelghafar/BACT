@@ -2,7 +2,7 @@
 * MOTOR.c
 *
 * Created: 4/22/2016 12:21:52 AM
-*  Author: hossam
+*  Author: hossam & Amr Tarek
 */
 #include "PWM.h"
 #include "MOTOR.h"

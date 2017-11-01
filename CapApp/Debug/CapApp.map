@@ -1,15 +1,15 @@
 Archive member included to satisfy reference by file (symbol)
 
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3.o)
-                              MOTOR.o (__addsf3)
+                              HAL/MOTOR.o (__addsf3)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3x.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3.o) (__addsf3x)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(cmpsf2.o)
-                              PWM.o (__eqsf2)
+                              HAL/PWM.o (__eqsf2)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fixunssfsi.o)
-                              MOTOR.o (__fixunssfsi)
+                              HAL/MOTOR.o (__fixunssfsi)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(floatsisf.o)
-                              MOTOR.o (__floatunsisf)
+                              HAL/MOTOR.o (__floatunsisf)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_cmp.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(cmpsf2.o) (__fp_cmp)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_inf.o)
@@ -27,184 +27,184 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(fp_zero.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3x.o) (__fp_zero)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(gesf2.o)
-                              MOTOR.o (__gtsf2)
+                              HAL/MOTOR.o (__gtsf2)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(mulsf3.o)
-                              MOTOR.o (__mulsf3)
+                              HAL/MOTOR.o (__mulsf3)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(mulsf3x.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(mulsf3.o) (__mulsf3x)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_udivmodsi4.o)
-                              PWM.o (__udivmodsi4)
+                              HAL/PWM.o (__udivmodsi4)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_exit.o)
                               C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.132/gcc/dev/atmega8/avr4/crtatmega8.o (exit)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_copy_data.o)
-                              BLTD.o (__do_copy_data)
+                              CapApp.o (__do_copy_data)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_clear_bss.o)
-                              BLTD.o (__do_clear_bss)
+                              CapApp.o (__do_clear_bss)
 
 Allocating common symbols
 Common symbol       size              file
 
-WMGR_MacAddress     0x11              WMGR.o
+WMGR_MacAddress     0x11              HAL/WMGR.o
 WakeUpState         0x1               CapApp.o
 
 Discarded input sections
 
  .data          0x00000000        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.132/gcc/dev/atmega8/avr4/crtatmega8.o
  .bss           0x00000000        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.132/gcc/dev/atmega8/avr4/crtatmega8.o
- .text          0x00000000        0x0 BLTD.o
- .data          0x00000000        0x0 BLTD.o
- .bss           0x00000000        0x0 BLTD.o
- .text          0x00000000        0x0 BLTD_Cfg.o
- .data          0x00000000        0x0 BLTD_Cfg.o
- .bss           0x00000000        0x0 BLTD_Cfg.o
- .text          0x00000000        0x0 BTN.o
- .data          0x00000000        0x0 BTN.o
- .bss           0x00000000        0x0 BTN.o
- .text.BTN_Init
-                0x00000000       0x12 BTN.o
- .text          0x00000000        0x0 BTN_CFG.o
- .data          0x00000000        0x0 BTN_CFG.o
- .bss           0x00000000        0x0 BTN_CFG.o
  .text          0x00000000        0x0 CapApp.o
  .data          0x00000000        0x0 CapApp.o
  .bss           0x00000000        0x0 CapApp.o
  .avr.prop      0x00000000       0x16 CapApp.o
- .text          0x00000000        0x0 Debug.o
- .data          0x00000000        0x0 Debug.o
- .bss           0x00000000        0x0 Debug.o
+ .text          0x00000000        0x0 Config/BLTD_Cfg.o
+ .data          0x00000000        0x0 Config/BLTD_Cfg.o
+ .bss           0x00000000        0x0 Config/BLTD_Cfg.o
+ .text          0x00000000        0x0 Config/BTN_CFG.o
+ .data          0x00000000        0x0 Config/BTN_CFG.o
+ .bss           0x00000000        0x0 Config/BTN_CFG.o
+ .text          0x00000000        0x0 Config/L3G4200D_Lcfg.o
+ .data          0x00000000        0x0 Config/L3G4200D_Lcfg.o
+ .bss           0x00000000        0x0 Config/L3G4200D_Lcfg.o
+ .text          0x00000000        0x0 Config/LED_Cfg.o
+ .data          0x00000000        0x0 Config/LED_Cfg.o
+ .bss           0x00000000        0x0 Config/LED_Cfg.o
+ .text          0x00000000        0x0 Config/SPI_Lcfg.o
+ .data          0x00000000        0x0 Config/SPI_Lcfg.o
+ .bss           0x00000000        0x0 Config/SPI_Lcfg.o
+ .rodata.SPI_InitConfig
+                0x00000000        0x6 Config/SPI_Lcfg.o
+ .debug_info    0x00000000       0xc7 Config/SPI_Lcfg.o
+ .debug_abbrev  0x00000000       0x74 Config/SPI_Lcfg.o
+ .debug_aranges
+                0x00000000       0x18 Config/SPI_Lcfg.o
+ .debug_line    0x00000000       0x50 Config/SPI_Lcfg.o
+ .debug_str     0x00000000      0x1b5 Config/SPI_Lcfg.o
+ .comment       0x00000000       0x31 Config/SPI_Lcfg.o
+ .text          0x00000000        0x0 Config/UART_Lcg.o
+ .data          0x00000000        0x0 Config/UART_Lcg.o
+ .bss           0x00000000        0x0 Config/UART_Lcg.o
+ .text          0x00000000        0x0 Config/WMGR_CFG.o
+ .data          0x00000000        0x0 Config/WMGR_CFG.o
+ .bss           0x00000000        0x0 Config/WMGR_CFG.o
+ .text          0x00000000        0x0 Debug/Debug.o
+ .data          0x00000000        0x0 Debug/Debug.o
+ .bss           0x00000000        0x0 Debug/Debug.o
  .text.DBG_InsertBreakPoint3
-                0x00000000       0x34 Debug.o
- .text          0x00000000        0x0 DIO.o
- .data          0x00000000        0x0 DIO.o
- .bss           0x00000000        0x0 DIO.o
- .text          0x00000000        0x0 GPT.o
- .data          0x00000000        0x0 GPT.o
- .bss           0x00000000        0x0 GPT.o
+                0x00000000       0x34 Debug/Debug.o
+ .text          0x00000000        0x0 HAL/BLTD.o
+ .data          0x00000000        0x0 HAL/BLTD.o
+ .bss           0x00000000        0x0 HAL/BLTD.o
+ .text          0x00000000        0x0 HAL/BTN.o
+ .data          0x00000000        0x0 HAL/BTN.o
+ .bss           0x00000000        0x0 HAL/BTN.o
+ .text.BTN_Init
+                0x00000000       0x12 HAL/BTN.o
+ .text          0x00000000        0x0 HAL/DIO.o
+ .data          0x00000000        0x0 HAL/DIO.o
+ .bss           0x00000000        0x0 HAL/DIO.o
+ .text          0x00000000        0x0 HAL/GPT.o
+ .data          0x00000000        0x0 HAL/GPT.o
+ .bss           0x00000000        0x0 HAL/GPT.o
  .text.GPT_Timer30msInit
-                0x00000000       0x18 GPT.o
- .text          0x00000000        0x0 GYRO.o
- .data          0x00000000        0x0 GYRO.o
- .bss           0x00000000        0x0 GYRO.o
- .text          0x00000000        0x0 L3G4200D.o
- .data          0x00000000        0x0 L3G4200D.o
- .bss           0x00000000        0x0 L3G4200D.o
+                0x00000000       0x18 HAL/GPT.o
+ .text          0x00000000        0x0 HAL/GYRO.o
+ .data          0x00000000        0x0 HAL/GYRO.o
+ .bss           0x00000000        0x0 HAL/GYRO.o
+ .text          0x00000000        0x0 HAL/L3G4200D.o
+ .data          0x00000000        0x0 HAL/L3G4200D.o
+ .bss           0x00000000        0x0 HAL/L3G4200D.o
  .text.GYHD_Init
-                0x00000000      0x10e L3G4200D.o
+                0x00000000      0x10e HAL/L3G4200D.o
  .text.GYHD_SleepModule
-                0x00000000       0x42 L3G4200D.o
+                0x00000000       0x42 HAL/L3G4200D.o
  .text.GYHD_ReadZDirection
-                0x00000000       0x5a L3G4200D.o
- .text          0x00000000        0x0 L3G4200D_Lcfg.o
- .data          0x00000000        0x0 L3G4200D_Lcfg.o
- .bss           0x00000000        0x0 L3G4200D_Lcfg.o
- .text          0x00000000        0x0 LED.o
- .data          0x00000000        0x0 LED.o
- .bss           0x00000000        0x0 LED.o
- .text          0x00000000        0x0 LED_Cfg.o
- .data          0x00000000        0x0 LED_Cfg.o
- .bss           0x00000000        0x0 LED_Cfg.o
+                0x00000000       0x5a HAL/L3G4200D.o
+ .text          0x00000000        0x0 HAL/LED.o
+ .data          0x00000000        0x0 HAL/LED.o
+ .bss           0x00000000        0x0 HAL/LED.o
+ .text          0x00000000        0x0 HAL/MOTOR.o
+ .data          0x00000000        0x0 HAL/MOTOR.o
+ .bss           0x00000000        0x0 HAL/MOTOR.o
+ .text.MOTOR_Init
+                0x00000000       0x48 HAL/MOTOR.o
+ .text.MOTOR_SetSpeed
+                0x00000000      0x292 HAL/MOTOR.o
+ .progmem.gcc_sw_table.MOTOR_SetSpeed
+                0x00000000        0xe HAL/MOTOR.o
+ .text.MOTOR_SetDirection
+                0x00000000       0x3e HAL/MOTOR.o
+ .text.MOTOR_StateMachine
+                0x00000000        0x2 HAL/MOTOR.o
+ .bss.RefreshCount.1766
+                0x00000000        0x1 HAL/MOTOR.o
+ .bss.RefreshData.1767
+                0x00000000        0x1 HAL/MOTOR.o
+ .bss.TargetSpeed
+                0x00000000        0x1 HAL/MOTOR.o
+ .bss.CurrentSpeed
+                0x00000000        0x4 HAL/MOTOR.o
+ .bss.TimeCounter
+                0x00000000        0x1 HAL/MOTOR.o
+ .bss.MotorState
+                0x00000000        0x1 HAL/MOTOR.o
+ .debug_info    0x00000000      0x3d6 HAL/MOTOR.o
+ .debug_abbrev  0x00000000       0xf8 HAL/MOTOR.o
+ .debug_loc     0x00000000      0x119 HAL/MOTOR.o
+ .debug_aranges
+                0x00000000       0x38 HAL/MOTOR.o
+ .debug_ranges  0x00000000       0x28 HAL/MOTOR.o
+ .debug_line    0x00000000      0x29f HAL/MOTOR.o
+ .debug_str     0x00000000      0x263 HAL/MOTOR.o
+ .comment       0x00000000       0x31 HAL/MOTOR.o
+ .debug_frame   0x00000000       0x70 HAL/MOTOR.o
+ .avr.prop      0x00000000       0x16 HAL/MOTOR.o
+ .text          0x00000000        0x0 HAL/PWM.o
+ .data          0x00000000        0x0 HAL/PWM.o
+ .bss           0x00000000        0x0 HAL/PWM.o
+ .text.PWM_Init
+                0x00000000       0x18 HAL/PWM.o
+ .text.PWM_SetSpeed
+                0x00000000       0x6c HAL/PWM.o
+ .debug_info    0x00000000       0xdc HAL/PWM.o
+ .debug_abbrev  0x00000000       0x94 HAL/PWM.o
+ .debug_loc     0x00000000       0xc1 HAL/PWM.o
+ .debug_aranges
+                0x00000000       0x28 HAL/PWM.o
+ .debug_ranges  0x00000000       0x18 HAL/PWM.o
+ .debug_line    0x00000000      0x133 HAL/PWM.o
+ .debug_str     0x00000000      0x1b0 HAL/PWM.o
+ .comment       0x00000000       0x31 HAL/PWM.o
+ .debug_frame   0x00000000       0x48 HAL/PWM.o
+ .text          0x00000000        0x0 HAL/SPI.o
+ .data          0x00000000        0x0 HAL/SPI.o
+ .bss           0x00000000        0x0 HAL/SPI.o
+ .text.SPI_vidInit
+                0x00000000       0x96 HAL/SPI.o
+ .data.Lut      0x00000000       0x23 HAL/SPI.o
+ .text          0x00000000        0x0 HAL/UART_Drv.o
+ .data          0x00000000        0x0 HAL/UART_Drv.o
+ .bss           0x00000000        0x0 HAL/UART_Drv.o
+ .text          0x00000000        0x0 HAL/UTL.o
+ .data          0x00000000        0x0 HAL/UTL.o
+ .bss           0x00000000        0x0 HAL/UTL.o
+ .text.UTL_MemSearch
+                0x00000000       0x34 HAL/UTL.o
+ .text.UTL_StringToInteger
+                0x00000000       0x50 HAL/UTL.o
+ .text          0x00000000        0x0 HAL/WMGR.o
+ .data          0x00000000        0x0 HAL/WMGR.o
+ .bss           0x00000000        0x0 HAL/WMGR.o
+ .text.WMGR_GetMacAddress
+                0x00000000       0x10 HAL/WMGR.o
+ .text.WMGR_GetData
+                0x00000000      0x206 HAL/WMGR.o
+ .text.WMGR_StartConnection
+                0x00000000       0x12 HAL/WMGR.o
  .text          0x00000000        0x0 ModukeTemp.o
  .data          0x00000000        0x0 ModukeTemp.o
  .bss           0x00000000        0x0 ModukeTemp.o
  .debug_line    0x00000000        0x0 ModukeTemp.o
- .debug_str     0x00000000       0xfd ModukeTemp.o
+ .debug_str     0x00000000       0xfc ModukeTemp.o
  .comment       0x00000000       0x31 ModukeTemp.o
- .text          0x00000000        0x0 MOTOR.o
- .data          0x00000000        0x0 MOTOR.o
- .bss           0x00000000        0x0 MOTOR.o
- .text.MOTOR_Init
-                0x00000000       0x48 MOTOR.o
- .text.MOTOR_SetSpeed
-                0x00000000      0x292 MOTOR.o
- .progmem.gcc_sw_table.MOTOR_SetSpeed
-                0x00000000        0xe MOTOR.o
- .text.MOTOR_SetDirection
-                0x00000000       0x3e MOTOR.o
- .text.MOTOR_StateMachine
-                0x00000000        0x2 MOTOR.o
- .bss.RefreshCount.1766
-                0x00000000        0x1 MOTOR.o
- .bss.RefreshData.1767
-                0x00000000        0x1 MOTOR.o
- .bss.TargetSpeed
-                0x00000000        0x1 MOTOR.o
- .bss.CurrentSpeed
-                0x00000000        0x4 MOTOR.o
- .bss.TimeCounter
-                0x00000000        0x1 MOTOR.o
- .bss.MotorState
-                0x00000000        0x1 MOTOR.o
- .debug_info    0x00000000      0x3d6 MOTOR.o
- .debug_abbrev  0x00000000       0xf8 MOTOR.o
- .debug_loc     0x00000000      0x119 MOTOR.o
- .debug_aranges
-                0x00000000       0x38 MOTOR.o
- .debug_ranges  0x00000000       0x28 MOTOR.o
- .debug_line    0x00000000      0x28c MOTOR.o
- .debug_str     0x00000000      0x262 MOTOR.o
- .comment       0x00000000       0x31 MOTOR.o
- .debug_frame   0x00000000       0x70 MOTOR.o
- .avr.prop      0x00000000       0x16 MOTOR.o
- .text          0x00000000        0x0 PWM.o
- .data          0x00000000        0x0 PWM.o
- .bss           0x00000000        0x0 PWM.o
- .text.PWM_Init
-                0x00000000       0x18 PWM.o
- .text.PWM_SetSpeed
-                0x00000000       0x6c PWM.o
- .debug_info    0x00000000       0xdc PWM.o
- .debug_abbrev  0x00000000       0x94 PWM.o
- .debug_loc     0x00000000       0xc1 PWM.o
- .debug_aranges
-                0x00000000       0x28 PWM.o
- .debug_ranges  0x00000000       0x18 PWM.o
- .debug_line    0x00000000      0x120 PWM.o
- .debug_str     0x00000000      0x1af PWM.o
- .comment       0x00000000       0x31 PWM.o
- .debug_frame   0x00000000       0x48 PWM.o
- .text          0x00000000        0x0 SPI.o
- .data          0x00000000        0x0 SPI.o
- .bss           0x00000000        0x0 SPI.o
- .text.SPI_vidInit
-                0x00000000       0x96 SPI.o
- .data.Lut      0x00000000       0x23 SPI.o
- .text          0x00000000        0x0 SPI_Lcfg.o
- .data          0x00000000        0x0 SPI_Lcfg.o
- .bss           0x00000000        0x0 SPI_Lcfg.o
- .rodata.SPI_InitConfig
-                0x00000000        0x6 SPI_Lcfg.o
- .debug_info    0x00000000       0xc7 SPI_Lcfg.o
- .debug_abbrev  0x00000000       0x74 SPI_Lcfg.o
- .debug_aranges
-                0x00000000       0x18 SPI_Lcfg.o
- .debug_line    0x00000000       0x4b SPI_Lcfg.o
- .debug_str     0x00000000      0x1b1 SPI_Lcfg.o
- .comment       0x00000000       0x31 SPI_Lcfg.o
- .text          0x00000000        0x0 UART_Drv.o
- .data          0x00000000        0x0 UART_Drv.o
- .bss           0x00000000        0x0 UART_Drv.o
- .text          0x00000000        0x0 UART_Lcg.o
- .data          0x00000000        0x0 UART_Lcg.o
- .bss           0x00000000        0x0 UART_Lcg.o
- .text          0x00000000        0x0 UTL.o
- .data          0x00000000        0x0 UTL.o
- .bss           0x00000000        0x0 UTL.o
- .text.UTL_MemSearch
-                0x00000000       0x34 UTL.o
- .text.UTL_StringToInteger
-                0x00000000       0x50 UTL.o
- .text          0x00000000        0x0 WMGR.o
- .data          0x00000000        0x0 WMGR.o
- .bss           0x00000000        0x0 WMGR.o
- .text.WMGR_GetMacAddress
-                0x00000000       0x10 WMGR.o
- .text.WMGR_GetData
-                0x00000000      0x206 WMGR.o
- .text.WMGR_StartConnection
-                0x00000000       0x12 WMGR.o
- .text          0x00000000        0x0 WMGR_CFG.o
- .data          0x00000000        0x0 WMGR_CFG.o
- .bss           0x00000000        0x0 WMGR_CFG.o
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a(addsf3.o)
@@ -363,29 +363,29 @@ user_signatures  0x00850000         0x00000400         rw !x
 Linker script and memory map
 
 LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.132/gcc/dev/atmega8/avr4/crtatmega8.o
-LOAD BLTD.o
-LOAD BLTD_Cfg.o
-LOAD BTN.o
-LOAD BTN_CFG.o
 LOAD CapApp.o
-LOAD Debug.o
-LOAD DIO.o
-LOAD GPT.o
-LOAD GYRO.o
-LOAD L3G4200D.o
-LOAD L3G4200D_Lcfg.o
-LOAD LED.o
-LOAD LED_Cfg.o
+LOAD Config/BLTD_Cfg.o
+LOAD Config/BTN_CFG.o
+LOAD Config/L3G4200D_Lcfg.o
+LOAD Config/LED_Cfg.o
+LOAD Config/SPI_Lcfg.o
+LOAD Config/UART_Lcg.o
+LOAD Config/WMGR_CFG.o
+LOAD Debug/Debug.o
+LOAD HAL/BLTD.o
+LOAD HAL/BTN.o
+LOAD HAL/DIO.o
+LOAD HAL/GPT.o
+LOAD HAL/GYRO.o
+LOAD HAL/L3G4200D.o
+LOAD HAL/LED.o
+LOAD HAL/MOTOR.o
+LOAD HAL/PWM.o
+LOAD HAL/SPI.o
+LOAD HAL/UART_Drv.o
+LOAD HAL/UTL.o
+LOAD HAL/WMGR.o
 LOAD ModukeTemp.o
-LOAD MOTOR.o
-LOAD PWM.o
-LOAD SPI.o
-LOAD SPI_Lcfg.o
-LOAD UART_Drv.o
-LOAD UART_Lcg.o
-LOAD UTL.o
-LOAD WMGR.o
-LOAD WMGR_CFG.o
 START GROUP
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4\libm.a
 END GROUP
@@ -572,132 +572,132 @@ END GROUP
                 0x0000006e                __vector_18
                 0x00000070                . = ALIGN (0x2)
  *(.text.*)
- .text.RxcCallBackFun
-                0x00000070       0x9a BLTD.o
- .text.BLTD_Init
-                0x0000010a       0x3c BLTD.o
-                0x0000010a                BLTD_Init
- .text.BLTD_SendCmd
-                0x00000146       0x9e BLTD.o
-                0x00000146                BLTD_SendCmd
- .text.BLTD_SetDeviceName
-                0x000001e4       0x10 BLTD.o
-                0x000001e4                BLTD_SetDeviceName
- .text.BLTD_SetPassKey
-                0x000001f4        0xc BLTD.o
-                0x000001f4                BLTD_SetPassKey
- .text.BLTD_GetMacAddress
-                0x00000200       0x10 BLTD.o
-                0x00000200                BLTD_GetMacAddress
- .text.BLTD_PowerOn
-                0x00000210       0x12 BLTD.o
-                0x00000210                BLTD_PowerOn
- .text.BLTD_PowerOff
-                0x00000222       0x12 BLTD.o
-                0x00000222                BLTD_PowerOff
- .text.BTN_GetState
-                0x00000234       0x56 BTN.o
-                0x00000234                BTN_GetState
- .text.Test     0x0000028a      0x206 CapApp.o
-                0x0000028a                Test
- .text.main     0x00000490       0x1a CapApp.o
-                0x00000490                main
+ .text.Test     0x00000070      0x206 CapApp.o
+                0x00000070                Test
+ .text.main     0x00000276       0x1a CapApp.o
+                0x00000276                main
  .text.DBG_InsertBreakPoint1
-                0x000004aa       0x3e Debug.o
-                0x000004aa                DBG_InsertBreakPoint1
+                0x00000290       0x3e Debug/Debug.o
+                0x00000290                DBG_InsertBreakPoint1
  .text.DBG_InsertBreakPoint2
-                0x000004e8       0x3c Debug.o
-                0x000004e8                DBG_InsertBreakPoint2
+                0x000002ce       0x3c Debug/Debug.o
+                0x000002ce                DBG_InsertBreakPoint2
+ .text.RxcCallBackFun
+                0x0000030a       0x9a HAL/BLTD.o
+ .text.BLTD_Init
+                0x000003a4       0x3c HAL/BLTD.o
+                0x000003a4                BLTD_Init
+ .text.BLTD_SendCmd
+                0x000003e0       0x9e HAL/BLTD.o
+                0x000003e0                BLTD_SendCmd
+ .text.BLTD_SetDeviceName
+                0x0000047e       0x10 HAL/BLTD.o
+                0x0000047e                BLTD_SetDeviceName
+ .text.BLTD_SetPassKey
+                0x0000048e        0xc HAL/BLTD.o
+                0x0000048e                BLTD_SetPassKey
+ .text.BLTD_GetMacAddress
+                0x0000049a       0x10 HAL/BLTD.o
+                0x0000049a                BLTD_GetMacAddress
+ .text.BLTD_PowerOn
+                0x000004aa       0x12 HAL/BLTD.o
+                0x000004aa                BLTD_PowerOn
+ .text.BLTD_PowerOff
+                0x000004bc       0x12 HAL/BLTD.o
+                0x000004bc                BLTD_PowerOff
+ .text.BTN_GetState
+                0x000004ce       0x56 HAL/BTN.o
+                0x000004ce                BTN_GetState
  .text.DIO_InitPortDirection
-                0x00000524       0x48 DIO.o
+                0x00000524       0x48 HAL/DIO.o
                 0x00000524                DIO_InitPortDirection
  .text.DIO_WritePort
-                0x0000056c       0x48 DIO.o
+                0x0000056c       0x48 HAL/DIO.o
                 0x0000056c                DIO_WritePort
  .text.DIO_ReadPort
-                0x000005b4       0x22 DIO.o
+                0x000005b4       0x22 HAL/DIO.o
                 0x000005b4                DIO_ReadPort
  .text.GPT_Timer10msInit
-                0x000005d6       0x1c GPT.o
+                0x000005d6       0x1c HAL/GPT.o
                 0x000005d6                GPT_Timer10msInit
  .text.__vector_9
-                0x000005f2       0x4e GPT.o
+                0x000005f2       0x4e HAL/GPT.o
                 0x000005f2                __vector_9
  .text.__vector_3
-                0x00000640       0x4e GPT.o
+                0x00000640       0x4e HAL/GPT.o
                 0x00000640                __vector_3
  .text.GetxDiff
-                0x0000068e       0x3a GYRO.o
+                0x0000068e       0x3a HAL/GYRO.o
                 0x0000068e                GetxDiff
  .text.GetyDiff
-                0x000006c8       0x3a GYRO.o
+                0x000006c8       0x3a HAL/GYRO.o
                 0x000006c8                GetyDiff
  .text.GetGyroState
-                0x00000702      0x1ca GYRO.o
+                0x00000702      0x1ca HAL/GYRO.o
                 0x00000702                GetGyroState
  .text.GYHD_WakeUpModule
-                0x000008cc       0xc4 L3G4200D.o
+                0x000008cc       0xc4 HAL/L3G4200D.o
                 0x000008cc                GYHD_WakeUpModule
  .text.GYHD_ReadXDirection
-                0x00000990       0x5a L3G4200D.o
+                0x00000990       0x5a HAL/L3G4200D.o
                 0x00000990                GYHD_ReadXDirection
  .text.GYHD_ReadYDirection
-                0x000009ea       0x5a L3G4200D.o
+                0x000009ea       0x5a HAL/L3G4200D.o
                 0x000009ea                GYHD_ReadYDirection
  .text.LED_Init
-                0x00000a44       0x5e LED.o
+                0x00000a44       0x5e HAL/LED.o
                 0x00000a44                LED_Init
  .text.LED_SetData
-                0x00000aa2       0x22 LED.o
+                0x00000aa2       0x22 HAL/LED.o
                 0x00000aa2                LED_SetData
  .text.SPI_u8TransfereByte
-                0x00000ac4        0xa SPI.o
+                0x00000ac4        0xa HAL/SPI.o
                 0x00000ac4                SPI_u8TransfereByte
  .text.UART_Init
-                0x00000ace       0x4c UART_Drv.o
+                0x00000ace       0x4c HAL/UART_Drv.o
                 0x00000ace                UART_Init
  .text.UART_StartReception
-                0x00000b1a       0x24 UART_Drv.o
+                0x00000b1a       0x24 HAL/UART_Drv.o
                 0x00000b1a                UART_StartReception
  .text.__vector_11
-                0x00000b3e       0x88 UART_Drv.o
+                0x00000b3e       0x88 HAL/UART_Drv.o
                 0x00000b3e                __vector_11
  .text.UART_GetNumOfRxbytes
-                0x00000bc6        0xa UART_Drv.o
+                0x00000bc6        0xa HAL/UART_Drv.o
                 0x00000bc6                UART_GetNumOfRxbytes
  .text.UART_StopRception
-                0x00000bd0       0x10 UART_Drv.o
+                0x00000bd0       0x10 HAL/UART_Drv.o
                 0x00000bd0                UART_StopRception
  .text.USART_Transmit
-                0x00000be0        0x8 UART_Drv.o
+                0x00000be0        0x8 HAL/UART_Drv.o
                 0x00000be0                USART_Transmit
  .text.UART_TxBuffer
-                0x00000be8       0x3c UART_Drv.o
+                0x00000be8       0x3c HAL/UART_Drv.o
                 0x00000be8                UART_TxBuffer
  .text.UTL_MemCpy
-                0x00000c24       0x1c UTL.o
+                0x00000c24       0x1c HAL/UTL.o
                 0x00000c24                UTL_MemCpy
  .text.UTL_MemCmp
-                0x00000c40       0x3e UTL.o
+                0x00000c40       0x3e HAL/UTL.o
                 0x00000c40                UTL_MemCmp
  .text.UTL_MemReplace
-                0x00000c7e       0x24 UTL.o
+                0x00000c7e       0x24 HAL/UTL.o
                 0x00000c7e                UTL_MemReplace
  .text.WMGR_ResponseReceivedCbk
-                0x00000ca2        0xc WMGR.o
+                0x00000ca2        0xc HAL/WMGR.o
  .text.WMGR_DataReceivedCbk
-                0x00000cae        0x8 WMGR.o
+                0x00000cae        0x8 HAL/WMGR.o
  .text.WMGR_Init
-                0x00000cb6       0x52 WMGR.o
+                0x00000cb6       0x52 HAL/WMGR.o
                 0x00000cb6                WMGR_Init
  .text.WMGR_RunInitScript
-                0x00000d08      0x128 WMGR.o
+                0x00000d08      0x128 HAL/WMGR.o
                 0x00000d08                WMGR_RunInitScript
  .text.WMGR_MasterStartConn
-                0x00000e30      0x244 WMGR.o
+                0x00000e30      0x244 HAL/WMGR.o
                 0x00000e30                WMGR_MasterStartConn
  .text.WMGR_SendData
-                0x00001074       0xb4 WMGR.o
+                0x00001074       0xb4 HAL/WMGR.o
                 0x00001074                WMGR_SendData
  .text.libgcc.div
                 0x00001128       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr4\libgcc.a(_udivmodsi4.o)
@@ -733,135 +733,135 @@ END GROUP
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
- .data.BTResPonseBuffer
-                0x00800060       0x28 BLTD.o
  .data.BLTD_CmdList
-                0x00800088       0x9c BLTD_Cfg.o
-                0x00800088                BLTD_CmdList
+                0x00800060       0x9c Config/BLTD_Cfg.o
+                0x00800060                BLTD_CmdList
  .data.BTN_COnfigParam
-                0x00800124        0x2 BTN_CFG.o
-                0x00800124                BTN_COnfigParam
- .data.PichCheckAllowed.1604
-                0x00800126        0x1 GYRO.o
+                0x008000fc        0x2 Config/BTN_CFG.o
+                0x008000fc                BTN_COnfigParam
  .data.LED_ConfigParamaters
-                0x00800127        0x4 LED_Cfg.o
-                0x00800127                LED_ConfigParamaters
+                0x008000fe        0x4 Config/LED_Cfg.o
+                0x008000fe                LED_ConfigParamaters
+ .data.BTResPonseBuffer
+                0x00800102       0x28 HAL/BLTD.o
+ .data.PichCheckAllowed.1604
+                0x0080012a        0x1 HAL/GYRO.o
  .data.SpeedBuffer
-                0x0080012b       0x14 WMGR.o
+                0x0080012b       0x14 HAL/WMGR.o
                 0x0080012b                SpeedBuffer
  *(.rodata)
  *(.rodata*)
  .rodata.str1.1
-                0x0080013f        0x0 BLTD.o
-                                  0x3 (size before relaxing)
+                0x0080013f        0xf CapApp.o
  .rodata.str1.1
-                0x0080013f       0xb5 BLTD_Cfg.o
+                0x0080014e       0xb5 Config/BLTD_Cfg.o
                                  0xc1 (size before relaxing)
- .rodata.str1.1
-                0x008001f4        0xf CapApp.o
  .rodata.L3G4200D_ConfigParam
-                0x00800203       0x11 L3G4200D_Lcfg.o
+                0x00800203       0x11 Config/L3G4200D_Lcfg.o
                 0x00800203                L3G4200D_ConfigParam
  .rodata.UartConfig
-                0x00800214        0x6 UART_Lcg.o
+                0x00800214        0x6 Config/UART_Lcg.o
                 0x00800214                UartConfig
- .rodata.str1.1
-                0x0080021a       0x21 WMGR.o
-                                 0x26 (size before relaxing)
  .rodata.WMGR_PassKeySize
-                0x0080023b        0x1 WMGR_CFG.o
-                0x0080023b                WMGR_PassKeySize
+                0x0080021a        0x1 Config/WMGR_CFG.o
+                0x0080021a                WMGR_PassKeySize
  .rodata.WMGR_PassKey
-                0x0080023c        0x7 WMGR_CFG.o
-                0x0080023c                WMGR_PassKey
+                0x0080021b        0x7 Config/WMGR_CFG.o
+                0x0080021b                WMGR_PassKey
  .rodata.WMGR_DeviceNameSize
-                0x00800243        0x1 WMGR_CFG.o
-                0x00800243                WMGR_DeviceNameSize
+                0x00800222        0x1 Config/WMGR_CFG.o
+                0x00800222                WMGR_DeviceNameSize
  .rodata.WMGR_DeviceName
-                0x00800244        0x9 WMGR_CFG.o
-                0x00800244                WMGR_DeviceName
+                0x00800223        0x9 Config/WMGR_CFG.o
+                0x00800223                WMGR_DeviceName
  .rodata.WMGR_StartScriptCommands
-                0x0080024d        0x7 WMGR_CFG.o
-                0x0080024d                WMGR_StartScriptCommands
+                0x0080022c        0x7 Config/WMGR_CFG.o
+                0x0080022c                WMGR_StartScriptCommands
+ .rodata.str1.1
+                0x00800233       0xb5 HAL/BLTD.o
+                                  0x3 (size before relaxing)
+ .rodata.str1.1
+                0x00800233       0x21 HAL/WMGR.o
+                                 0x26 (size before relaxing)
  *(.gnu.linkonce.d*)
-                0x00800254                . = ALIGN (0x2)
-                0x00800254                _edata = .
-                0x00800254                PROVIDE (__data_end, .)
+                0x008002e8                . = ALIGN (0x2)
+                0x008002e8                _edata = .
+                0x008002e8                PROVIDE (__data_end, .)
 
 .bss            0x00800254       0xb7
                 0x00800254                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
- .bss.BLTD_RespCallBackPtr
-                0x00800254        0x2 BLTD.o
- .bss.BLTD_CmdInProcess
-                0x00800256        0x1 BLTD.o
- .bss.BTCommandBuffer
-                0x00800257       0x28 BLTD.o
- .bss.State     0x0080027f        0x1 BTN.o
  .bss.Direction.1884
-                0x00800280        0x1 CapApp.o
+                0x00800254        0x1 CapApp.o
  .bss.Speed.1883
-                0x00800281        0x1 CapApp.o
+                0x00800255        0x1 CapApp.o
  .bss.GyroTimeOutCounter.1881
-                0x00800282        0x1 CapApp.o
+                0x00800256        0x1 CapApp.o
  .bss.BuzzerState.1882
-                0x00800283        0x1 CapApp.o
+                0x00800257        0x1 CapApp.o
  .bss.TimeOutCounter.1880
-                0x00800284        0x2 CapApp.o
- .bss.MgrState  0x00800286        0x1 CapApp.o
+                0x00800258        0x2 CapApp.o
+ .bss.MgrState  0x0080025a        0x1 CapApp.o
  .bss.cout.1831
-                0x00800287        0x2 Debug.o
+                0x0080025b        0x2 Debug/Debug.o
+ .bss.BLTD_RespCallBackPtr
+                0x0080025d        0x2 HAL/BLTD.o
+ .bss.BLTD_CmdInProcess
+                0x0080025f        0x1 HAL/BLTD.o
+ .bss.BTCommandBuffer
+                0x00800260       0x28 HAL/BLTD.o
+ .bss.State     0x00800288        0x1 HAL/BTN.o
  .bss.Timer10msCallBackPtr
-                0x00800289        0x2 GPT.o
+                0x00800289        0x2 HAL/GPT.o
  .bss.Timer5msCallBackPtr
-                0x0080028b        0x2 GPT.o
+                0x0080028b        0x2 HAL/GPT.o
  .bss.YawCheckAllowed.1603
-                0x0080028d        0x1 GYRO.o
+                0x0080028d        0x1 HAL/GYRO.o
  .bss.lastDiff.1601
-                0x0080028e        0x1 GYRO.o
+                0x0080028e        0x1 HAL/GYRO.o
  .bss.ReadingStarted.1602
-                0x0080028f        0x1 GYRO.o
+                0x0080028f        0x1 HAL/GYRO.o
  .bss.State.1600
-                0x00800290        0x1 GYRO.o
+                0x00800290        0x1 HAL/GYRO.o
  .bss.GYHD_u8StartTimeoutFlag
-                0x00800291        0x1 L3G4200D.o
+                0x00800291        0x1 HAL/L3G4200D.o
  .bss.GYHD_u8TimeOutFlag
-                0x00800292        0x1 L3G4200D.o
+                0x00800292        0x1 HAL/L3G4200D.o
  .bss.GYHD_u8LastPowerMode
-                0x00800293        0x1 L3G4200D.o
+                0x00800293        0x1 HAL/L3G4200D.o
  .bss.UartRxcCnkFnPtr
-                0x00800294        0x2 UART_Drv.o
+                0x00800294        0x2 HAL/UART_Drv.o
  .bss.RxBuffLength
-                0x00800296        0x2 UART_Drv.o
+                0x00800296        0x2 HAL/UART_Drv.o
  .bss.RxCounter
-                0x00800298        0x2 UART_Drv.o
+                0x00800298        0x2 HAL/UART_Drv.o
  .bss.RxBuffAdd
-                0x0080029a        0x2 UART_Drv.o
+                0x0080029a        0x2 HAL/UART_Drv.o
  .bss.MasterConnectionState.1914
-                0x0080029c        0x1 WMGR.o
+                0x0080029c        0x1 HAL/WMGR.o
  .bss.WMGR_IsDataReceived
-                0x0080029d        0x1 WMGR.o
+                0x0080029d        0x1 HAL/WMGR.o
  .bss.WMGR_ReceivingState
-                0x0080029e        0x1 WMGR.o
+                0x0080029e        0x1 HAL/WMGR.o
  .bss.WMGR_DataBuffer
-                0x0080029f       0x50 WMGR.o
+                0x0080029f       0x50 HAL/WMGR.o
  .bss.WMGR_DeviceMacAddresPtr
-                0x008002ef        0x2 WMGR.o
+                0x008002ef        0x2 HAL/WMGR.o
  .bss.WMGR_ResPonseStatus
-                0x008002f1        0x1 WMGR.o
+                0x008002f1        0x1 HAL/WMGR.o
  .bss.WMGR_IsResponseReceived
-                0x008002f2        0x1 WMGR.o
+                0x008002f2        0x1 HAL/WMGR.o
  .bss.WMGR_PowerState
-                0x008002f3        0x1 WMGR.o
+                0x008002f3        0x1 HAL/WMGR.o
  .bss.WMGR_InitScriptIndex
-                0x008002f4        0x1 WMGR.o
+                0x008002f4        0x1 HAL/WMGR.o
  .bss.WMGR_TimeoutCounter
-                0x008002f5        0x4 WMGR.o
+                0x008002f5        0x4 HAL/WMGR.o
  *(COMMON)
  COMMON         0x008002f9        0x1 CapApp.o
                 0x008002f9                WakeUpState
- COMMON         0x008002fa       0x11 WMGR.o
+ COMMON         0x008002fa       0x11 HAL/WMGR.o
                 0x008002fa                WMGR_MacAddress
                 0x0080030b                PROVIDE (__bss_end, .)
                 0x00001170                __data_load_start = LOADADDR (.data)
@@ -913,26 +913,26 @@ END GROUP
 
 .comment        0x00000000       0x30
  *(.comment)
- .comment       0x00000000       0x30 BLTD.o
+ .comment       0x00000000       0x30 CapApp.o
                                  0x31 (size before relaxing)
- .comment       0x00000030       0x31 BLTD_Cfg.o
- .comment       0x00000030       0x31 BTN.o
- .comment       0x00000030       0x31 BTN_CFG.o
- .comment       0x00000030       0x31 CapApp.o
- .comment       0x00000030       0x31 Debug.o
- .comment       0x00000030       0x31 DIO.o
- .comment       0x00000030       0x31 GPT.o
- .comment       0x00000030       0x31 GYRO.o
- .comment       0x00000030       0x31 L3G4200D.o
- .comment       0x00000030       0x31 L3G4200D_Lcfg.o
- .comment       0x00000030       0x31 LED.o
- .comment       0x00000030       0x31 LED_Cfg.o
- .comment       0x00000030       0x31 SPI.o
- .comment       0x00000030       0x31 UART_Drv.o
- .comment       0x00000030       0x31 UART_Lcg.o
- .comment       0x00000030       0x31 UTL.o
- .comment       0x00000030       0x31 WMGR.o
- .comment       0x00000030       0x31 WMGR_CFG.o
+ .comment       0x00000030       0x31 Config/BLTD_Cfg.o
+ .comment       0x00000030       0x31 Config/BTN_CFG.o
+ .comment       0x00000030       0x31 Config/L3G4200D_Lcfg.o
+ .comment       0x00000030       0x31 Config/LED_Cfg.o
+ .comment       0x00000030       0x31 Config/UART_Lcg.o
+ .comment       0x00000030       0x31 Config/WMGR_CFG.o
+ .comment       0x00000030       0x31 Debug/Debug.o
+ .comment       0x00000030       0x31 HAL/BLTD.o
+ .comment       0x00000030       0x31 HAL/BTN.o
+ .comment       0x00000030       0x31 HAL/DIO.o
+ .comment       0x00000030       0x31 HAL/GPT.o
+ .comment       0x00000030       0x31 HAL/GYRO.o
+ .comment       0x00000030       0x31 HAL/L3G4200D.o
+ .comment       0x00000030       0x31 HAL/LED.o
+ .comment       0x00000030       0x31 HAL/SPI.o
+ .comment       0x00000030       0x31 HAL/UART_Drv.o
+ .comment       0x00000030       0x31 HAL/UTL.o
+ .comment       0x00000030       0x31 HAL/WMGR.o
 
 .note.gnu.avr.deviceinfo
                 0x00000000       0x3c
@@ -957,43 +957,43 @@ END GROUP
 .debug_aranges  0x00000000      0x388
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0x58 BLTD.o
+                0x00000000       0x28 CapApp.o
  .debug_aranges
-                0x00000058       0x18 BLTD_Cfg.o
+                0x00000028       0x18 Config/BLTD_Cfg.o
  .debug_aranges
-                0x00000070       0x28 BTN.o
+                0x00000040       0x18 Config/BTN_CFG.o
  .debug_aranges
-                0x00000098       0x18 BTN_CFG.o
+                0x00000058       0x18 Config/L3G4200D_Lcfg.o
  .debug_aranges
-                0x000000b0       0x28 CapApp.o
+                0x00000070       0x18 Config/LED_Cfg.o
  .debug_aranges
-                0x000000d8       0x30 Debug.o
+                0x00000088       0x18 Config/UART_Lcg.o
  .debug_aranges
-                0x00000108       0x30 DIO.o
+                0x000000a0       0x18 Config/WMGR_CFG.o
  .debug_aranges
-                0x00000138       0x38 GPT.o
+                0x000000b8       0x30 Debug/Debug.o
  .debug_aranges
-                0x00000170       0x30 GYRO.o
+                0x000000e8       0x58 HAL/BLTD.o
  .debug_aranges
-                0x000001a0       0x48 L3G4200D.o
+                0x00000140       0x28 HAL/BTN.o
  .debug_aranges
-                0x000001e8       0x18 L3G4200D_Lcfg.o
+                0x00000168       0x30 HAL/DIO.o
  .debug_aranges
-                0x00000200       0x28 LED.o
+                0x00000198       0x38 HAL/GPT.o
  .debug_aranges
-                0x00000228       0x18 LED_Cfg.o
+                0x000001d0       0x30 HAL/GYRO.o
  .debug_aranges
-                0x00000240       0x28 SPI.o
+                0x00000200       0x48 HAL/L3G4200D.o
  .debug_aranges
-                0x00000268       0x50 UART_Drv.o
+                0x00000248       0x28 HAL/LED.o
  .debug_aranges
-                0x000002b8       0x18 UART_Lcg.o
+                0x00000270       0x28 HAL/SPI.o
  .debug_aranges
-                0x000002d0       0x40 UTL.o
+                0x00000298       0x50 HAL/UART_Drv.o
  .debug_aranges
-                0x00000310       0x60 WMGR.o
+                0x000002e8       0x40 HAL/UTL.o
  .debug_aranges
-                0x00000370       0x18 WMGR_CFG.o
+                0x00000328       0x60 HAL/WMGR.o
 
 .debug_pubnames
  *(.debug_pubnames)
@@ -1001,145 +1001,145 @@ END GROUP
 .debug_info     0x00000000     0x3d32
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x48c C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.132/gcc/dev/atmega8/avr4/crtatmega8.o
- .debug_info    0x0000048c      0x542 BLTD.o
- .debug_info    0x000009ce      0x142 BLTD_Cfg.o
- .debug_info    0x00000b10      0x1c4 BTN.o
- .debug_info    0x00000cd4       0xc0 BTN_CFG.o
- .debug_info    0x00000d94      0x47c CapApp.o
- .debug_info    0x00001210      0x38c Debug.o
- .debug_info    0x0000159c      0x150 DIO.o
- .debug_info    0x000016ec      0x129 GPT.o
- .debug_info    0x00001815      0x1b1 GYRO.o
- .debug_info    0x000019c6      0xe29 L3G4200D.o
- .debug_info    0x000027ef      0x1c7 L3G4200D_Lcfg.o
- .debug_info    0x000029b6      0x178 LED.o
- .debug_info    0x00002b2e       0xc0 LED_Cfg.o
- .debug_info    0x00002bee      0x1de SPI.o
- .debug_info    0x00002dcc      0x2a8 UART_Drv.o
- .debug_info    0x00003074       0x9d UART_Lcg.o
- .debug_info    0x00003111      0x266 UTL.o
- .debug_info    0x00003377      0x8bf WMGR.o
- .debug_info    0x00003c36       0xfc WMGR_CFG.o
+ .debug_info    0x0000048c      0x47c CapApp.o
+ .debug_info    0x00000908      0x142 Config/BLTD_Cfg.o
+ .debug_info    0x00000a4a       0xc0 Config/BTN_CFG.o
+ .debug_info    0x00000b0a      0x1c7 Config/L3G4200D_Lcfg.o
+ .debug_info    0x00000cd1       0xc0 Config/LED_Cfg.o
+ .debug_info    0x00000d91       0x9d Config/UART_Lcg.o
+ .debug_info    0x00000e2e       0xfc Config/WMGR_CFG.o
+ .debug_info    0x00000f2a      0x38c Debug/Debug.o
+ .debug_info    0x000012b6      0x542 HAL/BLTD.o
+ .debug_info    0x000017f8      0x1c4 HAL/BTN.o
+ .debug_info    0x000019bc      0x150 HAL/DIO.o
+ .debug_info    0x00001b0c      0x129 HAL/GPT.o
+ .debug_info    0x00001c35      0x1b1 HAL/GYRO.o
+ .debug_info    0x00001de6      0xe29 HAL/L3G4200D.o
+ .debug_info    0x00002c0f      0x178 HAL/LED.o
+ .debug_info    0x00002d87      0x1de HAL/SPI.o
+ .debug_info    0x00002f65      0x2a8 HAL/UART_Drv.o
+ .debug_info    0x0000320d      0x266 HAL/UTL.o
+ .debug_info    0x00003473      0x8bf HAL/WMGR.o
 
 .debug_abbrev   0x00000000     0x1777
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x44e C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.132/gcc/dev/atmega8/avr4/crtatmega8.o
- .debug_abbrev  0x0000044e      0x184 BLTD.o
- .debug_abbrev  0x000005d2       0xa0 BLTD_Cfg.o
- .debug_abbrev  0x00000672      0x129 BTN.o
- .debug_abbrev  0x0000079b       0x7f BTN_CFG.o
- .debug_abbrev  0x0000081a      0x127 CapApp.o
- .debug_abbrev  0x00000941      0x157 Debug.o
- .debug_abbrev  0x00000a98       0xa7 DIO.o
- .debug_abbrev  0x00000b3f       0x99 GPT.o
- .debug_abbrev  0x00000bd8       0xc3 GYRO.o
- .debug_abbrev  0x00000c9b      0x271 L3G4200D.o
- .debug_abbrev  0x00000f0c       0x74 L3G4200D_Lcfg.o
- .debug_abbrev  0x00000f80      0x10d LED.o
- .debug_abbrev  0x0000108d       0x7f LED_Cfg.o
- .debug_abbrev  0x0000110c      0x127 SPI.o
- .debug_abbrev  0x00001233      0x15c UART_Drv.o
- .debug_abbrev  0x0000138f       0x69 UART_Lcg.o
- .debug_abbrev  0x000013f8       0xf3 UTL.o
- .debug_abbrev  0x000014eb      0x22f WMGR.o
- .debug_abbrev  0x0000171a       0x5d WMGR_CFG.o
+ .debug_abbrev  0x0000044e      0x127 CapApp.o
+ .debug_abbrev  0x00000575       0xa0 Config/BLTD_Cfg.o
+ .debug_abbrev  0x00000615       0x7f Config/BTN_CFG.o
+ .debug_abbrev  0x00000694       0x74 Config/L3G4200D_Lcfg.o
+ .debug_abbrev  0x00000708       0x7f Config/LED_Cfg.o
+ .debug_abbrev  0x00000787       0x69 Config/UART_Lcg.o
+ .debug_abbrev  0x000007f0       0x5d Config/WMGR_CFG.o
+ .debug_abbrev  0x0000084d      0x157 Debug/Debug.o
+ .debug_abbrev  0x000009a4      0x184 HAL/BLTD.o
+ .debug_abbrev  0x00000b28      0x129 HAL/BTN.o
+ .debug_abbrev  0x00000c51       0xa7 HAL/DIO.o
+ .debug_abbrev  0x00000cf8       0x99 HAL/GPT.o
+ .debug_abbrev  0x00000d91       0xc3 HAL/GYRO.o
+ .debug_abbrev  0x00000e54      0x271 HAL/L3G4200D.o
+ .debug_abbrev  0x000010c5      0x10d HAL/LED.o
+ .debug_abbrev  0x000011d2      0x127 HAL/SPI.o
+ .debug_abbrev  0x000012f9      0x15c HAL/UART_Drv.o
+ .debug_abbrev  0x00001455       0xf3 HAL/UTL.o
+ .debug_abbrev  0x00001548      0x22f HAL/WMGR.o
 
-.debug_line     0x00000000     0x1cbb
+.debug_line     0x00000000     0x1e6f
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x109 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.132/gcc/dev/atmega8/avr4/crtatmega8.o
- .debug_line    0x00000109      0x1bd BLTD.o
- .debug_line    0x000002c6       0x55 BLTD_Cfg.o
- .debug_line    0x0000031b       0xd4 BTN.o
- .debug_line    0x000003ef       0x49 BTN_CFG.o
- .debug_line    0x00000438      0x2ad CapApp.o
- .debug_line    0x000006e5      0x213 Debug.o
- .debug_line    0x000008f8      0x148 DIO.o
- .debug_line    0x00000a40      0x121 GPT.o
- .debug_line    0x00000b61      0x28d GYRO.o
- .debug_line    0x00000dee      0x307 L3G4200D.o
- .debug_line    0x000010f5       0x55 L3G4200D_Lcfg.o
- .debug_line    0x0000114a       0xa0 LED.o
- .debug_line    0x000011ea       0x49 LED_Cfg.o
- .debug_line    0x00001233      0x13f SPI.o
- .debug_line    0x00001372      0x1f5 UART_Drv.o
- .debug_line    0x00001567       0x4c UART_Lcg.o
- .debug_line    0x000015b3      0x14e UTL.o
- .debug_line    0x00001701      0x57d WMGR.o
- .debug_line    0x00001c7e       0x3d WMGR_CFG.o
+ .debug_line    0x00000109      0x2e0 CapApp.o
+ .debug_line    0x000003e9       0x6b Config/BLTD_Cfg.o
+ .debug_line    0x00000454       0x4e Config/BTN_CFG.o
+ .debug_line    0x000004a2       0x5a Config/L3G4200D_Lcfg.o
+ .debug_line    0x000004fc       0x4e Config/LED_Cfg.o
+ .debug_line    0x0000054a       0x51 Config/UART_Lcg.o
+ .debug_line    0x0000059b       0x42 Config/WMGR_CFG.o
+ .debug_line    0x000005dd      0x23a Debug/Debug.o
+ .debug_line    0x00000817      0x20b HAL/BLTD.o
+ .debug_line    0x00000a22       0xe7 HAL/BTN.o
+ .debug_line    0x00000b09      0x15b HAL/DIO.o
+ .debug_line    0x00000c64      0x123 HAL/GPT.o
+ .debug_line    0x00000d87      0x2a0 HAL/GYRO.o
+ .debug_line    0x00001027      0x332 HAL/L3G4200D.o
+ .debug_line    0x00001359       0xb3 HAL/LED.o
+ .debug_line    0x0000140c      0x152 HAL/SPI.o
+ .debug_line    0x0000155e      0x208 HAL/UART_Drv.o
+ .debug_line    0x00001766      0x161 HAL/UTL.o
+ .debug_line    0x000018c7      0x5a8 HAL/WMGR.o
 
 .debug_frame    0x00000000      0x72c
  *(.debug_frame)
- .debug_frame   0x00000000       0xd0 BLTD.o
- .debug_frame   0x000000d0       0x40 BTN.o
- .debug_frame   0x00000110       0x34 CapApp.o
- .debug_frame   0x00000144       0x54 Debug.o
- .debug_frame   0x00000198       0x44 DIO.o
- .debug_frame   0x000001dc       0xe4 GPT.o
- .debug_frame   0x000002c0       0x64 GYRO.o
- .debug_frame   0x00000324       0xe8 L3G4200D.o
- .debug_frame   0x0000040c       0x54 LED.o
- .debug_frame   0x00000460       0x40 SPI.o
- .debug_frame   0x000004a0       0xe8 UART_Drv.o
- .debug_frame   0x00000588       0x7c UTL.o
- .debug_frame   0x00000604      0x128 WMGR.o
+ .debug_frame   0x00000000       0x34 CapApp.o
+ .debug_frame   0x00000034       0x54 Debug/Debug.o
+ .debug_frame   0x00000088       0xd0 HAL/BLTD.o
+ .debug_frame   0x00000158       0x40 HAL/BTN.o
+ .debug_frame   0x00000198       0x44 HAL/DIO.o
+ .debug_frame   0x000001dc       0xe4 HAL/GPT.o
+ .debug_frame   0x000002c0       0x64 HAL/GYRO.o
+ .debug_frame   0x00000324       0xe8 HAL/L3G4200D.o
+ .debug_frame   0x0000040c       0x54 HAL/LED.o
+ .debug_frame   0x00000460       0x40 HAL/SPI.o
+ .debug_frame   0x000004a0       0xe8 HAL/UART_Drv.o
+ .debug_frame   0x00000588       0x7c HAL/UTL.o
+ .debug_frame   0x00000604      0x128 HAL/WMGR.o
 
-.debug_str      0x00000000     0x1060
+.debug_str      0x00000000     0x1097
  *(.debug_str)
  .debug_str     0x00000000      0x17a C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.132/gcc/dev/atmega8/avr4/crtatmega8.o
- .debug_str     0x0000017a      0x355 BLTD.o
-                                0x3a1 (size before relaxing)
- .debug_str     0x000004cf       0x20 BLTD_Cfg.o
-                                0x1fd (size before relaxing)
- .debug_str     0x000004ef       0x7c BTN.o
-                                0x219 (size before relaxing)
- .debug_str     0x0000056b        0xf BTN_CFG.o
-                                0x1ac (size before relaxing)
- .debug_str     0x0000057a      0x145 CapApp.o
-                                0x31a (size before relaxing)
- .debug_str     0x000006bf       0x82 Debug.o
-                                0x221 (size before relaxing)
- .debug_str     0x00000741       0x25 DIO.o
-                                0x1e0 (size before relaxing)
- .debug_str     0x00000766       0x63 GPT.o
-                                0x1ee (size before relaxing)
- .debug_str     0x000007c9       0x85 GYRO.o
+ .debug_str     0x0000017a      0x2b4 CapApp.o
+                                0x319 (size before relaxing)
+ .debug_str     0x0000042e       0x9d Config/BLTD_Cfg.o
+                                0x201 (size before relaxing)
+ .debug_str     0x000004cb       0x43 Config/BTN_CFG.o
+                                0x1b0 (size before relaxing)
+ .debug_str     0x0000050e      0x17c Config/L3G4200D_Lcfg.o
+                                0x2e0 (size before relaxing)
+ .debug_str     0x0000068a       0x4e Config/LED_Cfg.o
                                 0x1bb (size before relaxing)
- .debug_str     0x0000084e      0x30b L3G4200D.o
-                                0x53f (size before relaxing)
- .debug_str     0x00000b59       0x15 L3G4200D_Lcfg.o
-                                0x2dc (size before relaxing)
- .debug_str     0x00000b6e       0x53 LED.o
-                                0x204 (size before relaxing)
- .debug_str     0x00000bc1        0xf LED_Cfg.o
-                                0x1b7 (size before relaxing)
- .debug_str     0x00000bd0       0x81 SPI.o
-                                0x22d (size before relaxing)
- .debug_str     0x00000c51       0xf3 UART_Drv.o
-                                0x2a5 (size before relaxing)
- .debug_str     0x00000d44       0x10 UART_Lcg.o
-                                0x165 (size before relaxing)
- .debug_str     0x00000d54       0xb5 UTL.o
-                                0x216 (size before relaxing)
- .debug_str     0x00000e09      0x247 WMGR.o
-                                0x5b3 (size before relaxing)
- .debug_str     0x00001050       0x10 WMGR_CFG.o
-                                0x1d9 (size before relaxing)
+ .debug_str     0x000006d8       0x4c Config/UART_Lcg.o
+                                0x169 (size before relaxing)
+ .debug_str     0x00000724       0x70 Config/WMGR_CFG.o
+                                0x1dd (size before relaxing)
+ .debug_str     0x00000794       0x86 Debug/Debug.o
+                                0x224 (size before relaxing)
+ .debug_str     0x0000081a      0x17c HAL/BLTD.o
+                                0x3a2 (size before relaxing)
+ .debug_str     0x00000996       0x42 HAL/BTN.o
+                                0x21a (size before relaxing)
+ .debug_str     0x000009d8       0x27 HAL/DIO.o
+                                0x1e1 (size before relaxing)
+ .debug_str     0x000009ff       0x65 HAL/GPT.o
+                                0x1ef (size before relaxing)
+ .debug_str     0x00000a64       0x87 HAL/GYRO.o
+                                0x1bc (size before relaxing)
+ .debug_str     0x00000aeb      0x1ab HAL/L3G4200D.o
+                                0x540 (size before relaxing)
+ .debug_str     0x00000c96       0x1b HAL/LED.o
+                                0x205 (size before relaxing)
+ .debug_str     0x00000cb1       0x83 HAL/SPI.o
+                                0x22e (size before relaxing)
+ .debug_str     0x00000d34       0xbe HAL/UART_Drv.o
+                                0x2a6 (size before relaxing)
+ .debug_str     0x00000df2       0xb7 HAL/UTL.o
+                                0x217 (size before relaxing)
+ .debug_str     0x00000ea9      0x1ee HAL/WMGR.o
+                                0x5b4 (size before relaxing)
 
 .debug_loc      0x00000000     0x204a
  *(.debug_loc)
- .debug_loc     0x00000000      0x1de BLTD.o
- .debug_loc     0x000001de      0x140 BTN.o
- .debug_loc     0x0000031e       0x96 CapApp.o
- .debug_loc     0x000003b4      0x2ab Debug.o
- .debug_loc     0x0000065f      0x21c DIO.o
- .debug_loc     0x0000087b      0x200 GPT.o
- .debug_loc     0x00000a7b       0xf0 GYRO.o
- .debug_loc     0x00000b6b      0x732 L3G4200D.o
- .debug_loc     0x0000129d       0xb9 LED.o
- .debug_loc     0x00001356       0x97 SPI.o
- .debug_loc     0x000013ed      0x1ac UART_Drv.o
- .debug_loc     0x00001599      0x4c4 UTL.o
- .debug_loc     0x00001a5d      0x5ed WMGR.o
+ .debug_loc     0x00000000       0x96 CapApp.o
+ .debug_loc     0x00000096      0x2ab Debug/Debug.o
+ .debug_loc     0x00000341      0x1de HAL/BLTD.o
+ .debug_loc     0x0000051f      0x140 HAL/BTN.o
+ .debug_loc     0x0000065f      0x21c HAL/DIO.o
+ .debug_loc     0x0000087b      0x200 HAL/GPT.o
+ .debug_loc     0x00000a7b       0xf0 HAL/GYRO.o
+ .debug_loc     0x00000b6b      0x732 HAL/L3G4200D.o
+ .debug_loc     0x0000129d       0xb9 HAL/LED.o
+ .debug_loc     0x00001356       0x97 HAL/SPI.o
+ .debug_loc     0x000013ed      0x1ac HAL/UART_Drv.o
+ .debug_loc     0x00001599      0x4c4 HAL/UTL.o
+ .debug_loc     0x00001a5d      0x5ed HAL/WMGR.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -1161,19 +1161,19 @@ END GROUP
 
 .debug_ranges   0x00000000      0x248
  *(.debug_ranges)
- .debug_ranges  0x00000000       0x48 BLTD.o
- .debug_ranges  0x00000048       0x18 BTN.o
- .debug_ranges  0x00000060       0x18 CapApp.o
- .debug_ranges  0x00000078       0x20 Debug.o
- .debug_ranges  0x00000098       0x20 DIO.o
- .debug_ranges  0x000000b8       0x28 GPT.o
- .debug_ranges  0x000000e0       0x20 GYRO.o
- .debug_ranges  0x00000100       0x58 L3G4200D.o
- .debug_ranges  0x00000158       0x18 LED.o
- .debug_ranges  0x00000170       0x18 SPI.o
- .debug_ranges  0x00000188       0x40 UART_Drv.o
- .debug_ranges  0x000001c8       0x30 UTL.o
- .debug_ranges  0x000001f8       0x50 WMGR.o
+ .debug_ranges  0x00000000       0x18 CapApp.o
+ .debug_ranges  0x00000018       0x20 Debug/Debug.o
+ .debug_ranges  0x00000038       0x48 HAL/BLTD.o
+ .debug_ranges  0x00000080       0x18 HAL/BTN.o
+ .debug_ranges  0x00000098       0x20 HAL/DIO.o
+ .debug_ranges  0x000000b8       0x28 HAL/GPT.o
+ .debug_ranges  0x000000e0       0x20 HAL/GYRO.o
+ .debug_ranges  0x00000100       0x58 HAL/L3G4200D.o
+ .debug_ranges  0x00000158       0x18 HAL/LED.o
+ .debug_ranges  0x00000170       0x18 HAL/SPI.o
+ .debug_ranges  0x00000188       0x40 HAL/UART_Drv.o
+ .debug_ranges  0x000001c8       0x30 HAL/UTL.o
+ .debug_ranges  0x000001f8       0x50 HAL/WMGR.o
 
 .debug_macro
  *(.debug_macro)

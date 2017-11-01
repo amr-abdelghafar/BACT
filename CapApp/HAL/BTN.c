@@ -2,12 +2,12 @@
 * BTN.c
 *
 * Created: 28/02/2016 02:23:43 م
-*  Author: hossam
+*  Author: hossam & Amr Tarek
 */
-#include "BasicTypes.h"
+#include "../Config/BasicTypes.h"
 #include "DIO.h"
 #include "BTN.h"
-#include "BTN_CFG.h"
+#include "../Config/BTN_CFG.h"
 
 #define STATE_OPEN 0x00
 #define STATE_CLOSED 0x01

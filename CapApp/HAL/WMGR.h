@@ -2,7 +2,7 @@
  * WMGR.h
  *
  * Created: 5/12/2016 12:01:35 AM
- *  Author: hossam
+ *  Author: hossam & Amr Tarek
  */ 
 
 

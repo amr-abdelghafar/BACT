@@ -2,13 +2,13 @@
  * Debug.h
  *
  * Created: 5/17/2016 2:36:32 PM
- *  Author: hossam
+ *  Author: hossam & Amr Tarek
  */ 
 
 
 #ifndef DEBUG_H_
 #define DEBUG_H_
-#include "WMGR_Cfg.h"
+#include "../Config/WMGR_Cfg.h"
 #include <util/delay.h>
 #if(DEVICE_ROLE == DEVICE_ROLE_SLAVE)
 #define BUZZER_PORT PC

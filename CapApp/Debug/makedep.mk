@@ -2,49 +2,49 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
-BLTD.c
-
-BLTD_Cfg.c
-
-BTN.c
-
-BTN_CFG.c
-
 CapApp.c
 
-Debug.c
+Config\BLTD_Cfg.c
 
-DIO.c
+Config\BTN_CFG.c
 
-GPT.c
+Config\L3G4200D_Lcfg.c
 
-GYRO.c
+Config\LED_Cfg.c
 
-L3G4200D.c
+Config\SPI_Lcfg.c
 
-L3G4200D_Lcfg.c
+Config\UART_Lcg.c
 
-LED.c
+Config\WMGR_CFG.c
 
-LED_Cfg.c
+Debug\Debug.c
+
+HAL\BLTD.c
+
+HAL\BTN.c
+
+HAL\DIO.c
+
+HAL\GPT.c
+
+HAL\GYRO.c
+
+HAL\L3G4200D.c
+
+HAL\LED.c
+
+HAL\MOTOR.c
+
+HAL\PWM.c
+
+HAL\SPI.c
+
+HAL\UART_Drv.c
+
+HAL\UTL.c
+
+HAL\WMGR.c
 
 ModukeTemp.c
-
-MOTOR.c
-
-PWM.c
-
-SPI.c
-
-SPI_Lcfg.c
-
-UART_Drv.c
-
-UART_Lcg.c
-
-UTL.c
-
-WMGR.c
-
-WMGR_CFG.c
 

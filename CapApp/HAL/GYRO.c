@@ -2,10 +2,10 @@
 * GYRO.c
 *
 * Created: 5/2/2016 7:29:58 PM
-*  Author: hossam
+*  Author: hossam & Amr Tarek
 */
 
-#include "BasicTypes.h"
+#include "../Config/BasicTypes.h"
 #include "GYRO.h"
 #include "L3G4200D.h"
 u8 GetxDiff(void)

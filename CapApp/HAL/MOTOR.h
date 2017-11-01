@@ -2,14 +2,14 @@
  * MOTOR.h
  *
  * Created: 4/22/2016 12:20:28 AM
- *  Author: hossam
+ *  Author: hossam & Amr Tarek
  */ 
 
 
 #ifndef MOTOR_H_
 #define MOTOR_H_
 
-#include "BasicTypes.h"
+#include "../Config/BasicTypes.h"
 #include "DIO.h"
 
 #define INIT_DIRCTION_PINS() DIO_InitPortDirection(PD,0xff,0xC0)

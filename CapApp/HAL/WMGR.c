@@ -2,17 +2,17 @@
 * WMGR.c
 *
 * Created: 5/12/2016 12:01:51 AM
-*  Author: hossam
+*  Author: hossam & Amr Tarek
 */
-#include "BasicTypes.h"
+#include "../Config/BasicTypes.h"
 #include "BLTD.h"
 #include "DIO.h"
 #include "WMGR.h"
-#include "WMGR_Cfg.h"
+#include "../Config/WMGR_Cfg.h"
 #include "UART_Drv.h"
 #include "UTL.h"
-#include "BLTD_Cfg.h"
-#include "Debug.h"
+#include "../Config/BLTD_Cfg.h"
+#include "../Debug/Debug.h"
 
 #define POWER_STATE_OFF                 0x00
 #define POWER_STATE_IN_PROGRESS         0x01

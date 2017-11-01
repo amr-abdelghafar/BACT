@@ -28,234 +28,280 @@
     <eraseonlaunchrule>0</eraseonlaunchrule>
     <AsfFrameworkConfig>
       <framework-data>
-  <options />
-  <configurations />
-  <files />
-  <documentation help="" />
-  <offline-documentation help="" />
-  <dependencies>
-    <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.25.0" />
-  </dependencies>
-</framework-data>
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.25.0" />
+        </dependencies>
+      </framework-data>
     </AsfFrameworkConfig>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>
       <AvrGcc>
-  <avrgcc.common.Device>-mmcu=atmega8 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.2.132\gcc\dev\atmega8"</avrgcc.common.Device>
-  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
-  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
-  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
-  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
-  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
-  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
-  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
-  <avrgcc.compiler.symbols.DefSymbols>
-    <ListValues>
-      <Value>NDEBUG</Value>
-    </ListValues>
-  </avrgcc.compiler.symbols.DefSymbols>
-  <avrgcc.compiler.directories.IncludePaths>
-    <ListValues>
-      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.132\include</Value>
-    </ListValues>
-  </avrgcc.compiler.directories.IncludePaths>
-  <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
-  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
-  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
-  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
-  <avrgcc.linker.libraries.Libraries>
-    <ListValues>
-      <Value>libm</Value>
-    </ListValues>
-  </avrgcc.linker.libraries.Libraries>
-  <avrgcc.assembler.general.IncludePaths>
-    <ListValues>
-      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.132\include</Value>
-    </ListValues>
-  </avrgcc.assembler.general.IncludePaths>
-</AvrGcc>
+        <avrgcc.common.Device>-mmcu=atmega8 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.2.132\gcc\dev\atmega8"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.132\include</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.132\include</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+      </AvrGcc>
     </ToolchainSettings>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <ToolchainSettings>
       <AvrGcc>
-  <avrgcc.common.Device>-mmcu=atmega8 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.2.132\gcc\dev\atmega8"</avrgcc.common.Device>
-  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
-  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
-  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
-  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
-  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
-  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
-  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
-  <avrgcc.compiler.symbols.DefSymbols>
-    <ListValues>
-      <Value>DEBUG</Value>
-    </ListValues>
-  </avrgcc.compiler.symbols.DefSymbols>
-  <avrgcc.compiler.directories.IncludePaths>
-    <ListValues>
-      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.132\include</Value>
-    </ListValues>
-  </avrgcc.compiler.directories.IncludePaths>
-  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
-  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
-  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
-  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
-  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
-  <avrgcc.linker.libraries.Libraries>
-    <ListValues>
-      <Value>libm</Value>
-    </ListValues>
-  </avrgcc.linker.libraries.Libraries>
-  <avrgcc.assembler.general.IncludePaths>
-    <ListValues>
-      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.132\include</Value>
-    </ListValues>
-  </avrgcc.assembler.general.IncludePaths>
-  <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
-</AvrGcc>
+        <avrgcc.common.Device>-mmcu=atmega8 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.2.132\gcc\dev\atmega8"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.132\include</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.132\include</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+        <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+      </AvrGcc>
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="BasicTypes.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="BLTD.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="BLTD.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="BLTD_Cfg.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="BLTD_Cfg.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="BTN.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="BTN.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="BTN_CFG.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="BTN_CFG.h">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="CapApp.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Debug.c">
+    <Compile Include="Config\BasicTypes.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Debug.h">
+    <Compile Include="Config\BLTD_Cfg.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="DIO.c">
+    <Compile Include="Config\BLTD_Cfg.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="DIO.h">
+    <Compile Include="Config\BTN_CFG.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="GPT.c">
+    <Compile Include="Config\BTN_CFG.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="GPT.h">
+    <Compile Include="Config\L3G4200D_Cfg.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="GYRO.c">
+    <Compile Include="Config\L3G4200D_Lcfg.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="GYRO.h">
+    <Compile Include="Config\L3G4200D_Lcfg.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="L3G4200D.c">
+    <Compile Include="Config\LED_Cfg.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="L3G4200D.h">
+    <Compile Include="Config\LED_Cfg.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="L3G4200D_Cfg.h">
+    <Compile Include="Config\SPI_Lcfg.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="L3G4200D_Lcfg.c">
+    <Compile Include="Config\SPI_Lcfg.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="L3G4200D_Lcfg.h">
+    <Compile Include="Config\UART_LCFG.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="LED.c">
+    <Compile Include="Config\UART_Lcg.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="LED.h">
+    <Compile Include="Config\WMGR_CFG.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="LED_Cfg.c">
+    <Compile Include="Config\WMGR_Cfg.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="LED_Cfg.h">
+    <Compile Include="Debug\Debug.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Debug\Debug.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\BLTD.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\BLTD.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\BTN.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\BTN.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\DIO.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\DIO.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\GPT.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\GPT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\GYRO.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\GYRO.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\L3G4200D.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\L3G4200D.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LED.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LED.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\MOTOR.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\MOTOR.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\PWM.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\PWM.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SPI.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SPI.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\UART_Drv.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\UART_Drv.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\UTL.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\UTL.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\WMGR.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\WMGR.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="ModukeTemp.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="MOTOR.c">
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Config\" />
+    <Folder Include="Debug\" />
+    <Folder Include="HAL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CapApp.componentinfo.xml">
       <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="MOTOR.h">
+    </None>
+    <None Include="Debug\CapApp.d">
       <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="PWM.c">
+    </None>
+    <None Include="Debug\CapApp.eep">
       <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="PWM.h">
+    </None>
+    <None Include="Debug\CapApp.elf">
       <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="SPI.c">
+    </None>
+    <None Include="Debug\CapApp.hex">
       <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="SPI.h">
+    </None>
+    <None Include="Debug\CapApp.lss">
       <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="SPI_Lcfg.c">
+    </None>
+    <None Include="Debug\CapApp.map">
       <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="SPI_Lcfg.h">
+    </None>
+    <None Include="Debug\CapApp.o">
       <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="UART_Drv.c">
+    </None>
+    <None Include="Debug\CapApp.srec">
       <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="UART_Drv.h">
+    </None>
+    <None Include="Debug\makedep.mk">
       <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="UART_LCFG.h">
+    </None>
+    <None Include="Debug\Makefile">
       <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="UART_Lcg.c">
+    </None>
+    <None Include="Debug\ModukeTemp.d">
       <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="UTL.c">
+    </None>
+    <None Include="Debug\ModukeTemp.o">
       <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="UTL.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="WMGR.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="WMGR.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="WMGR_CFG.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="WMGR_Cfg.h">
-      <SubType>compile</SubType>
-    </Compile>
+    </None>
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>

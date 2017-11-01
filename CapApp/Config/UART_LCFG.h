@@ -2,7 +2,7 @@
  * UART_LCFG.h
  *
  * Created: 26/07/2015 06:33:52 م
- *  Author: hossam
+ *  Author: hossam & Amr Tarek
  */ 
 
 

@@ -2,12 +2,12 @@
  * L3G4200D.c
  *
  * Created: 24/09/2015 09:13:31 م
- *  Author: hossam
+ *  Author: hossam & Amr Tarek
  */ 
 
 #include "L3G4200D.h"
-#include "L3G4200D_Cfg.h"
-#include "L3G4200D_Lcfg.h"
+#include "../Config/L3G4200D_Cfg.h"
+#include "../Config/L3G4200D_Lcfg.h"
 #include "SPI.h"
 /*****************************************************************************************************/
                                          /* Local Symbols */

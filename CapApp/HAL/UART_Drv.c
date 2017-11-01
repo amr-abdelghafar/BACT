@@ -2,12 +2,12 @@
  * UART_Drv.c
  *
  * Created: 26/07/2015 05:23:46 م
- *  Author: hossam
+ *  Author: hossam & Amr Tarek
  */ 
 #include "UART_Drv.h"
 #include <avr/io.h>
-#include "BasicTypes.h"
-#include "UART_LCFG.h"
+#include "../Config/BasicTypes.h"
+#include "../Config/UART_LCFG.h"
 #include <avr/interrupt.h>
 static const u8* TxBuffAdd = 0;
 static u16 TxCounter = 0;

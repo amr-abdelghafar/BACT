@@ -2,7 +2,7 @@
  * WMGR_Cfg.h
  *
  * Created: 5/12/2016 12:02:15 AM
- *  Author: hossam
+ *  Author: hossam & Amr Tarek
  */ 
 
 
@@ -10,9 +10,9 @@
 #define WMGR_CFG_H_
 
 #include "BasicTypes.h"
-#include "BLTD.h"
-#include "WMGR.h"
-#include "DIO.h"
+#include "../HAL/BLTD.h"
+#include "../HAL/WMGR.h"
+#include "../HAL/DIO.h"
 #include "BLTD_Cfg.h"
 
  

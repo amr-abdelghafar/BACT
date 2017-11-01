@@ -2,7 +2,7 @@
 * GYROTemp.c
 *
 * Created: 5/25/2016 2:17:17 AM
-*  Author: hossam
+*  Author: hossam & Amr Tarek
 */
 #if 0
 #include "BasicTypes.h"

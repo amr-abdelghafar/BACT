@@ -2,14 +2,14 @@
  * L3G4200D.h
  *
  * Created: 24/09/2015 09:13:19 م
- *  Author: hossam
+ *  Author: hossam & Amr Tarek
  */ 
 
 
 #ifndef L3G4200D_H_
 #define L3G4200D_H_
 
-#include "BasicTypes.h"
+#include "../Config/BasicTypes.h"
 /*Wakeup States*/
 #define u8WAKEUP_DN 0x00
 #define u8WAKEUP_IN_PROGRESS 0x01
