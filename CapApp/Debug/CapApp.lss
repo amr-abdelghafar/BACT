@@ -1,0 +1,3305 @@
+
+CapApp.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00001170  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         000001f4  00800060  00001170  00001204  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          000000b7  00800254  00800254  000013f8  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000013f8  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00001428  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000388  00000000  00000000  00001464  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00003d32  00000000  00000000  000017ec  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00001777  00000000  00000000  0000551e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00001cbb  00000000  00000000  00006c95  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  0000072c  00000000  00000000  00008950  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00001060  00000000  00000000  0000907c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    0000204a  00000000  00000000  0000a0dc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000248  00000000  00000000  0000c126  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	1b c0       	rjmp	.+54     	; 0x38 <__ctors_end>
+       2:	35 c0       	rjmp	.+106    	; 0x6e <__bad_interrupt>
+       4:	34 c0       	rjmp	.+104    	; 0x6e <__bad_interrupt>
+       6:	1c c3       	rjmp	.+1592   	; 0x640 <__vector_3>
+       8:	32 c0       	rjmp	.+100    	; 0x6e <__bad_interrupt>
+       a:	31 c0       	rjmp	.+98     	; 0x6e <__bad_interrupt>
+       c:	30 c0       	rjmp	.+96     	; 0x6e <__bad_interrupt>
+       e:	2f c0       	rjmp	.+94     	; 0x6e <__bad_interrupt>
+      10:	2e c0       	rjmp	.+92     	; 0x6e <__bad_interrupt>
+      12:	ef c2       	rjmp	.+1502   	; 0x5f2 <__vector_9>
+      14:	2c c0       	rjmp	.+88     	; 0x6e <__bad_interrupt>
+      16:	93 c5       	rjmp	.+2854   	; 0xb3e <__vector_11>
+      18:	2a c0       	rjmp	.+84     	; 0x6e <__bad_interrupt>
+      1a:	29 c0       	rjmp	.+82     	; 0x6e <__bad_interrupt>
+      1c:	28 c0       	rjmp	.+80     	; 0x6e <__bad_interrupt>
+      1e:	27 c0       	rjmp	.+78     	; 0x6e <__bad_interrupt>
+      20:	26 c0       	rjmp	.+76     	; 0x6e <__bad_interrupt>
+      22:	25 c0       	rjmp	.+74     	; 0x6e <__bad_interrupt>
+      24:	24 c0       	rjmp	.+72     	; 0x6e <__bad_interrupt>
+      26:	3d c1       	rjmp	.+634    	; 0x2a2 <Test+0x18>
+      28:	5b c1       	rjmp	.+694    	; 0x2e0 <Test+0x56>
+      2a:	31 c2       	rjmp	.+1122   	; 0x48e <__stack+0x2f>
+      2c:	7f c1       	rjmp	.+766    	; 0x32c <Test+0xa2>
+      2e:	ad c1       	rjmp	.+858    	; 0x38a <Test+0x100>
+      30:	2e c2       	rjmp	.+1116   	; 0x48e <__stack+0x2f>
+      32:	c7 c1       	rjmp	.+910    	; 0x3c2 <Test+0x138>
+      34:	a2 c1       	rjmp	.+836    	; 0x37a <Test+0xf0>
+      36:	15 c2       	rjmp	.+1066   	; 0x462 <__stack+0x3>
+
+00000038 <__ctors_end>:
+      38:	11 24       	eor	r1, r1
+      3a:	1f be       	out	0x3f, r1	; 63
+      3c:	cf e5       	ldi	r28, 0x5F	; 95
+      3e:	d4 e0       	ldi	r29, 0x04	; 4
+      40:	de bf       	out	0x3e, r29	; 62
+      42:	cd bf       	out	0x3d, r28	; 61
+
+00000044 <__do_copy_data>:
+      44:	12 e0       	ldi	r17, 0x02	; 2
+      46:	a0 e6       	ldi	r26, 0x60	; 96
+      48:	b0 e0       	ldi	r27, 0x00	; 0
+      4a:	e0 e7       	ldi	r30, 0x70	; 112
+      4c:	f1 e1       	ldi	r31, 0x11	; 17
+      4e:	02 c0       	rjmp	.+4      	; 0x54 <__do_copy_data+0x10>
+      50:	05 90       	lpm	r0, Z+
+      52:	0d 92       	st	X+, r0
+      54:	a4 35       	cpi	r26, 0x54	; 84
+      56:	b1 07       	cpc	r27, r17
+      58:	d9 f7       	brne	.-10     	; 0x50 <__do_copy_data+0xc>
+
+0000005a <__do_clear_bss>:
+      5a:	23 e0       	ldi	r18, 0x03	; 3
+      5c:	a4 e5       	ldi	r26, 0x54	; 84
+      5e:	b2 e0       	ldi	r27, 0x02	; 2
+      60:	01 c0       	rjmp	.+2      	; 0x64 <.do_clear_bss_start>
+
+00000062 <.do_clear_bss_loop>:
+      62:	1d 92       	st	X+, r1
+
+00000064 <.do_clear_bss_start>:
+      64:	ab 30       	cpi	r26, 0x0B	; 11
+      66:	b2 07       	cpc	r27, r18
+      68:	e1 f7       	brne	.-8      	; 0x62 <.do_clear_bss_loop>
+      6a:	12 d2       	rcall	.+1060   	; 0x490 <main>
+      6c:	7f c8       	rjmp	.-3842   	; 0xfffff16c <__eeprom_end+0xff7ef16c>
+
+0000006e <__bad_interrupt>:
+      6e:	c8 cf       	rjmp	.-112    	; 0x0 <__vectors>
+
+00000070 <RxcCallBackFun>:
+/*********************************************************/
+/****************Private Functions************************/
+
+/*******************************************************************************************************/
+static void RxcCallBackFun(void)
+{
+      70:	cf 93       	push	r28
+	u8 RespState = 0;
+
+	RespState = UTL_MemCmp(BTResPonseBuffer,BLTD_CmdList[BLTD_CmdInProcess].RespPtr,BLTD_CmdList[BLTD_CmdInProcess].RespSize);
+      72:	80 91 56 02 	lds	r24, 0x0256	; 0x800256 <BLTD_CmdInProcess>
+      76:	90 e0       	ldi	r25, 0x00	; 0
+      78:	fc 01       	movw	r30, r24
+      7a:	ee 0f       	add	r30, r30
+      7c:	ff 1f       	adc	r31, r31
+      7e:	df 01       	movw	r26, r30
+      80:	a8 0f       	add	r26, r24
+      82:	b9 1f       	adc	r27, r25
+      84:	aa 0f       	add	r26, r26
+      86:	bb 1f       	adc	r27, r27
+      88:	aa 0f       	add	r26, r26
+      8a:	bb 1f       	adc	r27, r27
+      8c:	a8 57       	subi	r26, 0x78	; 120
+      8e:	bf 4f       	sbci	r27, 0xFF	; 255
+      90:	18 96       	adiw	r26, 0x08	; 8
+      92:	4c 91       	ld	r20, X
+      94:	18 97       	sbiw	r26, 0x08	; 8
+      96:	50 e0       	ldi	r21, 0x00	; 0
+      98:	fd 01       	movw	r30, r26
+      9a:	66 81       	ldd	r22, Z+6	; 0x06
+      9c:	77 81       	ldd	r23, Z+7	; 0x07
+      9e:	80 e6       	ldi	r24, 0x60	; 96
+      a0:	90 e0       	ldi	r25, 0x00	; 0
+      a2:	ce d5       	rcall	.+2972   	; 0xc40 <UTL_MemCmp>
+      a4:	c8 2f       	mov	r28, r24
+	if(RespState == 0)
+      a6:	81 11       	cpse	r24, r1
+      a8:	12 c0       	rjmp	.+36     	; 0xce <RxcCallBackFun+0x5e>
+	{
+		if(BLTD_CmdInProcess == GET_MAC_ADDRESS_ID)
+      aa:	80 91 56 02 	lds	r24, 0x0256	; 0x800256 <BLTD_CmdInProcess>
+      ae:	85 30       	cpi	r24, 0x05	; 5
+      b0:	11 f5       	brne	.+68     	; 0xf6 <RxcCallBackFun+0x86>
+		{
+			
+			UTL_MemCpy(BLTD_CmdList[BLTD_CmdInProcess].RespParamPtr,&BTResPonseBuffer[BLTD_CmdList[BLTD_CmdInProcess].RespSize],BLTD_CmdList[BLTD_CmdInProcess].RespParamSize);
+      b2:	40 91 cf 00 	lds	r20, 0x00CF	; 0x8000cf <BLTD_CmdList+0x47>
+      b6:	50 e0       	ldi	r21, 0x00	; 0
+      b8:	60 91 cc 00 	lds	r22, 0x00CC	; 0x8000cc <BLTD_CmdList+0x44>
+      bc:	70 e0       	ldi	r23, 0x00	; 0
+      be:	60 5a       	subi	r22, 0xA0	; 160
+      c0:	7f 4f       	sbci	r23, 0xFF	; 255
+      c2:	80 91 cd 00 	lds	r24, 0x00CD	; 0x8000cd <BLTD_CmdList+0x45>
+      c6:	90 91 ce 00 	lds	r25, 0x00CE	; 0x8000ce <BLTD_CmdList+0x46>
+      ca:	ac d5       	rcall	.+2904   	; 0xc24 <UTL_MemCpy>
+      cc:	14 c0       	rjmp	.+40     	; 0xf6 <RxcCallBackFun+0x86>
+		
+		RespState = BLTD_RESP_STATE_VALID;
+	}
+	else
+	{
+		UART_TxBuffer(BTResPonseBuffer,BLTD_CmdList[BLTD_CmdInProcess].RespSize);
+      ce:	80 91 56 02 	lds	r24, 0x0256	; 0x800256 <BLTD_CmdInProcess>
+      d2:	90 e0       	ldi	r25, 0x00	; 0
+      d4:	fc 01       	movw	r30, r24
+      d6:	ee 0f       	add	r30, r30
+      d8:	ff 1f       	adc	r31, r31
+      da:	e8 0f       	add	r30, r24
+      dc:	f9 1f       	adc	r31, r25
+      de:	ee 0f       	add	r30, r30
+      e0:	ff 1f       	adc	r31, r31
+      e2:	ee 0f       	add	r30, r30
+      e4:	ff 1f       	adc	r31, r31
+      e6:	e8 57       	subi	r30, 0x78	; 120
+      e8:	ff 4f       	sbci	r31, 0xFF	; 255
+      ea:	60 85       	ldd	r22, Z+8	; 0x08
+      ec:	70 e0       	ldi	r23, 0x00	; 0
+      ee:	80 e6       	ldi	r24, 0x60	; 96
+      f0:	90 e0       	ldi	r25, 0x00	; 0
+      f2:	7a d5       	rcall	.+2804   	; 0xbe8 <UART_TxBuffer>
+		RespState = BLTD_RESP_STATE_INVALID;
+      f4:	c1 e0       	ldi	r28, 0x01	; 1
+	}
+	BLTD_RespCallBackPtr(BLTD_CmdInProcess,RespState);
+      f6:	e0 91 54 02 	lds	r30, 0x0254	; 0x800254 <__data_end>
+      fa:	f0 91 55 02 	lds	r31, 0x0255	; 0x800255 <__data_end+0x1>
+      fe:	6c 2f       	mov	r22, r28
+     100:	80 91 56 02 	lds	r24, 0x0256	; 0x800256 <BLTD_CmdInProcess>
+     104:	09 95       	icall
+	
+}
+     106:	cf 91       	pop	r28
+     108:	08 95       	ret
+
+0000010a <BLTD_Init>:
+
+static void RxcCallBackFun(void);
+
+/*******************Global Services***********************/
+void BLTD_Init(BLTD_RespCbkFnPtrType RespCallBackPtr)
+{
+     10a:	cf 93       	push	r28
+     10c:	df 93       	push	r29
+     10e:	ec 01       	movw	r28, r24
+	/*Init Key Pin*/
+	INIT_KEY_PIN();
+     110:	40 e2       	ldi	r20, 0x20	; 32
+     112:	6f ef       	ldi	r22, 0xFF	; 255
+     114:	81 e0       	ldi	r24, 0x01	; 1
+     116:	06 d2       	rcall	.+1036   	; 0x524 <DIO_InitPortDirection>
+     118:	40 e2       	ldi	r20, 0x20	; 32
+     11a:	60 e0       	ldi	r22, 0x00	; 0
+     11c:	81 e0       	ldi	r24, 0x01	; 1
+     11e:	26 d2       	rcall	.+1100   	; 0x56c <DIO_WritePort>
+	/*Init Pwr Pin*/
+	INIT_PWR_PIN();
+     120:	40 e8       	ldi	r20, 0x80	; 128
+     122:	6f ef       	ldi	r22, 0xFF	; 255
+     124:	82 e0       	ldi	r24, 0x02	; 2
+     126:	fe d1       	rcall	.+1020   	; 0x524 <DIO_InitPortDirection>
+     128:	40 e8       	ldi	r20, 0x80	; 128
+     12a:	60 e0       	ldi	r22, 0x00	; 0
+     12c:	82 e0       	ldi	r24, 0x02	; 2
+     12e:	1e d2       	rcall	.+1084   	; 0x56c <DIO_WritePort>
+	BLTD_RespCallBackPtr = 	RespCallBackPtr;
+     130:	d0 93 55 02 	sts	0x0255, r29	; 0x800255 <__data_end+0x1>
+     134:	c0 93 54 02 	sts	0x0254, r28	; 0x800254 <__data_end>
+	BLTD_CmdInProcess = 0xff;
+     138:	8f ef       	ldi	r24, 0xFF	; 255
+     13a:	80 93 56 02 	sts	0x0256, r24	; 0x800256 <BLTD_CmdInProcess>
+	UART_Init();
+     13e:	c7 d4       	rcall	.+2446   	; 0xace <UART_Init>
+}
+     140:	df 91       	pop	r29
+     142:	cf 91       	pop	r28
+     144:	08 95       	ret
+
+00000146 <BLTD_SendCmd>:
+/*********************************************************/
+void BLTD_SendCmd(u8 CommandId)
+{
+     146:	cf 92       	push	r12
+     148:	df 92       	push	r13
+     14a:	ef 92       	push	r14
+     14c:	ff 92       	push	r15
+     14e:	0f 93       	push	r16
+     150:	1f 93       	push	r17
+     152:	cf 93       	push	r28
+     154:	df 93       	push	r29
+     156:	e8 2e       	mov	r14, r24
+	u8 AddedLength = 0;
+	u8 LoopIndex;
+	/*Prepare Cmd*/
+	UTL_MemCpy(&BTCommandBuffer[0],BLTD_CmdList[CommandId].ComdPtr,BLTD_CmdList[CommandId].CmdSize);
+     158:	08 2f       	mov	r16, r24
+     15a:	10 e0       	ldi	r17, 0x00	; 0
+     15c:	68 01       	movw	r12, r16
+     15e:	cc 0c       	add	r12, r12
+     160:	dd 1c       	adc	r13, r13
+     162:	e6 01       	movw	r28, r12
+     164:	c0 0f       	add	r28, r16
+     166:	d1 1f       	adc	r29, r17
+     168:	cc 0f       	add	r28, r28
+     16a:	dd 1f       	adc	r29, r29
+     16c:	cc 0f       	add	r28, r28
+     16e:	dd 1f       	adc	r29, r29
+     170:	c8 57       	subi	r28, 0x78	; 120
+     172:	df 4f       	sbci	r29, 0xFF	; 255
+     174:	4a 81       	ldd	r20, Y+2	; 0x02
+     176:	50 e0       	ldi	r21, 0x00	; 0
+     178:	68 81       	ld	r22, Y
+     17a:	79 81       	ldd	r23, Y+1	; 0x01
+     17c:	87 e5       	ldi	r24, 0x57	; 87
+     17e:	92 e0       	ldi	r25, 0x02	; 2
+     180:	51 d5       	rcall	.+2722   	; 0xc24 <UTL_MemCpy>
+	AddedLength += BLTD_CmdList[CommandId].CmdSize;
+     182:	fa 80       	ldd	r15, Y+2	; 0x02
+	UTL_MemCpy(&BTCommandBuffer[AddedLength],BLTD_CmdList[CommandId].CmdParamPtr,BLTD_CmdList[CommandId].CmdParamSize);
+     184:	4d 81       	ldd	r20, Y+5	; 0x05
+     186:	50 e0       	ldi	r21, 0x00	; 0
+     188:	6b 81       	ldd	r22, Y+3	; 0x03
+     18a:	7c 81       	ldd	r23, Y+4	; 0x04
+     18c:	8f 2d       	mov	r24, r15
+     18e:	90 e0       	ldi	r25, 0x00	; 0
+     190:	89 5a       	subi	r24, 0xA9	; 169
+     192:	9d 4f       	sbci	r25, 0xFD	; 253
+     194:	47 d5       	rcall	.+2702   	; 0xc24 <UTL_MemCpy>
+	AddedLength +=BLTD_CmdList[CommandId].CmdParamSize;
+     196:	6d 81       	ldd	r22, Y+5	; 0x05
+     198:	f6 0e       	add	r15, r22
+				
+		}
+		AddedLength += LoopIndex;
+	}
+	#endif
+	UTL_MemCpy(&BTCommandBuffer[AddedLength],(u8*)"\r\n",2);
+     19a:	8f 2d       	mov	r24, r15
+     19c:	90 e0       	ldi	r25, 0x00	; 0
+     19e:	42 e0       	ldi	r20, 0x02	; 2
+     1a0:	50 e0       	ldi	r21, 0x00	; 0
+     1a2:	66 e7       	ldi	r22, 0x76	; 118
+     1a4:	71 e0       	ldi	r23, 0x01	; 1
+     1a6:	89 5a       	subi	r24, 0xA9	; 169
+     1a8:	9d 4f       	sbci	r25, 0xFD	; 253
+     1aa:	3c d5       	rcall	.+2680   	; 0xc24 <UTL_MemCpy>
+	AddedLength+=2;
+	UART_StartReception(BTResPonseBuffer,BLTD_CmdList[CommandId].RespSize + BLTD_CmdList[CommandId].RespParamSize,RxcCallBackFun);
+     1ac:	88 85       	ldd	r24, Y+8	; 0x08
+     1ae:	6b 85       	ldd	r22, Y+11	; 0x0b
+     1b0:	70 e0       	ldi	r23, 0x00	; 0
+     1b2:	68 0f       	add	r22, r24
+     1b4:	71 1d       	adc	r23, r1
+     1b6:	48 e3       	ldi	r20, 0x38	; 56
+     1b8:	50 e0       	ldi	r21, 0x00	; 0
+     1ba:	80 e6       	ldi	r24, 0x60	; 96
+     1bc:	90 e0       	ldi	r25, 0x00	; 0
+     1be:	ad d4       	rcall	.+2394   	; 0xb1a <UART_StartReception>
+	UART_TxBuffer(BTCommandBuffer,AddedLength);
+     1c0:	f3 94       	inc	r15
+     1c2:	f3 94       	inc	r15
+     1c4:	6f 2d       	mov	r22, r15
+     1c6:	70 e0       	ldi	r23, 0x00	; 0
+     1c8:	87 e5       	ldi	r24, 0x57	; 87
+     1ca:	92 e0       	ldi	r25, 0x02	; 2
+     1cc:	0d d5       	rcall	.+2586   	; 0xbe8 <UART_TxBuffer>
+	BLTD_CmdInProcess = CommandId;
+     1ce:	e0 92 56 02 	sts	0x0256, r14	; 0x800256 <BLTD_CmdInProcess>
+}
+     1d2:	df 91       	pop	r29
+     1d4:	cf 91       	pop	r28
+     1d6:	1f 91       	pop	r17
+     1d8:	0f 91       	pop	r16
+     1da:	ff 90       	pop	r15
+     1dc:	ef 90       	pop	r14
+     1de:	df 90       	pop	r13
+     1e0:	cf 90       	pop	r12
+     1e2:	08 95       	ret
+
+000001e4 <BLTD_SetDeviceName>:
+/*********************************************************/
+void BLTD_SetDeviceName( const u8* DeviceNamePtr,u8 DeviceNameLength)
+{
+	BLTD_CmdList[SET_DEVICE_NAME_ID].CmdParamPtr = (u8*)DeviceNamePtr;
+     1e4:	e8 e8       	ldi	r30, 0x88	; 136
+     1e6:	f0 e0       	ldi	r31, 0x00	; 0
+     1e8:	90 8b       	std	Z+16, r25	; 0x10
+     1ea:	87 87       	std	Z+15, r24	; 0x0f
+	BLTD_CmdList[SET_DEVICE_NAME_ID].CmdParamSize = DeviceNameLength;
+     1ec:	61 8b       	std	Z+17, r22	; 0x11
+	#if(MODULE_TYPE == MODULE_TYPE_M10)
+	BLTD_CmdList[SET_DEVICE_NAME_ID].RespParamSize = DeviceNameLength + 6;
+     1ee:	6a 5f       	subi	r22, 0xFA	; 250
+     1f0:	67 8b       	std	Z+23, r22	; 0x17
+     1f2:	08 95       	ret
+
+000001f4 <BLTD_SetPassKey>:
+	
+}
+/*********************************************************/
+void BLTD_SetPassKey(const u8* PassKey,u8 PassKeyLength)
+{
+	BLTD_CmdList[SET_PASS_KEY_ID].CmdParamPtr = (u8*)PassKey;
+     1f4:	e8 e8       	ldi	r30, 0x88	; 136
+     1f6:	f0 e0       	ldi	r31, 0x00	; 0
+     1f8:	94 ab       	std	Z+52, r25	; 0x34
+     1fa:	83 ab       	std	Z+51, r24	; 0x33
+	BLTD_CmdList[SET_PASS_KEY_ID].CmdParamSize = PassKeyLength;
+     1fc:	65 ab       	std	Z+53, r22	; 0x35
+     1fe:	08 95       	ret
+
+00000200 <BLTD_GetMacAddress>:
+//}
+/*********************************************************/
+void BLTD_GetMacAddress(u8** MacAddressPtr)
+{
+	
+	*MacAddressPtr = BLTD_CmdList[GET_MAC_ADDRESS_ID].RespParamPtr;
+     200:	20 91 cd 00 	lds	r18, 0x00CD	; 0x8000cd <BLTD_CmdList+0x45>
+     204:	30 91 ce 00 	lds	r19, 0x00CE	; 0x8000ce <BLTD_CmdList+0x46>
+     208:	fc 01       	movw	r30, r24
+     20a:	31 83       	std	Z+1, r19	; 0x01
+     20c:	20 83       	st	Z, r18
+     20e:	08 95       	ret
+
+00000210 <BLTD_PowerOn>:
+	
+}
+/*********************************************************/
+void BLTD_PowerOn(void)
+{
+	SET_PWR_PIN();
+     210:	40 e8       	ldi	r20, 0x80	; 128
+     212:	6f ef       	ldi	r22, 0xFF	; 255
+     214:	82 e0       	ldi	r24, 0x02	; 2
+     216:	aa d1       	rcall	.+852    	; 0x56c <DIO_WritePort>
+	SET_KEY_PIN();
+     218:	40 e2       	ldi	r20, 0x20	; 32
+     21a:	6f ef       	ldi	r22, 0xFF	; 255
+     21c:	81 e0       	ldi	r24, 0x01	; 1
+     21e:	a6 d1       	rcall	.+844    	; 0x56c <DIO_WritePort>
+     220:	08 95       	ret
+
+00000222 <BLTD_PowerOff>:
+}
+/*********************************************************/
+void BLTD_PowerOff(void)
+{
+	CLR_KEY_PIN();
+     222:	40 e2       	ldi	r20, 0x20	; 32
+     224:	60 e0       	ldi	r22, 0x00	; 0
+     226:	81 e0       	ldi	r24, 0x01	; 1
+     228:	a1 d1       	rcall	.+834    	; 0x56c <DIO_WritePort>
+	CLR_PWR_PIN();
+     22a:	40 e8       	ldi	r20, 0x80	; 128
+     22c:	60 e0       	ldi	r22, 0x00	; 0
+     22e:	82 e0       	ldi	r24, 0x02	; 2
+     230:	9d d1       	rcall	.+826    	; 0x56c <DIO_WritePort>
+     232:	08 95       	ret
+
+00000234 <BTN_GetState>:
+		State[LoopIndex] = STATE_OPEN;
+	}
+	
+}
+u8 BTN_GetState(u8 BtnId)
+{
+     234:	cf 93       	push	r28
+     236:	df 93       	push	r29
+	u8 PinValue;
+	u8 PortName;
+	u8 PortMask;
+	u8 RetVar;
+	PortName = BTN_COnfigParam[BtnId].BtnPort;
+     238:	c8 2f       	mov	r28, r24
+     23a:	d0 e0       	ldi	r29, 0x00	; 0
+	PortMask = BTN_COnfigParam[BtnId].BtnMask;
+     23c:	fe 01       	movw	r30, r28
+     23e:	ee 0f       	add	r30, r30
+     240:	ff 1f       	adc	r31, r31
+     242:	ec 5d       	subi	r30, 0xDC	; 220
+     244:	fe 4f       	sbci	r31, 0xFE	; 254
+	PinValue = DIO_ReadPort(PortName,PortMask);
+     246:	61 81       	ldd	r22, Z+1	; 0x01
+     248:	80 81       	ld	r24, Z
+     24a:	b4 d1       	rcall	.+872    	; 0x5b4 <DIO_ReadPort>
+	
+	if(State[BtnId] == STATE_OPEN)
+     24c:	fe 01       	movw	r30, r28
+     24e:	e1 58       	subi	r30, 0x81	; 129
+     250:	fd 4f       	sbci	r31, 0xFD	; 253
+     252:	90 81       	ld	r25, Z
+     254:	91 11       	cpse	r25, r1
+     256:	0b c0       	rjmp	.+22     	; 0x26e <BTN_GetState+0x3a>
+	{
+		
+		if(PinValue != 0x00)
+     258:	88 23       	and	r24, r24
+     25a:	19 f0       	breq	.+6      	; 0x262 <BTN_GetState+0x2e>
+		{
+			
+			State[BtnId]= STATE_OPEN;
+     25c:	10 82       	st	Z, r1
+			RetVar = BTN_INACTIVE;
+     25e:	81 e0       	ldi	r24, 0x01	; 1
+     260:	11 c0       	rjmp	.+34     	; 0x284 <BTN_GetState+0x50>
+		}
+		else
+		{
+			
+			State[BtnId] = STATE_CLOSED;
+     262:	c1 58       	subi	r28, 0x81	; 129
+     264:	dd 4f       	sbci	r29, 0xFD	; 253
+     266:	81 e0       	ldi	r24, 0x01	; 1
+     268:	88 83       	st	Y, r24
+			RetVar = BTN_ACTIVE;
+     26a:	80 e0       	ldi	r24, 0x00	; 0
+     26c:	0b c0       	rjmp	.+22     	; 0x284 <BTN_GetState+0x50>
+		}
+	}
+	else
+	{
+		if(PinValue != 0x00)
+     26e:	88 23       	and	r24, r24
+     270:	29 f0       	breq	.+10     	; 0x27c <BTN_GetState+0x48>
+		{
+			State[BtnId]= STATE_OPEN;
+     272:	c1 58       	subi	r28, 0x81	; 129
+     274:	dd 4f       	sbci	r29, 0xFD	; 253
+     276:	18 82       	st	Y, r1
+			RetVar = BTN_INACTIVE;
+     278:	81 e0       	ldi	r24, 0x01	; 1
+     27a:	04 c0       	rjmp	.+8      	; 0x284 <BTN_GetState+0x50>
+		}
+		else
+		{
+			State[BtnId] = STATE_CLOSED;
+     27c:	c1 58       	subi	r28, 0x81	; 129
+     27e:	dd 4f       	sbci	r29, 0xFD	; 253
+     280:	81 e0       	ldi	r24, 0x01	; 1
+     282:	88 83       	st	Y, r24
+			RetVar = BTN_INACTIVE;
+		}
+	}
+	return RetVar;
+     284:	df 91       	pop	r29
+     286:	cf 91       	pop	r28
+     288:	08 95       	ret
+
+0000028a <Test>:
+	
+
+	u8 Data;
+	{
+		
+		switch(MgrState)
+     28a:	e0 91 86 02 	lds	r30, 0x0286	; 0x800286 <MgrState>
+     28e:	8e 2f       	mov	r24, r30
+     290:	90 e0       	ldi	r25, 0x00	; 0
+     292:	89 30       	cpi	r24, 0x09	; 9
+     294:	91 05       	cpc	r25, r1
+     296:	08 f0       	brcs	.+2      	; 0x29a <Test+0x10>
+     298:	fa c0       	rjmp	.+500    	; 0x48e <__stack+0x2f>
+     29a:	fc 01       	movw	r30, r24
+     29c:	ed 5e       	subi	r30, 0xED	; 237
+     29e:	ff 4f       	sbci	r31, 0xFF	; 255
+     2a0:	09 94       	ijmp
+		{
+			case MGR_STATE_INIT:
+			{
+							
+				TimeOutCounter ++;
+     2a2:	80 91 84 02 	lds	r24, 0x0284	; 0x800284 <TimeOutCounter.1880>
+     2a6:	90 91 85 02 	lds	r25, 0x0285	; 0x800285 <TimeOutCounter.1880+0x1>
+     2aa:	01 96       	adiw	r24, 0x01	; 1
+				if(TimeOutCounter > 20)
+     2ac:	85 31       	cpi	r24, 0x15	; 21
+     2ae:	91 05       	cpc	r25, r1
+     2b0:	28 f4       	brcc	.+10     	; 0x2bc <Test+0x32>
+		switch(MgrState)
+		{
+			case MGR_STATE_INIT:
+			{
+							
+				TimeOutCounter ++;
+     2b2:	90 93 85 02 	sts	0x0285, r25	; 0x800285 <TimeOutCounter.1880+0x1>
+     2b6:	80 93 84 02 	sts	0x0284, r24	; 0x800284 <TimeOutCounter.1880>
+     2ba:	08 95       	ret
+				if(TimeOutCounter > 20)
+				{
+					
+					
+					TimeOutCounter = 0;
+     2bc:	10 92 85 02 	sts	0x0285, r1	; 0x800285 <TimeOutCounter.1880+0x1>
+     2c0:	10 92 84 02 	sts	0x0284, r1	; 0x800284 <TimeOutCounter.1880>
+}
+static u8 RunInitScript(void)
+{
+	u8 ScriptState;
+	
+	ScriptState = WMGR_RunInitScript();
+     2c4:	21 d5       	rcall	.+2626   	; 0xd08 <WMGR_RunInitScript>
+	
+	switch(ScriptState)
+     2c6:	81 11       	cpse	r24, r1
+     2c8:	02 c0       	rjmp	.+4      	; 0x2ce <Test+0x44>
+		}
+		break;
+		
+		case WMGR_SCRIPT_STATE_DONE:
+		{
+			DBG_InsertBreakPoint2();  /*added by Amr*/
+     2ca:	0e d1       	rcall	.+540    	; 0x4e8 <DBG_InsertBreakPoint2>
+     2cc:	02 c0       	rjmp	.+4      	; 0x2d2 <Test+0x48>
+				{
+					
+					
+					TimeOutCounter = 0;
+					ScriptState = RunInitScript();
+					if(ScriptState == WMGR_SCRIPT_STATE_DONE)
+     2ce:	81 11       	cpse	r24, r1
+     2d0:	de c0       	rjmp	.+444    	; 0x48e <__stack+0x2f>
+					{
+						//DBG_InsertBreakPoint2();  /*added by Amr*/
+						
+						MgrState = MGR_STATE_READY_INDICATION;
+     2d2:	81 e0       	ldi	r24, 0x01	; 1
+     2d4:	80 93 86 02 	sts	0x0286, r24	; 0x800286 <MgrState>
+						#if (DEVICE_ROLE == DEVICE_ROLE_MASTER)
+						GYHD_WakeUpModule(&WakeUpState);
+     2d8:	89 ef       	ldi	r24, 0xF9	; 249
+     2da:	92 e0       	ldi	r25, 0x02	; 2
+     2dc:	f7 d2       	rcall	.+1518   	; 0x8cc <GYHD_WakeUpModule>
+     2de:	08 95       	ret
+			}
+			break;
+			case MGR_STATE_READY_INDICATION:
+			{
+				
+				TimeOutCounter ++;
+     2e0:	80 91 84 02 	lds	r24, 0x0284	; 0x800284 <TimeOutCounter.1880>
+     2e4:	90 91 85 02 	lds	r25, 0x0285	; 0x800285 <TimeOutCounter.1880+0x1>
+     2e8:	01 96       	adiw	r24, 0x01	; 1
+     2ea:	90 93 85 02 	sts	0x0285, r25	; 0x800285 <TimeOutCounter.1880+0x1>
+     2ee:	80 93 84 02 	sts	0x0284, r24	; 0x800284 <TimeOutCounter.1880>
+				if(TimeOutCounter > 4)
+     2f2:	05 97       	sbiw	r24, 0x05	; 5
+     2f4:	40 f0       	brcs	.+16     	; 0x306 <Test+0x7c>
+				{
+					TimeOutCounter = 0;
+     2f6:	10 92 85 02 	sts	0x0285, r1	; 0x800285 <TimeOutCounter.1880+0x1>
+     2fa:	10 92 84 02 	sts	0x0284, r1	; 0x800284 <TimeOutCounter.1880>
+					MgrState = MGR_STATE_READ_DATA;
+					
+					
+					#else
+					
+					MgrState = MGR_STATE_WAIT_FOR_CONN_REQ;
+     2fe:	87 e0       	ldi	r24, 0x07	; 7
+     300:	80 93 86 02 	sts	0x0286, r24	; 0x800286 <MgrState>
+     304:	08 95       	ret
+					
+					
+				}
+				else
+				{
+					if(BuzzerState == 0)
+     306:	80 91 83 02 	lds	r24, 0x0283	; 0x800283 <BuzzerState.1882>
+     30a:	81 11       	cpse	r24, r1
+     30c:	08 c0       	rjmp	.+16     	; 0x31e <Test+0x94>
+					{
+						
+						BUZZER_ON();
+     30e:	48 e0       	ldi	r20, 0x08	; 8
+     310:	6f ef       	ldi	r22, 0xFF	; 255
+     312:	82 e0       	ldi	r24, 0x02	; 2
+     314:	2b d1       	rcall	.+598    	; 0x56c <DIO_WritePort>
+						BuzzerState = 1;
+     316:	81 e0       	ldi	r24, 0x01	; 1
+     318:	80 93 83 02 	sts	0x0283, r24	; 0x800283 <BuzzerState.1882>
+     31c:	08 95       	ret
+					}
+					else
+					{
+						BUZZER_OFF();
+     31e:	48 e0       	ldi	r20, 0x08	; 8
+     320:	60 e0       	ldi	r22, 0x00	; 0
+     322:	82 e0       	ldi	r24, 0x02	; 2
+     324:	23 d1       	rcall	.+582    	; 0x56c <DIO_WritePort>
+						BuzzerState = 0;
+     326:	10 92 83 02 	sts	0x0283, r1	; 0x800283 <BuzzerState.1882>
+     32a:	08 95       	ret
+			case MGR_STATE_DISCONNECT:
+			{
+				#if(DEVICE_ROLE == DEVICE_ROLE_SLAVE)
+				MOTOR_SetSpeed(0,Direction);
+				#endif
+				TimeOutCounter ++;
+     32c:	80 91 84 02 	lds	r24, 0x0284	; 0x800284 <TimeOutCounter.1880>
+     330:	90 91 85 02 	lds	r25, 0x0285	; 0x800285 <TimeOutCounter.1880+0x1>
+     334:	01 96       	adiw	r24, 0x01	; 1
+     336:	90 93 85 02 	sts	0x0285, r25	; 0x800285 <TimeOutCounter.1880+0x1>
+     33a:	80 93 84 02 	sts	0x0284, r24	; 0x800284 <TimeOutCounter.1880>
+				if(TimeOutCounter > 10)
+     33e:	0b 97       	sbiw	r24, 0x0b	; 11
+     340:	48 f0       	brcs	.+18     	; 0x354 <Test+0xca>
+				{
+					
+					TimeOutCounter = 0;
+     342:	10 92 85 02 	sts	0x0285, r1	; 0x800285 <TimeOutCounter.1880+0x1>
+     346:	10 92 84 02 	sts	0x0284, r1	; 0x800284 <TimeOutCounter.1880>
+					WMGR_Init();
+     34a:	b5 d4       	rcall	.+2410   	; 0xcb6 <WMGR_Init>
+					MgrState = MGR_STATE_INIT;
+     34c:	10 92 86 02 	sts	0x0286, r1	; 0x800286 <MgrState>
+					DBG_InsertBreakPoint1();
+     350:	ac d0       	rcall	.+344    	; 0x4aa <DBG_InsertBreakPoint1>
+     352:	08 95       	ret
+					
+				}
+				else
+				{
+					if(BuzzerState == 0)
+     354:	80 91 83 02 	lds	r24, 0x0283	; 0x800283 <BuzzerState.1882>
+     358:	81 11       	cpse	r24, r1
+     35a:	08 c0       	rjmp	.+16     	; 0x36c <Test+0xe2>
+					{
+						
+						BUZZER_ON();
+     35c:	48 e0       	ldi	r20, 0x08	; 8
+     35e:	6f ef       	ldi	r22, 0xFF	; 255
+     360:	82 e0       	ldi	r24, 0x02	; 2
+     362:	04 d1       	rcall	.+520    	; 0x56c <DIO_WritePort>
+						BuzzerState = 1;
+     364:	81 e0       	ldi	r24, 0x01	; 1
+     366:	80 93 83 02 	sts	0x0283, r24	; 0x800283 <BuzzerState.1882>
+     36a:	08 95       	ret
+					}
+					else
+					{
+						BUZZER_OFF();
+     36c:	48 e0       	ldi	r20, 0x08	; 8
+     36e:	60 e0       	ldi	r22, 0x00	; 0
+     370:	82 e0       	ldi	r24, 0x02	; 2
+     372:	fc d0       	rcall	.+504    	; 0x56c <DIO_WritePort>
+						BuzzerState = 0;
+     374:	10 92 83 02 	sts	0x0283, r1	; 0x800283 <BuzzerState.1882>
+     378:	08 95       	ret
+			}
+			break;
+			#if(DEVICE_ROLE == DEVICE_ROLE_MASTER)
+			case MGR_STATE_WAIT_FOR_CONN_REQ:
+			{
+				BtnState = BTN_GetState(0);
+     37a:	80 e0       	ldi	r24, 0x00	; 0
+     37c:	5b df       	rcall	.-330    	; 0x234 <BTN_GetState>
+				if(BtnState == BTN_ACTIVE)
+     37e:	81 11       	cpse	r24, r1
+     380:	86 c0       	rjmp	.+268    	; 0x48e <__stack+0x2f>
+				{
+					MgrState = MGR_STATE_START_CONNECTION;
+     382:	84 e0       	ldi	r24, 0x04	; 4
+     384:	80 93 86 02 	sts	0x0286, r24	; 0x800286 <MgrState>
+     388:	08 95       	ret
+			break;
+			case MGR_STATE_START_CONNECTION:
+			{
+
+				
+				RxState = WMGR_MasterStartConn((u8*)"3014,11,181325",14);
+     38a:	6e e0       	ldi	r22, 0x0E	; 14
+     38c:	84 ef       	ldi	r24, 0xF4	; 244
+     38e:	91 e0       	ldi	r25, 0x01	; 1
+     390:	4f d5       	rcall	.+2718   	; 0xe30 <WMGR_MasterStartConn>
+				if(RxState == WMGR_RX_STATUS_CONNECTED)
+     392:	81 11       	cpse	r24, r1
+     394:	08 c0       	rjmp	.+16     	; 0x3a6 <Test+0x11c>
+				{
+					MgrState = MGR_STATE_SEND_DATA;
+     396:	86 e0       	ldi	r24, 0x06	; 6
+     398:	80 93 86 02 	sts	0x0286, r24	; 0x800286 <MgrState>
+					TimeOutCounter = 0;
+     39c:	10 92 85 02 	sts	0x0285, r1	; 0x800285 <TimeOutCounter.1880+0x1>
+     3a0:	10 92 84 02 	sts	0x0284, r1	; 0x800284 <TimeOutCounter.1880>
+     3a4:	08 95       	ret
+				}
+				else if(RxState == WMGR_RX_STATUS_DISCONN)
+     3a6:	82 30       	cpi	r24, 0x02	; 2
+     3a8:	09 f0       	breq	.+2      	; 0x3ac <Test+0x122>
+     3aa:	71 c0       	rjmp	.+226    	; 0x48e <__stack+0x2f>
+				{
+					
+					
+					LED_SetData(1,0);
+     3ac:	60 e0       	ldi	r22, 0x00	; 0
+     3ae:	81 e0       	ldi	r24, 0x01	; 1
+     3b0:	78 d3       	rcall	.+1776   	; 0xaa2 <LED_SetData>
+					TimeOutCounter = 0;
+     3b2:	10 92 85 02 	sts	0x0285, r1	; 0x800285 <TimeOutCounter.1880+0x1>
+     3b6:	10 92 84 02 	sts	0x0284, r1	; 0x800284 <TimeOutCounter.1880>
+					MgrState = MGR_STATE_DISCONNECT;
+     3ba:	83 e0       	ldi	r24, 0x03	; 3
+     3bc:	80 93 86 02 	sts	0x0286, r24	; 0x800286 <MgrState>
+     3c0:	08 95       	ret
+			}
+			break;
+			#endif
+			case MGR_STATE_SEND_DATA:
+			{
+				GyroTimeOutCounter ++;
+     3c2:	80 91 82 02 	lds	r24, 0x0282	; 0x800282 <GyroTimeOutCounter.1881>
+     3c6:	8f 5f       	subi	r24, 0xFF	; 255
+     3c8:	80 93 82 02 	sts	0x0282, r24	; 0x800282 <GyroTimeOutCounter.1881>
+				TimeOutCounter ++;
+     3cc:	20 91 84 02 	lds	r18, 0x0284	; 0x800284 <TimeOutCounter.1880>
+     3d0:	30 91 85 02 	lds	r19, 0x0285	; 0x800285 <TimeOutCounter.1880+0x1>
+     3d4:	2f 5f       	subi	r18, 0xFF	; 255
+     3d6:	3f 4f       	sbci	r19, 0xFF	; 255
+     3d8:	30 93 85 02 	sts	0x0285, r19	; 0x800285 <TimeOutCounter.1880+0x1>
+     3dc:	20 93 84 02 	sts	0x0284, r18	; 0x800284 <TimeOutCounter.1880>
+				if(GyroTimeOutCounter > 20)
+     3e0:	85 31       	cpi	r24, 0x15	; 21
+     3e2:	f8 f0       	brcs	.+62     	; 0x422 <__LOCK_REGION_LENGTH__+0x22>
+				{
+					GyroTimeOutCounter = 0;
+     3e4:	10 92 82 02 	sts	0x0282, r1	; 0x800282 <GyroTimeOutCounter.1881>
+					Data = GetGyroState();
+     3e8:	8c d1       	rcall	.+792    	; 0x702 <GetGyroState>
+					if(Data == STP)
+     3ea:	81 11       	cpse	r24, r1
+     3ec:	05 c0       	rjmp	.+10     	; 0x3f8 <Test+0x16e>
+					{
+						Speed = 0;
+     3ee:	10 92 81 02 	sts	0x0281, r1	; 0x800281 <Speed.1883>
+						LED_SetData(0,0xff);
+     3f2:	6f ef       	ldi	r22, 0xFF	; 255
+     3f4:	56 d3       	rcall	.+1708   	; 0xaa2 <LED_SetData>
+     3f6:	15 c0       	rjmp	.+42     	; 0x422 <__LOCK_REGION_LENGTH__+0x22>
+					}
+					else if ((Data == RGHT) || (Data == LEFT))
+     3f8:	9d ef       	ldi	r25, 0xFD	; 253
+     3fa:	98 0f       	add	r25, r24
+     3fc:	92 30       	cpi	r25, 0x02	; 2
+     3fe:	48 f4       	brcc	.+18     	; 0x412 <__LOCK_REGION_LENGTH__+0x12>
+					{
+						Speed = 25;
+     400:	99 e1       	ldi	r25, 0x19	; 25
+     402:	90 93 81 02 	sts	0x0281, r25	; 0x800281 <Speed.1883>
+						Direction = Data;
+     406:	80 93 80 02 	sts	0x0280, r24	; 0x800280 <Direction.1884>
+						LED_SetData(0,0x00);
+     40a:	60 e0       	ldi	r22, 0x00	; 0
+     40c:	80 e0       	ldi	r24, 0x00	; 0
+     40e:	49 d3       	rcall	.+1682   	; 0xaa2 <LED_SetData>
+     410:	08 c0       	rjmp	.+16     	; 0x422 <__LOCK_REGION_LENGTH__+0x22>
+					}
+					else 
+					{
+						Speed = 15;
+     412:	9f e0       	ldi	r25, 0x0F	; 15
+     414:	90 93 81 02 	sts	0x0281, r25	; 0x800281 <Speed.1883>
+						Direction = Data;
+     418:	80 93 80 02 	sts	0x0280, r24	; 0x800280 <Direction.1884>
+						LED_SetData(0,0x00);
+     41c:	60 e0       	ldi	r22, 0x00	; 0
+     41e:	80 e0       	ldi	r24, 0x00	; 0
+     420:	40 d3       	rcall	.+1664   	; 0xaa2 <LED_SetData>
+					}
+					
+					
+				}
+				if(TimeOutCounter > 10)
+     422:	80 91 84 02 	lds	r24, 0x0284	; 0x800284 <TimeOutCounter.1880>
+     426:	90 91 85 02 	lds	r25, 0x0285	; 0x800285 <TimeOutCounter.1880+0x1>
+     42a:	0b 97       	sbiw	r24, 0x0b	; 11
+     42c:	48 f0       	brcs	.+18     	; 0x440 <__LOCK_REGION_LENGTH__+0x40>
+				{
+					TimeOutCounter = 0;
+     42e:	10 92 85 02 	sts	0x0285, r1	; 0x800285 <TimeOutCounter.1880+0x1>
+     432:	10 92 84 02 	sts	0x0284, r1	; 0x800284 <TimeOutCounter.1880>
+					WMGR_SendData(Speed,Direction);
+     436:	60 91 80 02 	lds	r22, 0x0280	; 0x800280 <Direction.1884>
+     43a:	80 91 81 02 	lds	r24, 0x0281	; 0x800281 <Speed.1883>
+     43e:	1a d6       	rcall	.+3124   	; 0x1074 <WMGR_SendData>
+				}
+				BtnState = BTN_GetState(0);
+     440:	80 e0       	ldi	r24, 0x00	; 0
+     442:	f8 de       	rcall	.-528    	; 0x234 <BTN_GetState>
+				if(BtnState == BTN_ACTIVE)
+     444:	81 11       	cpse	r24, r1
+     446:	23 c0       	rjmp	.+70     	; 0x48e <__stack+0x2f>
+				{
+					GyroTimeOutCounter = 0;
+     448:	10 92 82 02 	sts	0x0282, r1	; 0x800282 <GyroTimeOutCounter.1881>
+					TimeOutCounter = 0;
+     44c:	10 92 85 02 	sts	0x0285, r1	; 0x800285 <TimeOutCounter.1880+0x1>
+     450:	10 92 84 02 	sts	0x0284, r1	; 0x800284 <TimeOutCounter.1880>
+					
+					BLTD_PowerOff();
+     454:	e6 de       	rcall	.-564    	; 0x222 <BLTD_PowerOff>
+					WMGR_Init();
+     456:	2f d4       	rcall	.+2142   	; 0xcb6 <WMGR_Init>
+					UART_StopRception();
+     458:	bb d3       	rcall	.+1910   	; 0xbd0 <UART_StopRception>
+
+					MgrState = MGR_STATE_WAIT_PWR_OFF;
+     45a:	88 e0       	ldi	r24, 0x08	; 8
+     45c:	80 93 86 02 	sts	0x0286, r24	; 0x800286 <MgrState>
+     460:	08 95       	ret
+				
+			}
+			break;
+			case MGR_STATE_WAIT_PWR_OFF:
+			{
+				TimeOutCounter ++;
+     462:	80 91 84 02 	lds	r24, 0x0284	; 0x800284 <TimeOutCounter.1880>
+     466:	90 91 85 02 	lds	r25, 0x0285	; 0x800285 <TimeOutCounter.1880+0x1>
+     46a:	01 96       	adiw	r24, 0x01	; 1
+				if(TimeOutCounter > 100)
+     46c:	85 36       	cpi	r24, 0x65	; 101
+     46e:	91 05       	cpc	r25, r1
+     470:	28 f4       	brcc	.+10     	; 0x47c <__stack+0x1d>
+				
+			}
+			break;
+			case MGR_STATE_WAIT_PWR_OFF:
+			{
+				TimeOutCounter ++;
+     472:	90 93 85 02 	sts	0x0285, r25	; 0x800285 <TimeOutCounter.1880+0x1>
+     476:	80 93 84 02 	sts	0x0284, r24	; 0x800284 <TimeOutCounter.1880>
+     47a:	08 95       	ret
+				if(TimeOutCounter > 100)
+				{
+					TimeOutCounter = 0;
+     47c:	10 92 85 02 	sts	0x0285, r1	; 0x800285 <TimeOutCounter.1880+0x1>
+     480:	10 92 84 02 	sts	0x0284, r1	; 0x800284 <TimeOutCounter.1880>
+					MgrState = MGR_STATE_DISCONNECT;
+     484:	83 e0       	ldi	r24, 0x03	; 3
+     486:	80 93 86 02 	sts	0x0286, r24	; 0x800286 <MgrState>
+										WMGR_Init();
+     48a:	15 d4       	rcall	.+2090   	; 0xcb6 <WMGR_Init>
+										UART_StopRception();
+     48c:	a1 d3       	rcall	.+1858   	; 0xbd0 <UART_StopRception>
+     48e:	08 95       	ret
+
+00000490 <main>:
+
+int main(void)
+{
+
+
+	MgrState = MGR_STATE_INIT;
+     490:	10 92 86 02 	sts	0x0286, r1	; 0x800286 <MgrState>
+	BUZZER_INIT();
+     494:	48 e0       	ldi	r20, 0x08	; 8
+     496:	6f ef       	ldi	r22, 0xFF	; 255
+     498:	82 e0       	ldi	r24, 0x02	; 2
+     49a:	44 d0       	rcall	.+136    	; 0x524 <DIO_InitPortDirection>
+
+	WMGR_Init();
+     49c:	0c d4       	rcall	.+2072   	; 0xcb6 <WMGR_Init>
+	GPT_Timer10msInit(Test);   /* disabled for using the bluetooth Enable by Amr */
+     49e:	85 e4       	ldi	r24, 0x45	; 69
+     4a0:	91 e0       	ldi	r25, 0x01	; 1
+     4a2:	99 d0       	rcall	.+306    	; 0x5d6 <GPT_Timer10msInit>
+	sei();
+     4a4:	78 94       	sei
+	#if (DEVICE_ROLE == DEVICE_ROLE_MASTER)
+	//GYHD_Init();				 /* disabled for using the bluetooth Enable by Amr */
+	LED_Init();
+     4a6:	ce d2       	rcall	.+1436   	; 0xa44 <LED_Init>
+     4a8:	ff cf       	rjmp	.-2      	; 0x4a8 <main+0x18>
+
+000004aa <DBG_InsertBreakPoint1>:
+#include "BasicTypes.h"
+#include "DIO.h"
+#include "Debug.h"
+#include <util/delay.h>
+void DBG_InsertBreakPoint1(void)
+{
+     4aa:	cf 93       	push	r28
+	u8 i;
+	
+	static int cout = 0;
+	cout ++;
+     4ac:	80 91 87 02 	lds	r24, 0x0287	; 0x800287 <cout.1831>
+     4b0:	90 91 88 02 	lds	r25, 0x0288	; 0x800288 <cout.1831+0x1>
+     4b4:	01 96       	adiw	r24, 0x01	; 1
+     4b6:	90 93 88 02 	sts	0x0288, r25	; 0x800288 <cout.1831+0x1>
+     4ba:	80 93 87 02 	sts	0x0287, r24	; 0x800287 <cout.1831>
+     4be:	c5 e0       	ldi	r28, 0x05	; 5
+	for(i=0; i< 5; i++)
+	{
+			BUZZER_ON();
+     4c0:	48 e0       	ldi	r20, 0x08	; 8
+     4c2:	6f ef       	ldi	r22, 0xFF	; 255
+     4c4:	82 e0       	ldi	r24, 0x02	; 2
+     4c6:	52 d0       	rcall	.+164    	; 0x56c <DIO_WritePort>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     4c8:	82 e0       	ldi	r24, 0x02	; 2
+     4ca:	8a 95       	dec	r24
+     4cc:	f1 f7       	brne	.-4      	; 0x4ca <DBG_InsertBreakPoint1+0x20>
+     4ce:	00 c0       	rjmp	.+0      	; 0x4d0 <DBG_InsertBreakPoint1+0x26>
+			_delay_us(1);
+			BUZZER_OFF();
+     4d0:	48 e0       	ldi	r20, 0x08	; 8
+     4d2:	60 e0       	ldi	r22, 0x00	; 0
+     4d4:	82 e0       	ldi	r24, 0x02	; 2
+     4d6:	4a d0       	rcall	.+148    	; 0x56c <DIO_WritePort>
+     4d8:	82 e0       	ldi	r24, 0x02	; 2
+     4da:	8a 95       	dec	r24
+     4dc:	f1 f7       	brne	.-4      	; 0x4da <DBG_InsertBreakPoint1+0x30>
+     4de:	00 c0       	rjmp	.+0      	; 0x4e0 <DBG_InsertBreakPoint1+0x36>
+     4e0:	c1 50       	subi	r28, 0x01	; 1
+{
+	u8 i;
+	
+	static int cout = 0;
+	cout ++;
+	for(i=0; i< 5; i++)
+     4e2:	71 f7       	brne	.-36     	; 0x4c0 <DBG_InsertBreakPoint1+0x16>
+			BUZZER_OFF();
+			_delay_us(1);
+	}
+
+
+}
+     4e4:	cf 91       	pop	r28
+     4e6:	08 95       	ret
+
+000004e8 <DBG_InsertBreakPoint2>:
+void DBG_InsertBreakPoint2(void)
+{
+     4e8:	c5 e0       	ldi	r28, 0x05	; 5
+	u8 i;
+	for(i=0; i< 5; i++)
+	{
+		BUZZER_ON();
+     4ea:	48 e0       	ldi	r20, 0x08	; 8
+     4ec:	6f ef       	ldi	r22, 0xFF	; 255
+     4ee:	82 e0       	ldi	r24, 0x02	; 2
+     4f0:	3d d0       	rcall	.+122    	; 0x56c <DIO_WritePort>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     4f2:	2f ef       	ldi	r18, 0xFF	; 255
+     4f4:	80 e7       	ldi	r24, 0x70	; 112
+     4f6:	92 e0       	ldi	r25, 0x02	; 2
+     4f8:	21 50       	subi	r18, 0x01	; 1
+     4fa:	80 40       	sbci	r24, 0x00	; 0
+     4fc:	90 40       	sbci	r25, 0x00	; 0
+     4fe:	e1 f7       	brne	.-8      	; 0x4f8 <DBG_InsertBreakPoint2+0x10>
+     500:	00 c0       	rjmp	.+0      	; 0x502 <DBG_InsertBreakPoint2+0x1a>
+     502:	00 00       	nop
+		_delay_ms(100);
+		BUZZER_OFF();
+     504:	48 e0       	ldi	r20, 0x08	; 8
+     506:	60 e0       	ldi	r22, 0x00	; 0
+     508:	82 e0       	ldi	r24, 0x02	; 2
+     50a:	30 d0       	rcall	.+96     	; 0x56c <DIO_WritePort>
+     50c:	2f ef       	ldi	r18, 0xFF	; 255
+     50e:	80 e7       	ldi	r24, 0x70	; 112
+     510:	92 e0       	ldi	r25, 0x02	; 2
+     512:	21 50       	subi	r18, 0x01	; 1
+     514:	80 40       	sbci	r24, 0x00	; 0
+     516:	90 40       	sbci	r25, 0x00	; 0
+     518:	e1 f7       	brne	.-8      	; 0x512 <DBG_InsertBreakPoint2+0x2a>
+     51a:	00 c0       	rjmp	.+0      	; 0x51c <DBG_InsertBreakPoint2+0x34>
+     51c:	00 00       	nop
+     51e:	c1 50       	subi	r28, 0x01	; 1
+
+}
+void DBG_InsertBreakPoint2(void)
+{
+	u8 i;
+	for(i=0; i< 5; i++)
+     520:	21 f7       	brne	.-56     	; 0x4ea <DBG_InsertBreakPoint2+0x2>
+     522:	ff cf       	rjmp	.-2      	; 0x522 <DBG_InsertBreakPoint2+0x3a>
+
+00000524 <DIO_InitPortDirection>:
+#define READ_REG(Reg,Mask) Reg & Mask
+
+void DIO_InitPortDirection(u8 PortName,u8 PortDirection,u8 PortMask)
+{
+	//check the required port, specified bits and direction on the Data Direction Register
+	switch(PortName)
+     524:	82 30       	cpi	r24, 0x02	; 2
+     526:	71 f0       	breq	.+28     	; 0x544 <DIO_InitPortDirection+0x20>
+     528:	83 30       	cpi	r24, 0x03	; 3
+     52a:	b1 f0       	breq	.+44     	; 0x558 <DIO_InitPortDirection+0x34>
+     52c:	81 30       	cpi	r24, 0x01	; 1
+     52e:	e9 f4       	brne	.+58     	; 0x56a <DIO_InitPortDirection+0x46>
+	{
+
+		case PB:
+		{
+			WRITE_REG(DDRB,PortDirection,PortMask);
+     530:	87 b3       	in	r24, 0x17	; 23
+     532:	94 2f       	mov	r25, r20
+     534:	90 95       	com	r25
+     536:	89 23       	and	r24, r25
+     538:	87 bb       	out	0x17, r24	; 23
+     53a:	87 b3       	in	r24, 0x17	; 23
+     53c:	64 23       	and	r22, r20
+     53e:	68 2b       	or	r22, r24
+     540:	67 bb       	out	0x17, r22	; 23
+		}
+		break;
+     542:	08 95       	ret
+		case PC:
+		{
+			WRITE_REG(DDRC,PortDirection,PortMask);
+     544:	84 b3       	in	r24, 0x14	; 20
+     546:	94 2f       	mov	r25, r20
+     548:	90 95       	com	r25
+     54a:	89 23       	and	r24, r25
+     54c:	84 bb       	out	0x14, r24	; 20
+     54e:	84 b3       	in	r24, 0x14	; 20
+     550:	64 23       	and	r22, r20
+     552:	68 2b       	or	r22, r24
+     554:	64 bb       	out	0x14, r22	; 20
+		}
+		break;
+     556:	08 95       	ret
+		case PD:
+		{
+			WRITE_REG(DDRD,PortDirection,PortMask);
+     558:	81 b3       	in	r24, 0x11	; 17
+     55a:	94 2f       	mov	r25, r20
+     55c:	90 95       	com	r25
+     55e:	89 23       	and	r24, r25
+     560:	81 bb       	out	0x11, r24	; 17
+     562:	81 b3       	in	r24, 0x11	; 17
+     564:	64 23       	and	r22, r20
+     566:	68 2b       	or	r22, r24
+     568:	61 bb       	out	0x11, r22	; 17
+     56a:	08 95       	ret
+
+0000056c <DIO_WritePort>:
+}
+
+void DIO_WritePort(u8 PortName,u8 PortData,u8 PortMask)
+{
+	//check the required port, specified bits and value on the Port Data Register
+	switch(PortName)
+     56c:	82 30       	cpi	r24, 0x02	; 2
+     56e:	71 f0       	breq	.+28     	; 0x58c <DIO_WritePort+0x20>
+     570:	83 30       	cpi	r24, 0x03	; 3
+     572:	b1 f0       	breq	.+44     	; 0x5a0 <DIO_WritePort+0x34>
+     574:	81 30       	cpi	r24, 0x01	; 1
+     576:	e9 f4       	brne	.+58     	; 0x5b2 <DIO_WritePort+0x46>
+	{
+		
+		case PB:
+		{
+			WRITE_REG(PORTB,PortData,PortMask);
+     578:	88 b3       	in	r24, 0x18	; 24
+     57a:	94 2f       	mov	r25, r20
+     57c:	90 95       	com	r25
+     57e:	89 23       	and	r24, r25
+     580:	88 bb       	out	0x18, r24	; 24
+     582:	88 b3       	in	r24, 0x18	; 24
+     584:	64 23       	and	r22, r20
+     586:	68 2b       	or	r22, r24
+     588:	68 bb       	out	0x18, r22	; 24
+		}
+		break;
+     58a:	08 95       	ret
+		case PC:
+		{
+			WRITE_REG(PORTC,PortData,PortMask);
+     58c:	85 b3       	in	r24, 0x15	; 21
+     58e:	94 2f       	mov	r25, r20
+     590:	90 95       	com	r25
+     592:	89 23       	and	r24, r25
+     594:	85 bb       	out	0x15, r24	; 21
+     596:	85 b3       	in	r24, 0x15	; 21
+     598:	64 23       	and	r22, r20
+     59a:	68 2b       	or	r22, r24
+     59c:	65 bb       	out	0x15, r22	; 21
+		}
+		break;
+     59e:	08 95       	ret
+		case PD:
+		{
+			WRITE_REG(PORTD,PortData,PortMask);
+     5a0:	82 b3       	in	r24, 0x12	; 18
+     5a2:	94 2f       	mov	r25, r20
+     5a4:	90 95       	com	r25
+     5a6:	89 23       	and	r24, r25
+     5a8:	82 bb       	out	0x12, r24	; 18
+     5aa:	82 b3       	in	r24, 0x12	; 18
+     5ac:	64 23       	and	r22, r20
+     5ae:	68 2b       	or	r22, r24
+     5b0:	62 bb       	out	0x12, r22	; 18
+     5b2:	08 95       	ret
+
+000005b4 <DIO_ReadPort>:
+}
+u8 DIO_ReadPort(u8 PortName,u8 PortMAsk)
+{
+	//check the required port, specified bits and value from the Port input Register
+	u8 Data = 0;
+	switch(PortName)
+     5b4:	82 30       	cpi	r24, 0x02	; 2
+     5b6:	39 f0       	breq	.+14     	; 0x5c6 <DIO_ReadPort+0x12>
+     5b8:	83 30       	cpi	r24, 0x03	; 3
+     5ba:	41 f0       	breq	.+16     	; 0x5cc <DIO_ReadPort+0x18>
+     5bc:	81 30       	cpi	r24, 0x01	; 1
+     5be:	49 f4       	brne	.+18     	; 0x5d2 <DIO_ReadPort+0x1e>
+	{
+
+		case PB:
+		{
+			Data = READ_REG(PINB,PortMAsk);
+     5c0:	86 b3       	in	r24, 0x16	; 22
+     5c2:	86 23       	and	r24, r22
+		}
+		break;
+     5c4:	08 95       	ret
+		case PC:
+		{
+			Data = READ_REG(PINC,PortMAsk);
+     5c6:	83 b3       	in	r24, 0x13	; 19
+     5c8:	86 23       	and	r24, r22
+		}
+		break;
+     5ca:	08 95       	ret
+		case PD:
+		{
+			Data = READ_REG(PIND,PortMAsk);
+     5cc:	80 b3       	in	r24, 0x10	; 16
+     5ce:	86 23       	and	r24, r22
+		}
+		break;
+     5d0:	08 95       	ret
+	}	
+}
+u8 DIO_ReadPort(u8 PortName,u8 PortMAsk)
+{
+	//check the required port, specified bits and value from the Port input Register
+	u8 Data = 0;
+     5d2:	80 e0       	ldi	r24, 0x00	; 0
+		break;
+		
+	}
+	return Data;
+	
+     5d4:	08 95       	ret
+
+000005d6 <GPT_Timer10msInit>:
+	TCCR0 = 0x00;
+	TCCR0 |=  0x05;
+}
+void GPT_Timer10msInit(PfType CallBackPtr)
+{
+		Timer10msCallBackPtr = CallBackPtr;
+     5d6:	90 93 8a 02 	sts	0x028A, r25	; 0x80028a <Timer10msCallBackPtr+0x1>
+     5da:	80 93 89 02 	sts	0x0289, r24	; 0x800289 <Timer10msCallBackPtr>
+		OCR2 = 78;
+     5de:	8e e4       	ldi	r24, 0x4E	; 78
+     5e0:	83 bd       	out	0x23, r24	; 35
+		TIMSK |= 1<<OCIE2;
+     5e2:	89 b7       	in	r24, 0x39	; 57
+     5e4:	80 68       	ori	r24, 0x80	; 128
+     5e6:	89 bf       	out	0x39, r24	; 57
+		TCCR2 = 0x00;
+     5e8:	15 bc       	out	0x25, r1	; 37
+		TCCR2 |= (1<<WGM21) | 0x07;
+     5ea:	85 b5       	in	r24, 0x25	; 37
+     5ec:	8f 60       	ori	r24, 0x0F	; 15
+     5ee:	85 bd       	out	0x25, r24	; 37
+     5f0:	08 95       	ret
+
+000005f2 <__vector_9>:
+		
+	
+}
+
+ISR(TIMER0_OVF_vect)
+{
+     5f2:	1f 92       	push	r1
+     5f4:	0f 92       	push	r0
+     5f6:	0f b6       	in	r0, 0x3f	; 63
+     5f8:	0f 92       	push	r0
+     5fa:	11 24       	eor	r1, r1
+     5fc:	2f 93       	push	r18
+     5fe:	3f 93       	push	r19
+     600:	4f 93       	push	r20
+     602:	5f 93       	push	r21
+     604:	6f 93       	push	r22
+     606:	7f 93       	push	r23
+     608:	8f 93       	push	r24
+     60a:	9f 93       	push	r25
+     60c:	af 93       	push	r26
+     60e:	bf 93       	push	r27
+     610:	ef 93       	push	r30
+     612:	ff 93       	push	r31
+	Timer5msCallBackPtr();
+     614:	e0 91 8b 02 	lds	r30, 0x028B	; 0x80028b <Timer5msCallBackPtr>
+     618:	f0 91 8c 02 	lds	r31, 0x028C	; 0x80028c <Timer5msCallBackPtr+0x1>
+     61c:	09 95       	icall
+}
+     61e:	ff 91       	pop	r31
+     620:	ef 91       	pop	r30
+     622:	bf 91       	pop	r27
+     624:	af 91       	pop	r26
+     626:	9f 91       	pop	r25
+     628:	8f 91       	pop	r24
+     62a:	7f 91       	pop	r23
+     62c:	6f 91       	pop	r22
+     62e:	5f 91       	pop	r21
+     630:	4f 91       	pop	r20
+     632:	3f 91       	pop	r19
+     634:	2f 91       	pop	r18
+     636:	0f 90       	pop	r0
+     638:	0f be       	out	0x3f, r0	; 63
+     63a:	0f 90       	pop	r0
+     63c:	1f 90       	pop	r1
+     63e:	18 95       	reti
+
+00000640 <__vector_3>:
+
+ISR(TIMER2_COMP_vect)
+{
+     640:	1f 92       	push	r1
+     642:	0f 92       	push	r0
+     644:	0f b6       	in	r0, 0x3f	; 63
+     646:	0f 92       	push	r0
+     648:	11 24       	eor	r1, r1
+     64a:	2f 93       	push	r18
+     64c:	3f 93       	push	r19
+     64e:	4f 93       	push	r20
+     650:	5f 93       	push	r21
+     652:	6f 93       	push	r22
+     654:	7f 93       	push	r23
+     656:	8f 93       	push	r24
+     658:	9f 93       	push	r25
+     65a:	af 93       	push	r26
+     65c:	bf 93       	push	r27
+     65e:	ef 93       	push	r30
+     660:	ff 93       	push	r31
+	
+	Timer10msCallBackPtr();
+     662:	e0 91 89 02 	lds	r30, 0x0289	; 0x800289 <Timer10msCallBackPtr>
+     666:	f0 91 8a 02 	lds	r31, 0x028A	; 0x80028a <Timer10msCallBackPtr+0x1>
+     66a:	09 95       	icall
+}
+     66c:	ff 91       	pop	r31
+     66e:	ef 91       	pop	r30
+     670:	bf 91       	pop	r27
+     672:	af 91       	pop	r26
+     674:	9f 91       	pop	r25
+     676:	8f 91       	pop	r24
+     678:	7f 91       	pop	r23
+     67a:	6f 91       	pop	r22
+     67c:	5f 91       	pop	r21
+     67e:	4f 91       	pop	r20
+     680:	3f 91       	pop	r19
+     682:	2f 91       	pop	r18
+     684:	0f 90       	pop	r0
+     686:	0f be       	out	0x3f, r0	; 63
+     688:	0f 90       	pop	r0
+     68a:	1f 90       	pop	r1
+     68c:	18 95       	reti
+
+0000068e <GetxDiff>:
+
+#include "BasicTypes.h"
+#include "GYRO.h"
+#include "L3G4200D.h"
+u8 GetxDiff(void)
+{
+     68e:	cf 93       	push	r28
+     690:	df 93       	push	r29
+     692:	00 d0       	rcall	.+0      	; 0x694 <GetxDiff+0x6>
+     694:	cd b7       	in	r28, 0x3d	; 61
+     696:	de b7       	in	r29, 0x3e	; 62
+	u8 Diff;
+	int Datax;
+	GYHD_ReadYDirection(&Datax,0);
+     698:	60 e0       	ldi	r22, 0x00	; 0
+     69a:	70 e0       	ldi	r23, 0x00	; 0
+     69c:	ce 01       	movw	r24, r28
+     69e:	01 96       	adiw	r24, 0x01	; 1
+     6a0:	a4 d1       	rcall	.+840    	; 0x9ea <GYHD_ReadYDirection>
+	if(Datax > 2000)
+     6a2:	89 81       	ldd	r24, Y+1	; 0x01
+     6a4:	9a 81       	ldd	r25, Y+2	; 0x02
+     6a6:	81 3d       	cpi	r24, 0xD1	; 209
+     6a8:	27 e0       	ldi	r18, 0x07	; 7
+     6aa:	92 07       	cpc	r25, r18
+     6ac:	2c f4       	brge	.+10     	; 0x6b8 <GetxDiff+0x2a>
+	{
+		Diff = 1;
+		
+	}
+	else if(Datax < -2000)
+     6ae:	80 33       	cpi	r24, 0x30	; 48
+     6b0:	98 4f       	sbci	r25, 0xF8	; 248
+     6b2:	24 f0       	brlt	.+8      	; 0x6bc <GetxDiff+0x2e>
+		Diff = 2;
+
+	}
+	else
+	{
+		Diff = 0;
+     6b4:	80 e0       	ldi	r24, 0x00	; 0
+     6b6:	03 c0       	rjmp	.+6      	; 0x6be <GetxDiff+0x30>
+	u8 Diff;
+	int Datax;
+	GYHD_ReadYDirection(&Datax,0);
+	if(Datax > 2000)
+	{
+		Diff = 1;
+     6b8:	81 e0       	ldi	r24, 0x01	; 1
+     6ba:	01 c0       	rjmp	.+2      	; 0x6be <GetxDiff+0x30>
+		
+	}
+	else if(Datax < -2000)
+	{
+		Diff = 2;
+     6bc:	82 e0       	ldi	r24, 0x02	; 2
+		Diff = 0;
+	}
+	return Diff;
+	
+	
+}
+     6be:	0f 90       	pop	r0
+     6c0:	0f 90       	pop	r0
+     6c2:	df 91       	pop	r29
+     6c4:	cf 91       	pop	r28
+     6c6:	08 95       	ret
+
+000006c8 <GetyDiff>:
+u8 GetyDiff(void)
+{
+     6c8:	cf 93       	push	r28
+     6ca:	df 93       	push	r29
+     6cc:	00 d0       	rcall	.+0      	; 0x6ce <GetyDiff+0x6>
+     6ce:	cd b7       	in	r28, 0x3d	; 61
+     6d0:	de b7       	in	r29, 0x3e	; 62
+	u8 Diff;
+	int Datax;
+	GYHD_ReadXDirection(&Datax,0);
+     6d2:	60 e0       	ldi	r22, 0x00	; 0
+     6d4:	70 e0       	ldi	r23, 0x00	; 0
+     6d6:	ce 01       	movw	r24, r28
+     6d8:	01 96       	adiw	r24, 0x01	; 1
+     6da:	5a d1       	rcall	.+692    	; 0x990 <GYHD_ReadXDirection>
+	if(Datax > 2000)
+     6dc:	89 81       	ldd	r24, Y+1	; 0x01
+     6de:	9a 81       	ldd	r25, Y+2	; 0x02
+     6e0:	81 3d       	cpi	r24, 0xD1	; 209
+     6e2:	27 e0       	ldi	r18, 0x07	; 7
+     6e4:	92 07       	cpc	r25, r18
+     6e6:	2c f4       	brge	.+10     	; 0x6f2 <GetyDiff+0x2a>
+	{
+		Diff = 1;
+		
+	}
+	else if(Datax < -2000)
+     6e8:	80 33       	cpi	r24, 0x30	; 48
+     6ea:	98 4f       	sbci	r25, 0xF8	; 248
+     6ec:	24 f0       	brlt	.+8      	; 0x6f6 <GetyDiff+0x2e>
+		Diff = 2;
+
+	}
+	else
+	{
+		Diff = 0;
+     6ee:	80 e0       	ldi	r24, 0x00	; 0
+     6f0:	03 c0       	rjmp	.+6      	; 0x6f8 <GetyDiff+0x30>
+	u8 Diff;
+	int Datax;
+	GYHD_ReadXDirection(&Datax,0);
+	if(Datax > 2000)
+	{
+		Diff = 1;
+     6f2:	81 e0       	ldi	r24, 0x01	; 1
+     6f4:	01 c0       	rjmp	.+2      	; 0x6f8 <GetyDiff+0x30>
+		
+	}
+	else if(Datax < -2000)
+	{
+		Diff = 2;
+     6f6:	82 e0       	ldi	r24, 0x02	; 2
+		Diff = 0;
+	}
+	return Diff;
+	
+	
+}
+     6f8:	0f 90       	pop	r0
+     6fa:	0f 90       	pop	r0
+     6fc:	df 91       	pop	r29
+     6fe:	cf 91       	pop	r28
+     700:	08 95       	ret
+
+00000702 <GetGyroState>:
+
+
+	static u8 YawCheckAllowed  =0;
+	static u8 PichCheckAllowed = 1;
+	
+	if(PichCheckAllowed == 1)
+     702:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <PichCheckAllowed.1604>
+     706:	81 30       	cpi	r24, 0x01	; 1
+     708:	09 f0       	breq	.+2      	; 0x70c <GetGyroState+0xa>
+     70a:	6c c0       	rjmp	.+216    	; 0x7e4 <GetGyroState+0xe2>
+	{
+		Diff = GetxDiff();
+     70c:	c0 df       	rcall	.-128    	; 0x68e <GetxDiff>
+		switch(State)
+     70e:	90 91 90 02 	lds	r25, 0x0290	; 0x800290 <State.1600>
+     712:	91 30       	cpi	r25, 0x01	; 1
+     714:	71 f1       	breq	.+92     	; 0x772 <GetGyroState+0x70>
+     716:	20 f0       	brcs	.+8      	; 0x720 <GetGyroState+0x1e>
+     718:	92 30       	cpi	r25, 0x02	; 2
+     71a:	09 f4       	brne	.+2      	; 0x71e <GetGyroState+0x1c>
+     71c:	47 c0       	rjmp	.+142    	; 0x7ac <GetGyroState+0xaa>
+     71e:	62 c0       	rjmp	.+196    	; 0x7e4 <GetGyroState+0xe2>
+		{
+			case STP:
+			{
+				
+				//LCD_DispString("STP");
+				if(ReadingStarted == 0)
+     720:	90 91 8f 02 	lds	r25, 0x028F	; 0x80028f <ReadingStarted.1602>
+     724:	91 11       	cpse	r25, r1
+     726:	0e c0       	rjmp	.+28     	; 0x744 <GetGyroState+0x42>
+				{
+					if((Diff != 0))
+     728:	88 23       	and	r24, r24
+     72a:	41 f0       	breq	.+16     	; 0x73c <GetGyroState+0x3a>
+					{
+						ReadingStarted = 1;
+     72c:	91 e0       	ldi	r25, 0x01	; 1
+     72e:	90 93 8f 02 	sts	0x028F, r25	; 0x80028f <ReadingStarted.1602>
+						lastDiff = Diff;
+     732:	80 93 8e 02 	sts	0x028E, r24	; 0x80028e <lastDiff.1601>
+						YawCheckAllowed =0;
+     736:	10 92 8d 02 	sts	0x028D, r1	; 0x80028d <YawCheckAllowed.1603>
+     73a:	c5 c0       	rjmp	.+394    	; 0x8c6 <GetGyroState+0x1c4>
+					}
+					else
+					{
+						YawCheckAllowed = 1;
+     73c:	81 e0       	ldi	r24, 0x01	; 1
+     73e:	80 93 8d 02 	sts	0x028D, r24	; 0x80028d <YawCheckAllowed.1603>
+     742:	55 c0       	rjmp	.+170    	; 0x7ee <GetGyroState+0xec>
+					}
+				}
+				else
+				{
+					if(Diff == 0)
+     744:	81 11       	cpse	r24, r1
+     746:	4e c0       	rjmp	.+156    	; 0x7e4 <GetGyroState+0xe2>
+					{
+						ReadingStarted = 0;
+     748:	10 92 8f 02 	sts	0x028F, r1	; 0x80028f <ReadingStarted.1602>
+						if(lastDiff == 2)
+     74c:	80 91 8e 02 	lds	r24, 0x028E	; 0x80028e <lastDiff.1601>
+     750:	82 30       	cpi	r24, 0x02	; 2
+     752:	31 f4       	brne	.+12     	; 0x760 <GetGyroState+0x5e>
+						{
+							State = FWD;
+     754:	81 e0       	ldi	r24, 0x01	; 1
+     756:	80 93 90 02 	sts	0x0290, r24	; 0x800290 <State.1600>
+							YawCheckAllowed = 0;
+     75a:	10 92 8d 02 	sts	0x028D, r1	; 0x80028d <YawCheckAllowed.1603>
+     75e:	b3 c0       	rjmp	.+358    	; 0x8c6 <GetGyroState+0x1c4>
+						}
+						else if(lastDiff == 1)
+     760:	81 30       	cpi	r24, 0x01	; 1
+     762:	09 f0       	breq	.+2      	; 0x766 <GetGyroState+0x64>
+     764:	3f c0       	rjmp	.+126    	; 0x7e4 <GetGyroState+0xe2>
+						{
+							State = BWD;
+     766:	82 e0       	ldi	r24, 0x02	; 2
+     768:	80 93 90 02 	sts	0x0290, r24	; 0x800290 <State.1600>
+							YawCheckAllowed = 0;
+     76c:	10 92 8d 02 	sts	0x028D, r1	; 0x80028d <YawCheckAllowed.1603>
+     770:	aa c0       	rjmp	.+340    	; 0x8c6 <GetGyroState+0x1c4>
+			}
+			break;
+			case FWD:
+			{
+				//LCD_DispString("FWD");
+				if(ReadingStarted == 0)
+     772:	90 91 8f 02 	lds	r25, 0x028F	; 0x80028f <ReadingStarted.1602>
+     776:	91 11       	cpse	r25, r1
+     778:	08 c0       	rjmp	.+16     	; 0x78a <GetGyroState+0x88>
+				{
+					if(Diff != 0)
+     77a:	88 23       	and	r24, r24
+     77c:	99 f1       	breq	.+102    	; 0x7e4 <GetGyroState+0xe2>
+					{
+						ReadingStarted = 1;
+     77e:	91 e0       	ldi	r25, 0x01	; 1
+     780:	90 93 8f 02 	sts	0x028F, r25	; 0x80028f <ReadingStarted.1602>
+						lastDiff = Diff;
+     784:	80 93 8e 02 	sts	0x028E, r24	; 0x80028e <lastDiff.1601>
+     788:	2d c0       	rjmp	.+90     	; 0x7e4 <GetGyroState+0xe2>
+					}
+				}
+				else
+				{
+					if(Diff == 0)
+     78a:	81 11       	cpse	r24, r1
+     78c:	2b c0       	rjmp	.+86     	; 0x7e4 <GetGyroState+0xe2>
+					{
+						ReadingStarted = 0;
+     78e:	10 92 8f 02 	sts	0x028F, r1	; 0x80028f <ReadingStarted.1602>
+						if(lastDiff == 2)
+     792:	80 91 8e 02 	lds	r24, 0x028E	; 0x80028e <lastDiff.1601>
+     796:	82 30       	cpi	r24, 0x02	; 2
+     798:	21 f4       	brne	.+8      	; 0x7a2 <GetGyroState+0xa0>
+						{
+							State = FWD;
+     79a:	81 e0       	ldi	r24, 0x01	; 1
+     79c:	80 93 90 02 	sts	0x0290, r24	; 0x800290 <State.1600>
+     7a0:	21 c0       	rjmp	.+66     	; 0x7e4 <GetGyroState+0xe2>
+						}
+						else if(lastDiff == 1)
+     7a2:	81 30       	cpi	r24, 0x01	; 1
+     7a4:	f9 f4       	brne	.+62     	; 0x7e4 <GetGyroState+0xe2>
+						{
+							State = STP;
+     7a6:	10 92 90 02 	sts	0x0290, r1	; 0x800290 <State.1600>
+     7aa:	1c c0       	rjmp	.+56     	; 0x7e4 <GetGyroState+0xe2>
+			break;
+			
+			case BWD:
+			{
+				//LCD_DispString("BWD");
+				if(ReadingStarted == 0)
+     7ac:	90 91 8f 02 	lds	r25, 0x028F	; 0x80028f <ReadingStarted.1602>
+     7b0:	91 11       	cpse	r25, r1
+     7b2:	08 c0       	rjmp	.+16     	; 0x7c4 <GetGyroState+0xc2>
+				{
+					if(Diff != 0)
+     7b4:	88 23       	and	r24, r24
+     7b6:	b1 f0       	breq	.+44     	; 0x7e4 <GetGyroState+0xe2>
+					{
+						ReadingStarted = 1;
+     7b8:	91 e0       	ldi	r25, 0x01	; 1
+     7ba:	90 93 8f 02 	sts	0x028F, r25	; 0x80028f <ReadingStarted.1602>
+						lastDiff = Diff;
+     7be:	80 93 8e 02 	sts	0x028E, r24	; 0x80028e <lastDiff.1601>
+     7c2:	10 c0       	rjmp	.+32     	; 0x7e4 <GetGyroState+0xe2>
+					}
+				}
+				else
+				{
+					if(Diff == 0)
+     7c4:	81 11       	cpse	r24, r1
+     7c6:	0e c0       	rjmp	.+28     	; 0x7e4 <GetGyroState+0xe2>
+					{
+						ReadingStarted = 0;
+     7c8:	10 92 8f 02 	sts	0x028F, r1	; 0x80028f <ReadingStarted.1602>
+						if(lastDiff == 2)
+     7cc:	80 91 8e 02 	lds	r24, 0x028E	; 0x80028e <lastDiff.1601>
+     7d0:	82 30       	cpi	r24, 0x02	; 2
+     7d2:	19 f4       	brne	.+6      	; 0x7da <GetGyroState+0xd8>
+						{
+							State = STP;
+     7d4:	10 92 90 02 	sts	0x0290, r1	; 0x800290 <State.1600>
+     7d8:	05 c0       	rjmp	.+10     	; 0x7e4 <GetGyroState+0xe2>
+							
+						}
+						else if(lastDiff == 1)
+     7da:	81 30       	cpi	r24, 0x01	; 1
+     7dc:	19 f4       	brne	.+6      	; 0x7e4 <GetGyroState+0xe2>
+						{
+							State = BWD;
+     7de:	82 e0       	ldi	r24, 0x02	; 2
+     7e0:	80 93 90 02 	sts	0x0290, r24	; 0x800290 <State.1600>
+			}
+
+		}
+	}
+
+	if(YawCheckAllowed == 1)
+     7e4:	80 91 8d 02 	lds	r24, 0x028D	; 0x80028d <YawCheckAllowed.1603>
+     7e8:	81 30       	cpi	r24, 0x01	; 1
+     7ea:	09 f0       	breq	.+2      	; 0x7ee <GetGyroState+0xec>
+     7ec:	6c c0       	rjmp	.+216    	; 0x8c6 <GetGyroState+0x1c4>
+	{
+		Diff = GetyDiff();
+     7ee:	6c df       	rcall	.-296    	; 0x6c8 <GetyDiff>
+		switch(State)
+     7f0:	90 91 90 02 	lds	r25, 0x0290	; 0x800290 <State.1600>
+     7f4:	93 30       	cpi	r25, 0x03	; 3
+     7f6:	71 f1       	breq	.+92     	; 0x854 <GetGyroState+0x152>
+     7f8:	94 30       	cpi	r25, 0x04	; 4
+     7fa:	09 f4       	brne	.+2      	; 0x7fe <GetGyroState+0xfc>
+     7fc:	48 c0       	rjmp	.+144    	; 0x88e <GetGyroState+0x18c>
+     7fe:	91 11       	cpse	r25, r1
+     800:	62 c0       	rjmp	.+196    	; 0x8c6 <GetGyroState+0x1c4>
+		{
+			case STP:
+			{
+				//LCD_DispString("STP");
+				if(ReadingStarted == 0)
+     802:	90 91 8f 02 	lds	r25, 0x028F	; 0x80028f <ReadingStarted.1602>
+     806:	91 11       	cpse	r25, r1
+     808:	0e c0       	rjmp	.+28     	; 0x826 <GetGyroState+0x124>
+				{
+					if((Diff != 0))
+     80a:	88 23       	and	r24, r24
+     80c:	41 f0       	breq	.+16     	; 0x81e <GetGyroState+0x11c>
+					{
+						ReadingStarted = 1;
+     80e:	91 e0       	ldi	r25, 0x01	; 1
+     810:	90 93 8f 02 	sts	0x028F, r25	; 0x80028f <ReadingStarted.1602>
+						lastDiff = Diff;
+     814:	80 93 8e 02 	sts	0x028E, r24	; 0x80028e <lastDiff.1601>
+						PichCheckAllowed =0;
+     818:	10 92 26 01 	sts	0x0126, r1	; 0x800126 <PichCheckAllowed.1604>
+     81c:	54 c0       	rjmp	.+168    	; 0x8c6 <GetGyroState+0x1c4>
+					}
+					else
+					{
+						PichCheckAllowed = 1;
+     81e:	81 e0       	ldi	r24, 0x01	; 1
+     820:	80 93 26 01 	sts	0x0126, r24	; 0x800126 <PichCheckAllowed.1604>
+     824:	50 c0       	rjmp	.+160    	; 0x8c6 <GetGyroState+0x1c4>
+					}
+				}
+				else
+				{
+					if(Diff == 0)
+     826:	81 11       	cpse	r24, r1
+     828:	4e c0       	rjmp	.+156    	; 0x8c6 <GetGyroState+0x1c4>
+					{
+						ReadingStarted = 0;
+     82a:	10 92 8f 02 	sts	0x028F, r1	; 0x80028f <ReadingStarted.1602>
+						if(lastDiff == 2)
+     82e:	80 91 8e 02 	lds	r24, 0x028E	; 0x80028e <lastDiff.1601>
+     832:	82 30       	cpi	r24, 0x02	; 2
+     834:	31 f4       	brne	.+12     	; 0x842 <GetGyroState+0x140>
+						{
+							State = RGHT;
+     836:	83 e0       	ldi	r24, 0x03	; 3
+     838:	80 93 90 02 	sts	0x0290, r24	; 0x800290 <State.1600>
+							PichCheckAllowed = 0 ;
+     83c:	10 92 26 01 	sts	0x0126, r1	; 0x800126 <PichCheckAllowed.1604>
+     840:	42 c0       	rjmp	.+132    	; 0x8c6 <GetGyroState+0x1c4>
+						}
+						else if(lastDiff == 1)
+     842:	81 30       	cpi	r24, 0x01	; 1
+     844:	09 f0       	breq	.+2      	; 0x848 <GetGyroState+0x146>
+     846:	3f c0       	rjmp	.+126    	; 0x8c6 <GetGyroState+0x1c4>
+						{
+							State = LEFT;
+     848:	84 e0       	ldi	r24, 0x04	; 4
+     84a:	80 93 90 02 	sts	0x0290, r24	; 0x800290 <State.1600>
+							PichCheckAllowed = 0 ;
+     84e:	10 92 26 01 	sts	0x0126, r1	; 0x800126 <PichCheckAllowed.1604>
+     852:	39 c0       	rjmp	.+114    	; 0x8c6 <GetGyroState+0x1c4>
+			}
+			break;
+			case RGHT:
+			{
+				//LCD_DispString("RIGHT");
+				if(ReadingStarted == 0)
+     854:	90 91 8f 02 	lds	r25, 0x028F	; 0x80028f <ReadingStarted.1602>
+     858:	91 11       	cpse	r25, r1
+     85a:	08 c0       	rjmp	.+16     	; 0x86c <GetGyroState+0x16a>
+				{
+					if(Diff != 0)
+     85c:	88 23       	and	r24, r24
+     85e:	99 f1       	breq	.+102    	; 0x8c6 <GetGyroState+0x1c4>
+					{
+						ReadingStarted = 1;
+     860:	91 e0       	ldi	r25, 0x01	; 1
+     862:	90 93 8f 02 	sts	0x028F, r25	; 0x80028f <ReadingStarted.1602>
+						lastDiff = Diff;
+     866:	80 93 8e 02 	sts	0x028E, r24	; 0x80028e <lastDiff.1601>
+     86a:	2d c0       	rjmp	.+90     	; 0x8c6 <GetGyroState+0x1c4>
+					}
+				}
+				else
+				{
+					if(Diff == 0)
+     86c:	81 11       	cpse	r24, r1
+     86e:	2b c0       	rjmp	.+86     	; 0x8c6 <GetGyroState+0x1c4>
+					{
+						ReadingStarted = 0;
+     870:	10 92 8f 02 	sts	0x028F, r1	; 0x80028f <ReadingStarted.1602>
+						if(lastDiff == 2)
+     874:	80 91 8e 02 	lds	r24, 0x028E	; 0x80028e <lastDiff.1601>
+     878:	82 30       	cpi	r24, 0x02	; 2
+     87a:	21 f4       	brne	.+8      	; 0x884 <GetGyroState+0x182>
+						{
+							State = RGHT;
+     87c:	83 e0       	ldi	r24, 0x03	; 3
+     87e:	80 93 90 02 	sts	0x0290, r24	; 0x800290 <State.1600>
+     882:	21 c0       	rjmp	.+66     	; 0x8c6 <GetGyroState+0x1c4>
+						}
+						else if(lastDiff == 1)
+     884:	81 30       	cpi	r24, 0x01	; 1
+     886:	f9 f4       	brne	.+62     	; 0x8c6 <GetGyroState+0x1c4>
+						{
+							State = STP;
+     888:	10 92 90 02 	sts	0x0290, r1	; 0x800290 <State.1600>
+     88c:	1c c0       	rjmp	.+56     	; 0x8c6 <GetGyroState+0x1c4>
+			break;
+			
+			case LEFT:
+			{
+				//LCD_DispString("LEFT");
+				if(ReadingStarted == 0)
+     88e:	90 91 8f 02 	lds	r25, 0x028F	; 0x80028f <ReadingStarted.1602>
+     892:	91 11       	cpse	r25, r1
+     894:	08 c0       	rjmp	.+16     	; 0x8a6 <GetGyroState+0x1a4>
+				{
+					if(Diff != 0)
+     896:	88 23       	and	r24, r24
+     898:	b1 f0       	breq	.+44     	; 0x8c6 <GetGyroState+0x1c4>
+					{
+						ReadingStarted = 1;
+     89a:	91 e0       	ldi	r25, 0x01	; 1
+     89c:	90 93 8f 02 	sts	0x028F, r25	; 0x80028f <ReadingStarted.1602>
+						lastDiff = Diff;
+     8a0:	80 93 8e 02 	sts	0x028E, r24	; 0x80028e <lastDiff.1601>
+     8a4:	10 c0       	rjmp	.+32     	; 0x8c6 <GetGyroState+0x1c4>
+					}
+				}
+				else
+				{
+					if(Diff == 0)
+     8a6:	81 11       	cpse	r24, r1
+     8a8:	0e c0       	rjmp	.+28     	; 0x8c6 <GetGyroState+0x1c4>
+					{
+						ReadingStarted = 0;
+     8aa:	10 92 8f 02 	sts	0x028F, r1	; 0x80028f <ReadingStarted.1602>
+						if(lastDiff == 2)
+     8ae:	80 91 8e 02 	lds	r24, 0x028E	; 0x80028e <lastDiff.1601>
+     8b2:	82 30       	cpi	r24, 0x02	; 2
+     8b4:	19 f4       	brne	.+6      	; 0x8bc <GetGyroState+0x1ba>
+						{
+							State = STP;
+     8b6:	10 92 90 02 	sts	0x0290, r1	; 0x800290 <State.1600>
+     8ba:	05 c0       	rjmp	.+10     	; 0x8c6 <GetGyroState+0x1c4>
+							
+						}
+						else if(lastDiff == 1)
+     8bc:	81 30       	cpi	r24, 0x01	; 1
+     8be:	19 f4       	brne	.+6      	; 0x8c6 <GetGyroState+0x1c4>
+						{
+							State = LEFT;
+     8c0:	84 e0       	ldi	r24, 0x04	; 4
+     8c2:	80 93 90 02 	sts	0x0290, r24	; 0x800290 <State.1600>
+
+		}
+	}
+
+	return State;
+     8c6:	80 91 90 02 	lds	r24, 0x0290	; 0x800290 <State.1600>
+     8ca:	08 95       	ret
+
+000008cc <GYHD_WakeUpModule>:
+}
+/*****************************************************************************************************/
+void GYHD_SleepModule(void)
+{
+   vidManageOperationModes(u8SLEEP_MOD);	
+}
+     8cc:	0f 93       	push	r16
+     8ce:	1f 93       	push	r17
+     8d0:	cf 93       	push	r28
+     8d2:	df 93       	push	r29
+     8d4:	8c 01       	movw	r16, r24
+     8d6:	80 91 91 02 	lds	r24, 0x0291	; 0x800291 <GYHD_u8StartTimeoutFlag>
+     8da:	81 11       	cpse	r24, r1
+     8dc:	2b c0       	rjmp	.+86     	; 0x934 <GYHD_WakeUpModule+0x68>
+     8de:	e3 e0       	ldi	r30, 0x03	; 3
+     8e0:	f2 e0       	ldi	r31, 0x02	; 2
+     8e2:	c1 81       	ldd	r28, Z+1	; 0x01
+     8e4:	82 81       	ldd	r24, Z+2	; 0x02
+     8e6:	c8 2b       	or	r28, r24
+     8e8:	c8 60       	ori	r28, 0x08	; 8
+     8ea:	83 81       	ldd	r24, Z+3	; 0x03
+     8ec:	dc 2f       	mov	r29, r28
+     8ee:	d8 2b       	or	r29, r24
+     8f0:	10 92 92 02 	sts	0x0292, r1	; 0x800292 <GYHD_u8TimeOutFlag>
+     8f4:	44 e0       	ldi	r20, 0x04	; 4
+     8f6:	60 e0       	ldi	r22, 0x00	; 0
+     8f8:	81 e0       	ldi	r24, 0x01	; 1
+     8fa:	38 de       	rcall	.-912    	; 0x56c <DIO_WritePort>
+     8fc:	80 ea       	ldi	r24, 0xA0	; 160
+     8fe:	e2 d0       	rcall	.+452    	; 0xac4 <SPI_u8TransfereByte>
+     900:	80 e0       	ldi	r24, 0x00	; 0
+     902:	e0 d0       	rcall	.+448    	; 0xac4 <SPI_u8TransfereByte>
+     904:	c8 2f       	mov	r28, r24
+     906:	44 e0       	ldi	r20, 0x04	; 4
+     908:	6f ef       	ldi	r22, 0xFF	; 255
+     90a:	81 e0       	ldi	r24, 0x01	; 1
+     90c:	2f de       	rcall	.-930    	; 0x56c <DIO_WritePort>
+     90e:	c0 7f       	andi	r28, 0xF0	; 240
+     910:	cd 2b       	or	r28, r29
+     912:	44 e0       	ldi	r20, 0x04	; 4
+     914:	60 e0       	ldi	r22, 0x00	; 0
+     916:	81 e0       	ldi	r24, 0x01	; 1
+     918:	29 de       	rcall	.-942    	; 0x56c <DIO_WritePort>
+     91a:	80 e2       	ldi	r24, 0x20	; 32
+     91c:	d3 d0       	rcall	.+422    	; 0xac4 <SPI_u8TransfereByte>
+     91e:	8c 2f       	mov	r24, r28
+     920:	d1 d0       	rcall	.+418    	; 0xac4 <SPI_u8TransfereByte>
+     922:	44 e0       	ldi	r20, 0x04	; 4
+     924:	6f ef       	ldi	r22, 0xFF	; 255
+     926:	81 e0       	ldi	r24, 0x01	; 1
+     928:	21 de       	rcall	.-958    	; 0x56c <DIO_WritePort>
+     92a:	80 91 93 02 	lds	r24, 0x0293	; 0x800293 <GYHD_u8LastPowerMode>
+     92e:	8f 30       	cpi	r24, 0x0F	; 15
+     930:	01 f5       	brne	.+64     	; 0x972 <GYHD_WakeUpModule+0xa6>
+     932:	18 c0       	rjmp	.+48     	; 0x964 <GYHD_WakeUpModule+0x98>
+     934:	80 91 93 02 	lds	r24, 0x0293	; 0x800293 <GYHD_u8LastPowerMode>
+     938:	88 30       	cpi	r24, 0x08	; 8
+     93a:	51 f4       	brne	.+20     	; 0x950 <GYHD_WakeUpModule+0x84>
+     93c:	8f e0       	ldi	r24, 0x0F	; 15
+     93e:	97 e2       	ldi	r25, 0x27	; 39
+     940:	01 97       	sbiw	r24, 0x01	; 1
+     942:	f1 f7       	brne	.-4      	; 0x940 <GYHD_WakeUpModule+0x74>
+     944:	00 c0       	rjmp	.+0      	; 0x946 <GYHD_WakeUpModule+0x7a>
+     946:	00 00       	nop
+     948:	81 e0       	ldi	r24, 0x01	; 1
+     94a:	80 93 92 02 	sts	0x0292, r24	; 0x800292 <GYHD_u8TimeOutFlag>
+     94e:	15 c0       	rjmp	.+42     	; 0x97a <GYHD_WakeUpModule+0xae>
+     950:	ef e0       	ldi	r30, 0x0F	; 15
+     952:	f7 e2       	ldi	r31, 0x27	; 39
+     954:	31 97       	sbiw	r30, 0x01	; 1
+     956:	f1 f7       	brne	.-4      	; 0x954 <GYHD_WakeUpModule+0x88>
+     958:	00 c0       	rjmp	.+0      	; 0x95a <GYHD_WakeUpModule+0x8e>
+     95a:	00 00       	nop
+     95c:	81 e0       	ldi	r24, 0x01	; 1
+     95e:	80 93 92 02 	sts	0x0292, r24	; 0x800292 <GYHD_u8TimeOutFlag>
+     962:	0b c0       	rjmp	.+22     	; 0x97a <GYHD_WakeUpModule+0xae>
+     964:	80 91 91 02 	lds	r24, 0x0291	; 0x800291 <GYHD_u8StartTimeoutFlag>
+     968:	81 11       	cpse	r24, r1
+     96a:	03 c0       	rjmp	.+6      	; 0x972 <GYHD_WakeUpModule+0xa6>
+     96c:	f8 01       	movw	r30, r16
+     96e:	10 82       	st	Z, r1
+     970:	0a c0       	rjmp	.+20     	; 0x986 <GYHD_WakeUpModule+0xba>
+     972:	81 e0       	ldi	r24, 0x01	; 1
+     974:	f8 01       	movw	r30, r16
+     976:	80 83       	st	Z, r24
+     978:	06 c0       	rjmp	.+12     	; 0x986 <GYHD_WakeUpModule+0xba>
+     97a:	10 92 91 02 	sts	0x0291, r1	; 0x800291 <GYHD_u8StartTimeoutFlag>
+     97e:	8f e0       	ldi	r24, 0x0F	; 15
+     980:	80 93 93 02 	sts	0x0293, r24	; 0x800293 <GYHD_u8LastPowerMode>
+     984:	f3 cf       	rjmp	.-26     	; 0x96c <GYHD_WakeUpModule+0xa0>
+     986:	df 91       	pop	r29
+     988:	cf 91       	pop	r28
+     98a:	1f 91       	pop	r17
+     98c:	0f 91       	pop	r16
+     98e:	08 95       	ret
+
+00000990 <GYHD_ReadXDirection>:
+/*****************************************************************************************************/
+u8 GYHD_ReadXDirection(u16* pu16Data,u8* pu8ReadingStatus)
+{
+     990:	0f 93       	push	r16
+     992:	1f 93       	push	r17
+     994:	cf 93       	push	r28
+     996:	df 93       	push	r29
+     998:	8c 01       	movw	r16, r24
+	u8IsEnabled = u8AXIS_IS_ENABLED;
+	if(u8IsEnabled == u8AXIS_IS_ENABLED)
+	{
+		/*Check for Data Updated*/
+	//	vidCheckForNewData(pu8ReadingStatus,u8AxisMask);
+	*pu8ReadingStatus = u8READING_OK;
+     99a:	fb 01       	movw	r30, r22
+     99c:	10 82       	st	Z, r1
+	u8 u8RegData2;
+	switch(AxisMask)
+	{
+		case u8NEW_DATA_AVAILABEL_X_MASK:
+		{
+			L3G4200D_READ_OUT_X_L(&u8RegData1);
+     99e:	44 e0       	ldi	r20, 0x04	; 4
+     9a0:	60 e0       	ldi	r22, 0x00	; 0
+     9a2:	81 e0       	ldi	r24, 0x01	; 1
+     9a4:	e3 dd       	rcall	.-1082   	; 0x56c <DIO_WritePort>
+     9a6:	88 ea       	ldi	r24, 0xA8	; 168
+     9a8:	8d d0       	rcall	.+282    	; 0xac4 <SPI_u8TransfereByte>
+     9aa:	80 e0       	ldi	r24, 0x00	; 0
+     9ac:	8b d0       	rcall	.+278    	; 0xac4 <SPI_u8TransfereByte>
+     9ae:	c8 2f       	mov	r28, r24
+     9b0:	44 e0       	ldi	r20, 0x04	; 4
+     9b2:	6f ef       	ldi	r22, 0xFF	; 255
+     9b4:	81 e0       	ldi	r24, 0x01	; 1
+     9b6:	da dd       	rcall	.-1100   	; 0x56c <DIO_WritePort>
+			L3G4200D_READ_OUT_X_H(&u8RegData2);
+     9b8:	44 e0       	ldi	r20, 0x04	; 4
+     9ba:	60 e0       	ldi	r22, 0x00	; 0
+     9bc:	81 e0       	ldi	r24, 0x01	; 1
+     9be:	d6 dd       	rcall	.-1108   	; 0x56c <DIO_WritePort>
+     9c0:	89 ea       	ldi	r24, 0xA9	; 169
+     9c2:	80 d0       	rcall	.+256    	; 0xac4 <SPI_u8TransfereByte>
+     9c4:	80 e0       	ldi	r24, 0x00	; 0
+     9c6:	7e d0       	rcall	.+252    	; 0xac4 <SPI_u8TransfereByte>
+     9c8:	d8 2f       	mov	r29, r24
+     9ca:	44 e0       	ldi	r20, 0x04	; 4
+     9cc:	6f ef       	ldi	r22, 0xFF	; 255
+     9ce:	81 e0       	ldi	r24, 0x01	; 1
+     9d0:	cd dd       	rcall	.-1126   	; 0x56c <DIO_WritePort>
+	//	vidCheckForNewData(pu8ReadingStatus,u8AxisMask);
+	*pu8ReadingStatus = u8READING_OK;
+		if(*pu8ReadingStatus == u8READING_OK)
+		{
+			/*Read Data*/
+			*pu16Data = u16ReadAxisData(u8AxisMask);
+     9d2:	8c 2f       	mov	r24, r28
+     9d4:	90 e0       	ldi	r25, 0x00	; 0
+     9d6:	9d 2b       	or	r25, r29
+     9d8:	f8 01       	movw	r30, r16
+     9da:	91 83       	std	Z+1, r25	; 0x01
+     9dc:	80 83       	st	Z, r24
+		/*Axis Disabled*/
+		*pu8ReadingStatus = u8AXIS_DISABLED;
+	}
+	
+	return RetVar;
+}
+     9de:	80 e0       	ldi	r24, 0x00	; 0
+     9e0:	df 91       	pop	r29
+     9e2:	cf 91       	pop	r28
+     9e4:	1f 91       	pop	r17
+     9e6:	0f 91       	pop	r16
+     9e8:	08 95       	ret
+
+000009ea <GYHD_ReadYDirection>:
+/*****************************************************************************************************/
+u8 GYHD_ReadYDirection(u16* pu16Data,u8* pu8ReadingStatus)
+{
+     9ea:	0f 93       	push	r16
+     9ec:	1f 93       	push	r17
+     9ee:	cf 93       	push	r28
+     9f0:	df 93       	push	r29
+     9f2:	8c 01       	movw	r16, r24
+	u8IsEnabled = u8AXIS_IS_ENABLED;
+	if(u8IsEnabled == u8AXIS_IS_ENABLED)
+	{
+		/*Check for Data Updated*/
+		//vidCheckForNewData(pu8ReadingStatus,u8AxisMask);
+		*pu8ReadingStatus = u8READING_OK;
+     9f4:	fb 01       	movw	r30, r22
+     9f6:	10 82       	st	Z, r1
+			u16AxisData = u8RegData1 | ((u16)(u8RegData2<<8));
+		}
+		break;
+		case u8NEW_DATA_AVAILABEL_Y_MASK:
+		{
+			L3G4200D_READ_OUT_Y_L(&u8RegData1);
+     9f8:	44 e0       	ldi	r20, 0x04	; 4
+     9fa:	60 e0       	ldi	r22, 0x00	; 0
+     9fc:	81 e0       	ldi	r24, 0x01	; 1
+     9fe:	b6 dd       	rcall	.-1172   	; 0x56c <DIO_WritePort>
+     a00:	8a ea       	ldi	r24, 0xAA	; 170
+     a02:	60 d0       	rcall	.+192    	; 0xac4 <SPI_u8TransfereByte>
+     a04:	80 e0       	ldi	r24, 0x00	; 0
+     a06:	5e d0       	rcall	.+188    	; 0xac4 <SPI_u8TransfereByte>
+     a08:	c8 2f       	mov	r28, r24
+     a0a:	44 e0       	ldi	r20, 0x04	; 4
+     a0c:	6f ef       	ldi	r22, 0xFF	; 255
+     a0e:	81 e0       	ldi	r24, 0x01	; 1
+     a10:	ad dd       	rcall	.-1190   	; 0x56c <DIO_WritePort>
+			L3G4200D_READ_OUT_Y_H(&u8RegData2);
+     a12:	44 e0       	ldi	r20, 0x04	; 4
+     a14:	60 e0       	ldi	r22, 0x00	; 0
+     a16:	81 e0       	ldi	r24, 0x01	; 1
+     a18:	a9 dd       	rcall	.-1198   	; 0x56c <DIO_WritePort>
+     a1a:	8b ea       	ldi	r24, 0xAB	; 171
+     a1c:	53 d0       	rcall	.+166    	; 0xac4 <SPI_u8TransfereByte>
+     a1e:	80 e0       	ldi	r24, 0x00	; 0
+     a20:	51 d0       	rcall	.+162    	; 0xac4 <SPI_u8TransfereByte>
+     a22:	d8 2f       	mov	r29, r24
+     a24:	44 e0       	ldi	r20, 0x04	; 4
+     a26:	6f ef       	ldi	r22, 0xFF	; 255
+     a28:	81 e0       	ldi	r24, 0x01	; 1
+     a2a:	a0 dd       	rcall	.-1216   	; 0x56c <DIO_WritePort>
+		//vidCheckForNewData(pu8ReadingStatus,u8AxisMask);
+		*pu8ReadingStatus = u8READING_OK;
+		if(*pu8ReadingStatus == u8READING_OK)
+		{
+			/*Read Data*/
+			*pu16Data = u16ReadAxisData(u8AxisMask);
+     a2c:	8c 2f       	mov	r24, r28
+     a2e:	90 e0       	ldi	r25, 0x00	; 0
+     a30:	9d 2b       	or	r25, r29
+     a32:	f8 01       	movw	r30, r16
+     a34:	91 83       	std	Z+1, r25	; 0x01
+     a36:	80 83       	st	Z, r24
+		/*Axis Disabled*/
+		*pu8ReadingStatus = u8AXIS_DISABLED;
+	}
+	
+	return RetVar;
+}
+     a38:	80 e0       	ldi	r24, 0x00	; 0
+     a3a:	df 91       	pop	r29
+     a3c:	cf 91       	pop	r28
+     a3e:	1f 91       	pop	r17
+     a40:	0f 91       	pop	r16
+     a42:	08 95       	ret
+
+00000a44 <LED_Init>:
+#include "BasicTypes.h"
+#include "DIO.h"
+#include "LED_Cfg.h"
+/*Is a function to initialize direction of all connected LEDs and turn them all off*/
+void LED_Init(void)
+{
+     a44:	ef 92       	push	r14
+     a46:	ff 92       	push	r15
+     a48:	0f 93       	push	r16
+     a4a:	1f 93       	push	r17
+     a4c:	cf 93       	push	r28
+     a4e:	df 93       	push	r29
+     a50:	c7 e2       	ldi	r28, 0x27	; 39
+     a52:	d1 e0       	ldi	r29, 0x01	; 1
+     a54:	0f 2e       	mov	r0, r31
+     a56:	fb e2       	ldi	r31, 0x2B	; 43
+     a58:	ef 2e       	mov	r14, r31
+     a5a:	f1 e0       	ldi	r31, 0x01	; 1
+     a5c:	ff 2e       	mov	r15, r31
+     a5e:	f0 2d       	mov	r31, r0
+	u8 LoopIndex;
+
+	for(LoopIndex = 0; LoopIndex < LED_MAX_NUM; LoopIndex++)
+	{
+
+	  DIO_InitPortDirection(LED_ConfigParamaters[LoopIndex].LedPortName,0XFF,1<< LED_ConfigParamaters[LoopIndex].LedPinNum); 
+     a60:	01 e0       	ldi	r16, 0x01	; 1
+     a62:	10 e0       	ldi	r17, 0x00	; 0
+     a64:	a8 01       	movw	r20, r16
+     a66:	09 80       	ldd	r0, Y+1	; 0x01
+     a68:	02 c0       	rjmp	.+4      	; 0xa6e <LED_Init+0x2a>
+     a6a:	44 0f       	add	r20, r20
+     a6c:	55 1f       	adc	r21, r21
+     a6e:	0a 94       	dec	r0
+     a70:	e2 f7       	brpl	.-8      	; 0xa6a <LED_Init+0x26>
+     a72:	6f ef       	ldi	r22, 0xFF	; 255
+     a74:	88 81       	ld	r24, Y
+     a76:	56 dd       	rcall	.-1364   	; 0x524 <DIO_InitPortDirection>
+	  DIO_WritePort(LED_ConfigParamaters[LoopIndex].LedPortName,0X00,1<< LED_ConfigParamaters[LoopIndex].LedPinNum); // this will make them all on -- by Amr
+     a78:	a8 01       	movw	r20, r16
+     a7a:	09 80       	ldd	r0, Y+1	; 0x01
+     a7c:	02 c0       	rjmp	.+4      	; 0xa82 <LED_Init+0x3e>
+     a7e:	44 0f       	add	r20, r20
+     a80:	55 1f       	adc	r21, r21
+     a82:	0a 94       	dec	r0
+     a84:	e2 f7       	brpl	.-8      	; 0xa7e <LED_Init+0x3a>
+     a86:	60 e0       	ldi	r22, 0x00	; 0
+     a88:	88 81       	ld	r24, Y
+     a8a:	70 dd       	rcall	.-1312   	; 0x56c <DIO_WritePort>
+     a8c:	22 96       	adiw	r28, 0x02	; 2
+/*Is a function to initialize direction of all connected LEDs and turn them all off*/
+void LED_Init(void)
+{
+	u8 LoopIndex;
+
+	for(LoopIndex = 0; LoopIndex < LED_MAX_NUM; LoopIndex++)
+     a8e:	ce 15       	cp	r28, r14
+     a90:	df 05       	cpc	r29, r15
+     a92:	41 f7       	brne	.-48     	; 0xa64 <LED_Init+0x20>
+
+	  DIO_InitPortDirection(LED_ConfigParamaters[LoopIndex].LedPortName,0XFF,1<< LED_ConfigParamaters[LoopIndex].LedPinNum); 
+	  DIO_WritePort(LED_ConfigParamaters[LoopIndex].LedPortName,0X00,1<< LED_ConfigParamaters[LoopIndex].LedPinNum); // this will make them all on -- by Amr
+	}
+	
+}
+     a94:	df 91       	pop	r29
+     a96:	cf 91       	pop	r28
+     a98:	1f 91       	pop	r17
+     a9a:	0f 91       	pop	r16
+     a9c:	ff 90       	pop	r15
+     a9e:	ef 90       	pop	r14
+     aa0:	08 95       	ret
+
+00000aa2 <LED_SetData>:
+/* Is A function to Write a data LED_DATA_OFF or LED_DATA_ON to a specific LED bu LedId*/
+void LED_SetData(u8 LedId,u8 LedData)
+{
+
+DIO_WritePort(LED_ConfigParamaters[LedId].LedPortName,LedData,1<< LED_ConfigParamaters[LedId].LedPinNum);
+     aa2:	e8 2f       	mov	r30, r24
+     aa4:	f0 e0       	ldi	r31, 0x00	; 0
+     aa6:	ee 0f       	add	r30, r30
+     aa8:	ff 1f       	adc	r31, r31
+     aaa:	e9 5d       	subi	r30, 0xD9	; 217
+     aac:	fe 4f       	sbci	r31, 0xFE	; 254
+     aae:	41 e0       	ldi	r20, 0x01	; 1
+     ab0:	50 e0       	ldi	r21, 0x00	; 0
+     ab2:	01 80       	ldd	r0, Z+1	; 0x01
+     ab4:	02 c0       	rjmp	.+4      	; 0xaba <LED_SetData+0x18>
+     ab6:	44 0f       	add	r20, r20
+     ab8:	55 1f       	adc	r21, r21
+     aba:	0a 94       	dec	r0
+     abc:	e2 f7       	brpl	.-8      	; 0xab6 <LED_SetData+0x14>
+     abe:	80 81       	ld	r24, Z
+     ac0:	55 dd       	rcall	.-1366   	; 0x56c <DIO_WritePort>
+     ac2:	08 95       	ret
+
+00000ac4 <SPI_u8TransfereByte>:
+	SPSR |= (Lut[u8LoopCount-1].u8RegVal >> 2); 
+	
+}
+u8 SPI_u8TransfereByte(u8 u8Byte)
+{
+	SPDR = u8Byte;
+     ac4:	8f b9       	out	0x0f, r24	; 15
+	while((SPSR&(1<<SPIF))== 0x00)
+     ac6:	77 9b       	sbis	0x0e, 7	; 14
+     ac8:	fe cf       	rjmp	.-4      	; 0xac6 <SPI_u8TransfereByte+0x2>
+	;
+	u8Byte = SPDR;
+     aca:	8f b1       	in	r24, 0x0f	; 15
+	return u8Byte;
+     acc:	08 95       	ret
+
+00000ace <UART_Init>:
+static tCbkFn UartRxcCnkFnPtr;
+
+void UART_Init(void)
+{
+	u16 Ubrr ;
+	UCSRA = 0x00;
+     ace:	1b b8       	out	0x0b, r1	; 11
+	UCSRC = 0x00;
+     ad0:	10 bc       	out	0x20, r1	; 32
+	UCSRC |= (1<<URSEL) | (UartConfig.Parity << UPM0) | UartConfig.stopBitSetting << USBS | 0x03<<UCSZ0 ;
+     ad2:	90 b5       	in	r25, 0x20	; 32
+     ad4:	e4 e1       	ldi	r30, 0x14	; 20
+     ad6:	f2 e0       	ldi	r31, 0x02	; 2
+     ad8:	24 81       	ldd	r18, Z+4	; 0x04
+     ada:	80 e1       	ldi	r24, 0x10	; 16
+     adc:	28 9f       	mul	r18, r24
+     ade:	90 01       	movw	r18, r0
+     ae0:	11 24       	eor	r1, r1
+     ae2:	85 81       	ldd	r24, Z+5	; 0x05
+     ae4:	88 0f       	add	r24, r24
+     ae6:	88 0f       	add	r24, r24
+     ae8:	88 0f       	add	r24, r24
+     aea:	82 2b       	or	r24, r18
+     aec:	89 2b       	or	r24, r25
+     aee:	86 68       	ori	r24, 0x86	; 134
+     af0:	80 bd       	out	0x20, r24	; 32
+	Ubrr = F_CPU/16/UartConfig.BaudRate-1;
+     af2:	20 81       	ld	r18, Z
+     af4:	31 81       	ldd	r19, Z+1	; 0x01
+     af6:	42 81       	ldd	r20, Z+2	; 0x02
+     af8:	53 81       	ldd	r21, Z+3	; 0x03
+     afa:	60 e2       	ldi	r22, 0x20	; 32
+     afc:	71 ea       	ldi	r23, 0xA1	; 161
+     afe:	87 e0       	ldi	r24, 0x07	; 7
+     b00:	90 e0       	ldi	r25, 0x00	; 0
+     b02:	12 d3       	rcall	.+1572   	; 0x1128 <__udivmodsi4>
+     b04:	21 50       	subi	r18, 0x01	; 1
+     b06:	31 09       	sbc	r19, r1
+	UBRRL = (u8) Ubrr;
+     b08:	29 b9       	out	0x09, r18	; 9
+	UBRRH = (u8)(Ubrr >> 8);
+     b0a:	30 bd       	out	0x20, r19	; 32
+	UCSRB = (1<<RXEN)|(1<<TXEN);
+     b0c:	88 e1       	ldi	r24, 0x18	; 24
+     b0e:	8a b9       	out	0x0a, r24	; 10
+	TxBuffAdd = 0;
+	TxCounter = 0;
+	TxBuffLength = 0;
+	UartRxcCnkFnPtr = 0;
+     b10:	10 92 95 02 	sts	0x0295, r1	; 0x800295 <UartRxcCnkFnPtr+0x1>
+     b14:	10 92 94 02 	sts	0x0294, r1	; 0x800294 <UartRxcCnkFnPtr>
+     b18:	08 95       	ret
+
+00000b1a <UART_StartReception>:
+}
+
+}
+void UART_StartReception(u8* Buffer,u16 BufferLength,tCbkFn RxcCbkFnPtr)
+{
+	RxCounter =0;
+     b1a:	10 92 99 02 	sts	0x0299, r1	; 0x800299 <RxCounter+0x1>
+     b1e:	10 92 98 02 	sts	0x0298, r1	; 0x800298 <RxCounter>
+ RxBuffAdd = Buffer;
+     b22:	90 93 9b 02 	sts	0x029B, r25	; 0x80029b <RxBuffAdd+0x1>
+     b26:	80 93 9a 02 	sts	0x029A, r24	; 0x80029a <RxBuffAdd>
+ RxBuffLength = BufferLength;
+     b2a:	70 93 97 02 	sts	0x0297, r23	; 0x800297 <RxBuffLength+0x1>
+     b2e:	60 93 96 02 	sts	0x0296, r22	; 0x800296 <RxBuffLength>
+ UartRxcCnkFnPtr = RxcCbkFnPtr; 
+     b32:	50 93 95 02 	sts	0x0295, r21	; 0x800295 <UartRxcCnkFnPtr+0x1>
+     b36:	40 93 94 02 	sts	0x0294, r20	; 0x800294 <UartRxcCnkFnPtr>
+ //UCSRB |= 1<<RXEN;
+ UCSRB |= 1<<RXCIE;
+     b3a:	57 9a       	sbi	0x0a, 7	; 10
+     b3c:	08 95       	ret
+
+00000b3e <__vector_11>:
+}
+
+
+
+ISR (USART_RXC_vect)
+{
+     b3e:	1f 92       	push	r1
+     b40:	0f 92       	push	r0
+     b42:	0f b6       	in	r0, 0x3f	; 63
+     b44:	0f 92       	push	r0
+     b46:	11 24       	eor	r1, r1
+     b48:	2f 93       	push	r18
+     b4a:	3f 93       	push	r19
+     b4c:	4f 93       	push	r20
+     b4e:	5f 93       	push	r21
+     b50:	6f 93       	push	r22
+     b52:	7f 93       	push	r23
+     b54:	8f 93       	push	r24
+     b56:	9f 93       	push	r25
+     b58:	af 93       	push	r26
+     b5a:	bf 93       	push	r27
+     b5c:	ef 93       	push	r30
+     b5e:	ff 93       	push	r31
+
+	 *(RxBuffAdd + RxCounter)  = UDR; 
+     b60:	80 91 98 02 	lds	r24, 0x0298	; 0x800298 <RxCounter>
+     b64:	90 91 99 02 	lds	r25, 0x0299	; 0x800299 <RxCounter+0x1>
+     b68:	2c b1       	in	r18, 0x0c	; 12
+     b6a:	e0 91 9a 02 	lds	r30, 0x029A	; 0x80029a <RxBuffAdd>
+     b6e:	f0 91 9b 02 	lds	r31, 0x029B	; 0x80029b <RxBuffAdd+0x1>
+     b72:	e8 0f       	add	r30, r24
+     b74:	f9 1f       	adc	r31, r25
+     b76:	20 83       	st	Z, r18
+	RxCounter ++;
+     b78:	01 96       	adiw	r24, 0x01	; 1
+     b7a:	90 93 99 02 	sts	0x0299, r25	; 0x800299 <RxCounter+0x1>
+     b7e:	80 93 98 02 	sts	0x0298, r24	; 0x800298 <RxCounter>
+	
+	if(RxCounter == RxBuffLength)
+     b82:	20 91 96 02 	lds	r18, 0x0296	; 0x800296 <RxBuffLength>
+     b86:	30 91 97 02 	lds	r19, 0x0297	; 0x800297 <RxBuffLength+0x1>
+     b8a:	82 17       	cp	r24, r18
+     b8c:	93 07       	cpc	r25, r19
+     b8e:	51 f4       	brne	.+20     	; 0xba4 <__vector_11+0x66>
+	{
+
+ 		RxBuffLength = 0;
+     b90:	10 92 97 02 	sts	0x0297, r1	; 0x800297 <RxBuffLength+0x1>
+     b94:	10 92 96 02 	sts	0x0296, r1	; 0x800296 <RxBuffLength>
+		UCSRB &= ~(1<<RXCIE);
+     b98:	57 98       	cbi	0x0a, 7	; 10
+	//	UCSRB &= ~(1<<RXEN);
+	    
+		UartRxcCnkFnPtr();
+     b9a:	e0 91 94 02 	lds	r30, 0x0294	; 0x800294 <UartRxcCnkFnPtr>
+     b9e:	f0 91 95 02 	lds	r31, 0x0295	; 0x800295 <UartRxcCnkFnPtr+0x1>
+     ba2:	09 95       	icall
+  
+	}
+}
+     ba4:	ff 91       	pop	r31
+     ba6:	ef 91       	pop	r30
+     ba8:	bf 91       	pop	r27
+     baa:	af 91       	pop	r26
+     bac:	9f 91       	pop	r25
+     bae:	8f 91       	pop	r24
+     bb0:	7f 91       	pop	r23
+     bb2:	6f 91       	pop	r22
+     bb4:	5f 91       	pop	r21
+     bb6:	4f 91       	pop	r20
+     bb8:	3f 91       	pop	r19
+     bba:	2f 91       	pop	r18
+     bbc:	0f 90       	pop	r0
+     bbe:	0f be       	out	0x3f, r0	; 63
+     bc0:	0f 90       	pop	r0
+     bc2:	1f 90       	pop	r1
+     bc4:	18 95       	reti
+
+00000bc6 <UART_GetNumOfRxbytes>:
+u16 UART_GetNumOfRxbytes(void)
+{
+	return RxCounter;
+}
+     bc6:	80 91 98 02 	lds	r24, 0x0298	; 0x800298 <RxCounter>
+     bca:	90 91 99 02 	lds	r25, 0x0299	; 0x800299 <RxCounter+0x1>
+     bce:	08 95       	ret
+
+00000bd0 <UART_StopRception>:
+void UART_StopRception(void)
+{
+	UCSRB &= ~(1<<RXCIE);
+     bd0:	57 98       	cbi	0x0a, 7	; 10
+	RxCounter = 0;
+     bd2:	10 92 99 02 	sts	0x0299, r1	; 0x800299 <RxCounter+0x1>
+     bd6:	10 92 98 02 	sts	0x0298, r1	; 0x800298 <RxCounter>
+	UCSRB &= ~(1<<RXEN);
+     bda:	54 98       	cbi	0x0a, 4	; 10
+	UCSRB |=1<<RXEN;
+     bdc:	54 9a       	sbi	0x0a, 4	; 10
+     bde:	08 95       	ret
+
+00000be0 <USART_Transmit>:
+}
+
+ void USART_Transmit( unsigned char data )
+{
+/* Wait for empty transmit buffer */
+while ( !( UCSRA & (1<<UDRE)) )
+     be0:	5d 9b       	sbis	0x0b, 5	; 11
+     be2:	fe cf       	rjmp	.-4      	; 0xbe0 <USART_Transmit>
+;
+/* Put data into buffer, sends the data */
+UDR = data;
+     be4:	8c b9       	out	0x0c, r24	; 12
+     be6:	08 95       	ret
+
+00000be8 <UART_TxBuffer>:
+	TxBuffLength = 0;
+	UartRxcCnkFnPtr = 0;
+	
+}
+void UART_TxBuffer(const u8* Buffer,u16 BufferLength)
+{
+     be8:	ef 92       	push	r14
+     bea:	ff 92       	push	r15
+     bec:	0f 93       	push	r16
+     bee:	1f 93       	push	r17
+     bf0:	cf 93       	push	r28
+u8 i;
+for (i = 0 ;i<BufferLength;i++)
+     bf2:	61 15       	cp	r22, r1
+     bf4:	71 05       	cpc	r23, r1
+     bf6:	81 f0       	breq	.+32     	; 0xc18 <UART_TxBuffer+0x30>
+     bf8:	8b 01       	movw	r16, r22
+     bfa:	7c 01       	movw	r14, r24
+     bfc:	20 e0       	ldi	r18, 0x00	; 0
+     bfe:	30 e0       	ldi	r19, 0x00	; 0
+     c00:	c0 e0       	ldi	r28, 0x00	; 0
+{
+	USART_Transmit(Buffer[i]);
+     c02:	f7 01       	movw	r30, r14
+     c04:	e2 0f       	add	r30, r18
+     c06:	f3 1f       	adc	r31, r19
+     c08:	80 81       	ld	r24, Z
+     c0a:	ea df       	rcall	.-44     	; 0xbe0 <USART_Transmit>
+	
+}
+void UART_TxBuffer(const u8* Buffer,u16 BufferLength)
+{
+u8 i;
+for (i = 0 ;i<BufferLength;i++)
+     c0c:	cf 5f       	subi	r28, 0xFF	; 255
+     c0e:	2c 2f       	mov	r18, r28
+     c10:	30 e0       	ldi	r19, 0x00	; 0
+     c12:	20 17       	cp	r18, r16
+     c14:	31 07       	cpc	r19, r17
+     c16:	a8 f3       	brcs	.-22     	; 0xc02 <UART_TxBuffer+0x1a>
+{
+	USART_Transmit(Buffer[i]);
+}
+
+}
+     c18:	cf 91       	pop	r28
+     c1a:	1f 91       	pop	r17
+     c1c:	0f 91       	pop	r16
+     c1e:	ff 90       	pop	r15
+     c20:	ef 90       	pop	r14
+     c22:	08 95       	ret
+
+00000c24 <UTL_MemCpy>:
+	{
+	   Integer += (StrPtr[Length - 1 - LoopIndex] - '0') * Base;
+	   Base *=10;
+	}
+	return Integer;
+}
+     c24:	41 15       	cp	r20, r1
+     c26:	51 05       	cpc	r21, r1
+     c28:	51 f0       	breq	.+20     	; 0xc3e <UTL_MemCpy+0x1a>
+     c2a:	fb 01       	movw	r30, r22
+     c2c:	a8 2f       	mov	r26, r24
+     c2e:	b9 2f       	mov	r27, r25
+     c30:	64 0f       	add	r22, r20
+     c32:	75 1f       	adc	r23, r21
+     c34:	81 91       	ld	r24, Z+
+     c36:	8d 93       	st	X+, r24
+     c38:	e6 17       	cp	r30, r22
+     c3a:	f7 07       	cpc	r31, r23
+     c3c:	d9 f7       	brne	.-10     	; 0xc34 <UTL_MemCpy+0x10>
+     c3e:	08 95       	ret
+
+00000c40 <UTL_MemCmp>:
+     c40:	41 15       	cp	r20, r1
+     c42:	51 05       	cpc	r21, r1
+     c44:	b1 f0       	breq	.+44     	; 0xc72 <UTL_MemCmp+0x32>
+     c46:	fc 01       	movw	r30, r24
+     c48:	30 81       	ld	r19, Z
+     c4a:	fb 01       	movw	r30, r22
+     c4c:	20 81       	ld	r18, Z
+     c4e:	32 13       	cpse	r19, r18
+     c50:	12 c0       	rjmp	.+36     	; 0xc76 <UTL_MemCmp+0x36>
+     c52:	fc 01       	movw	r30, r24
+     c54:	31 96       	adiw	r30, 0x01	; 1
+     c56:	db 01       	movw	r26, r22
+     c58:	11 96       	adiw	r26, 0x01	; 1
+     c5a:	48 0f       	add	r20, r24
+     c5c:	59 1f       	adc	r21, r25
+     c5e:	04 c0       	rjmp	.+8      	; 0xc68 <UTL_MemCmp+0x28>
+     c60:	21 91       	ld	r18, Z+
+     c62:	9d 91       	ld	r25, X+
+     c64:	29 13       	cpse	r18, r25
+     c66:	09 c0       	rjmp	.+18     	; 0xc7a <UTL_MemCmp+0x3a>
+     c68:	e4 17       	cp	r30, r20
+     c6a:	f5 07       	cpc	r31, r21
+     c6c:	c9 f7       	brne	.-14     	; 0xc60 <UTL_MemCmp+0x20>
+     c6e:	80 e0       	ldi	r24, 0x00	; 0
+     c70:	08 95       	ret
+     c72:	80 e0       	ldi	r24, 0x00	; 0
+     c74:	08 95       	ret
+     c76:	81 e0       	ldi	r24, 0x01	; 1
+     c78:	08 95       	ret
+     c7a:	81 e0       	ldi	r24, 0x01	; 1
+     c7c:	08 95       	ret
+
+00000c7e <UTL_MemReplace>:
+void UTL_MemReplace(u8* DataPtr,u8 SearchedChar,u8 ReplacedChar,u8 BufferLength)
+{
+	u8 LoopIndex;
+	for(LoopIndex = 0; LoopIndex < BufferLength; LoopIndex ++)
+     c7e:	22 23       	and	r18, r18
+     c80:	79 f0       	breq	.+30     	; 0xca0 <UTL_MemReplace+0x22>
+     c82:	fc 01       	movw	r30, r24
+     c84:	21 50       	subi	r18, 0x01	; 1
+     c86:	30 e0       	ldi	r19, 0x00	; 0
+     c88:	2f 5f       	subi	r18, 0xFF	; 255
+     c8a:	3f 4f       	sbci	r19, 0xFF	; 255
+     c8c:	28 0f       	add	r18, r24
+     c8e:	39 1f       	adc	r19, r25
+	{
+		if(DataPtr[LoopIndex] == SearchedChar)
+     c90:	90 81       	ld	r25, Z
+     c92:	96 13       	cpse	r25, r22
+     c94:	01 c0       	rjmp	.+2      	; 0xc98 <UTL_MemReplace+0x1a>
+		{
+			DataPtr[LoopIndex] = ReplacedChar;
+     c96:	40 83       	st	Z, r20
+     c98:	31 96       	adiw	r30, 0x01	; 1
+	return Integer;
+}
+void UTL_MemReplace(u8* DataPtr,u8 SearchedChar,u8 ReplacedChar,u8 BufferLength)
+{
+	u8 LoopIndex;
+	for(LoopIndex = 0; LoopIndex < BufferLength; LoopIndex ++)
+     c9a:	e2 17       	cp	r30, r18
+     c9c:	f3 07       	cpc	r31, r19
+     c9e:	c1 f7       	brne	.-16     	; 0xc90 <UTL_MemReplace+0x12>
+     ca0:	08 95       	ret
+
+00000ca2 <WMGR_ResponseReceivedCbk>:
+void WMGR_StartConnection(u8* MacAddrPtr,u8 MacAddLength)
+{
+	//UTL_MemCpy(WMGR_TargetMacAddress,MacAddrPtr,MacAddLength);
+	BLTD_CmdList[START_CONN_ID].CmdParamPtr = MacAddrPtr;
+	BLTD_CmdList[START_CONN_ID].CmdParamSize = MacAddLength;
+	BLTD_SendCmd(START_CONN_ID);
+     ca2:	60 93 f1 02 	sts	0x02F1, r22	; 0x8002f1 <WMGR_ResPonseStatus>
+     ca6:	81 e0       	ldi	r24, 0x01	; 1
+     ca8:	80 93 f2 02 	sts	0x02F2, r24	; 0x8002f2 <WMGR_IsResponseReceived>
+     cac:	08 95       	ret
+
+00000cae <WMGR_DataReceivedCbk>:
+     cae:	81 e0       	ldi	r24, 0x01	; 1
+     cb0:	80 93 9d 02 	sts	0x029D, r24	; 0x80029d <WMGR_IsDataReceived>
+     cb4:	08 95       	ret
+
+00000cb6 <WMGR_Init>:
+     cb6:	10 92 f5 02 	sts	0x02F5, r1	; 0x8002f5 <WMGR_TimeoutCounter>
+     cba:	10 92 f6 02 	sts	0x02F6, r1	; 0x8002f6 <WMGR_TimeoutCounter+0x1>
+     cbe:	10 92 f7 02 	sts	0x02F7, r1	; 0x8002f7 <WMGR_TimeoutCounter+0x2>
+     cc2:	10 92 f8 02 	sts	0x02F8, r1	; 0x8002f8 <WMGR_TimeoutCounter+0x3>
+     cc6:	10 92 f4 02 	sts	0x02F4, r1	; 0x8002f4 <WMGR_InitScriptIndex>
+     cca:	10 92 f2 02 	sts	0x02F2, r1	; 0x8002f2 <WMGR_IsResponseReceived>
+     cce:	10 92 9d 02 	sts	0x029D, r1	; 0x80029d <WMGR_IsDataReceived>
+     cd2:	81 e0       	ldi	r24, 0x01	; 1
+     cd4:	80 93 f1 02 	sts	0x02F1, r24	; 0x8002f1 <WMGR_ResPonseStatus>
+     cd8:	10 92 f3 02 	sts	0x02F3, r1	; 0x8002f3 <WMGR_PowerState>
+     cdc:	85 e0       	ldi	r24, 0x05	; 5
+     cde:	80 93 9e 02 	sts	0x029E, r24	; 0x80029e <WMGR_ReceivingState>
+     ce2:	60 91 43 02 	lds	r22, 0x0243	; 0x800243 <WMGR_DeviceNameSize>
+     ce6:	84 e4       	ldi	r24, 0x44	; 68
+     ce8:	92 e0       	ldi	r25, 0x02	; 2
+     cea:	7c da       	rcall	.-2824   	; 0x1e4 <BLTD_SetDeviceName>
+     cec:	60 91 3b 02 	lds	r22, 0x023B	; 0x80023b <WMGR_PassKeySize>
+     cf0:	8c e3       	ldi	r24, 0x3C	; 60
+     cf2:	92 e0       	ldi	r25, 0x02	; 2
+     cf4:	7f da       	rcall	.-2818   	; 0x1f4 <BLTD_SetPassKey>
+     cf6:	81 e5       	ldi	r24, 0x51	; 81
+     cf8:	96 e0       	ldi	r25, 0x06	; 6
+     cfa:	07 da       	rcall	.-3058   	; 0x10a <BLTD_Init>
+     cfc:	48 e0       	ldi	r20, 0x08	; 8
+     cfe:	6f ef       	ldi	r22, 0xFF	; 255
+     d00:	82 e0       	ldi	r24, 0x02	; 2
+     d02:	10 dc       	rcall	.-2016   	; 0x524 <DIO_InitPortDirection>
+     d04:	85 da       	rcall	.-2806   	; 0x210 <BLTD_PowerOn>
+     d06:	08 95       	ret
+
+00000d08 <WMGR_RunInitScript>:
+     d08:	80 91 f3 02 	lds	r24, 0x02F3	; 0x8002f3 <WMGR_PowerState>
+     d0c:	81 30       	cpi	r24, 0x01	; 1
+     d0e:	59 f0       	breq	.+22     	; 0xd26 <WMGR_RunInitScript+0x1e>
+     d10:	28 f0       	brcs	.+10     	; 0xd1c <WMGR_RunInitScript+0x14>
+     d12:	82 30       	cpi	r24, 0x02	; 2
+     d14:	79 f1       	breq	.+94     	; 0xd74 <WMGR_RunInitScript+0x6c>
+     d16:	83 30       	cpi	r24, 0x03	; 3
+     d18:	d9 f1       	breq	.+118    	; 0xd90 <WMGR_RunInitScript+0x88>
+     d1a:	86 c0       	rjmp	.+268    	; 0xe28 <WMGR_RunInitScript+0x120>
+     d1c:	79 da       	rcall	.-2830   	; 0x210 <BLTD_PowerOn>
+     d1e:	81 e0       	ldi	r24, 0x01	; 1
+     d20:	80 93 f3 02 	sts	0x02F3, r24	; 0x8002f3 <WMGR_PowerState>
+     d24:	08 95       	ret
+     d26:	80 91 f5 02 	lds	r24, 0x02F5	; 0x8002f5 <WMGR_TimeoutCounter>
+     d2a:	90 91 f6 02 	lds	r25, 0x02F6	; 0x8002f6 <WMGR_TimeoutCounter+0x1>
+     d2e:	a0 91 f7 02 	lds	r26, 0x02F7	; 0x8002f7 <WMGR_TimeoutCounter+0x2>
+     d32:	b0 91 f8 02 	lds	r27, 0x02F8	; 0x8002f8 <WMGR_TimeoutCounter+0x3>
+     d36:	01 96       	adiw	r24, 0x01	; 1
+     d38:	a1 1d       	adc	r26, r1
+     d3a:	b1 1d       	adc	r27, r1
+     d3c:	85 30       	cpi	r24, 0x05	; 5
+     d3e:	91 05       	cpc	r25, r1
+     d40:	a1 05       	cpc	r26, r1
+     d42:	b1 05       	cpc	r27, r1
+     d44:	50 f4       	brcc	.+20     	; 0xd5a <WMGR_RunInitScript+0x52>
+     d46:	80 93 f5 02 	sts	0x02F5, r24	; 0x8002f5 <WMGR_TimeoutCounter>
+     d4a:	90 93 f6 02 	sts	0x02F6, r25	; 0x8002f6 <WMGR_TimeoutCounter+0x1>
+     d4e:	a0 93 f7 02 	sts	0x02F7, r26	; 0x8002f7 <WMGR_TimeoutCounter+0x2>
+     d52:	b0 93 f8 02 	sts	0x02F8, r27	; 0x8002f8 <WMGR_TimeoutCounter+0x3>
+     d56:	81 e0       	ldi	r24, 0x01	; 1
+     d58:	08 95       	ret
+     d5a:	10 92 f5 02 	sts	0x02F5, r1	; 0x8002f5 <WMGR_TimeoutCounter>
+     d5e:	10 92 f6 02 	sts	0x02F6, r1	; 0x8002f6 <WMGR_TimeoutCounter+0x1>
+     d62:	10 92 f7 02 	sts	0x02F7, r1	; 0x8002f7 <WMGR_TimeoutCounter+0x2>
+     d66:	10 92 f8 02 	sts	0x02F8, r1	; 0x8002f8 <WMGR_TimeoutCounter+0x3>
+     d6a:	82 e0       	ldi	r24, 0x02	; 2
+     d6c:	80 93 f3 02 	sts	0x02F3, r24	; 0x8002f3 <WMGR_PowerState>
+     d70:	81 e0       	ldi	r24, 0x01	; 1
+     d72:	08 95       	ret
+     d74:	10 92 f2 02 	sts	0x02F2, r1	; 0x8002f2 <WMGR_IsResponseReceived>
+     d78:	e0 91 f4 02 	lds	r30, 0x02F4	; 0x8002f4 <WMGR_InitScriptIndex>
+     d7c:	f0 e0       	ldi	r31, 0x00	; 0
+     d7e:	e3 5b       	subi	r30, 0xB3	; 179
+     d80:	fd 4f       	sbci	r31, 0xFD	; 253
+     d82:	80 81       	ld	r24, Z
+     d84:	e0 d9       	rcall	.-3136   	; 0x146 <BLTD_SendCmd>
+     d86:	83 e0       	ldi	r24, 0x03	; 3
+     d88:	80 93 f3 02 	sts	0x02F3, r24	; 0x8002f3 <WMGR_PowerState>
+     d8c:	81 e0       	ldi	r24, 0x01	; 1
+     d8e:	08 95       	ret
+     d90:	80 91 f2 02 	lds	r24, 0x02F2	; 0x8002f2 <WMGR_IsResponseReceived>
+     d94:	81 30       	cpi	r24, 0x01	; 1
+     d96:	19 f5       	brne	.+70     	; 0xdde <WMGR_RunInitScript+0xd6>
+     d98:	10 92 f2 02 	sts	0x02F2, r1	; 0x8002f2 <WMGR_IsResponseReceived>
+     d9c:	80 91 f1 02 	lds	r24, 0x02F1	; 0x8002f1 <WMGR_ResPonseStatus>
+     da0:	81 11       	cpse	r24, r1
+     da2:	44 c0       	rjmp	.+136    	; 0xe2c <WMGR_RunInitScript+0x124>
+     da4:	80 91 f4 02 	lds	r24, 0x02F4	; 0x8002f4 <WMGR_InitScriptIndex>
+     da8:	8f 5f       	subi	r24, 0xFF	; 255
+     daa:	80 93 f4 02 	sts	0x02F4, r24	; 0x8002f4 <WMGR_InitScriptIndex>
+     dae:	87 30       	cpi	r24, 0x07	; 7
+     db0:	89 f4       	brne	.+34     	; 0xdd4 <WMGR_RunInitScript+0xcc>
+     db2:	8f ee       	ldi	r24, 0xEF	; 239
+     db4:	92 e0       	ldi	r25, 0x02	; 2
+     db6:	24 da       	rcall	.-3000   	; 0x200 <BLTD_GetMacAddress>
+     db8:	2e e0       	ldi	r18, 0x0E	; 14
+     dba:	4c e2       	ldi	r20, 0x2C	; 44
+     dbc:	6a e3       	ldi	r22, 0x3A	; 58
+     dbe:	80 91 ef 02 	lds	r24, 0x02EF	; 0x8002ef <WMGR_DeviceMacAddresPtr>
+     dc2:	90 91 f0 02 	lds	r25, 0x02F0	; 0x8002f0 <WMGR_DeviceMacAddresPtr+0x1>
+     dc6:	5b df       	rcall	.-330    	; 0xc7e <UTL_MemReplace>
+     dc8:	10 92 f3 02 	sts	0x02F3, r1	; 0x8002f3 <WMGR_PowerState>
+     dcc:	10 92 f4 02 	sts	0x02F4, r1	; 0x8002f4 <WMGR_InitScriptIndex>
+     dd0:	80 e0       	ldi	r24, 0x00	; 0
+     dd2:	08 95       	ret
+     dd4:	82 e0       	ldi	r24, 0x02	; 2
+     dd6:	80 93 f3 02 	sts	0x02F3, r24	; 0x8002f3 <WMGR_PowerState>
+     dda:	81 e0       	ldi	r24, 0x01	; 1
+     ddc:	08 95       	ret
+     dde:	80 91 f5 02 	lds	r24, 0x02F5	; 0x8002f5 <WMGR_TimeoutCounter>
+     de2:	90 91 f6 02 	lds	r25, 0x02F6	; 0x8002f6 <WMGR_TimeoutCounter+0x1>
+     de6:	a0 91 f7 02 	lds	r26, 0x02F7	; 0x8002f7 <WMGR_TimeoutCounter+0x2>
+     dea:	b0 91 f8 02 	lds	r27, 0x02F8	; 0x8002f8 <WMGR_TimeoutCounter+0x3>
+     dee:	01 96       	adiw	r24, 0x01	; 1
+     df0:	a1 1d       	adc	r26, r1
+     df2:	b1 1d       	adc	r27, r1
+     df4:	89 35       	cpi	r24, 0x59	; 89
+     df6:	22 e0       	ldi	r18, 0x02	; 2
+     df8:	92 07       	cpc	r25, r18
+     dfa:	a1 05       	cpc	r26, r1
+     dfc:	b1 05       	cpc	r27, r1
+     dfe:	50 f4       	brcc	.+20     	; 0xe14 <WMGR_RunInitScript+0x10c>
+     e00:	80 93 f5 02 	sts	0x02F5, r24	; 0x8002f5 <WMGR_TimeoutCounter>
+     e04:	90 93 f6 02 	sts	0x02F6, r25	; 0x8002f6 <WMGR_TimeoutCounter+0x1>
+     e08:	a0 93 f7 02 	sts	0x02F7, r26	; 0x8002f7 <WMGR_TimeoutCounter+0x2>
+     e0c:	b0 93 f8 02 	sts	0x02F8, r27	; 0x8002f8 <WMGR_TimeoutCounter+0x3>
+     e10:	81 e0       	ldi	r24, 0x01	; 1
+     e12:	08 95       	ret
+     e14:	10 92 f5 02 	sts	0x02F5, r1	; 0x8002f5 <WMGR_TimeoutCounter>
+     e18:	10 92 f6 02 	sts	0x02F6, r1	; 0x8002f6 <WMGR_TimeoutCounter+0x1>
+     e1c:	10 92 f7 02 	sts	0x02F7, r1	; 0x8002f7 <WMGR_TimeoutCounter+0x2>
+     e20:	10 92 f8 02 	sts	0x02F8, r1	; 0x8002f8 <WMGR_TimeoutCounter+0x3>
+     e24:	82 e0       	ldi	r24, 0x02	; 2
+     e26:	08 95       	ret
+     e28:	82 e0       	ldi	r24, 0x02	; 2
+     e2a:	08 95       	ret
+     e2c:	82 e0       	ldi	r24, 0x02	; 2
+     e2e:	08 95       	ret
+
+00000e30 <WMGR_MasterStartConn>:
+{
+	WMGR_IsDataReceived = 1;
+}
+#if(DEVICE_ROLE == DEVICE_ROLE_MASTER)
+u8 WMGR_MasterStartConn(u8* MAcAddPtr,u8 MacAddLength)
+{
+     e30:	8f 92       	push	r8
+     e32:	9f 92       	push	r9
+     e34:	af 92       	push	r10
+     e36:	bf 92       	push	r11
+     e38:	cf 92       	push	r12
+     e3a:	df 92       	push	r13
+     e3c:	ef 92       	push	r14
+     e3e:	ff 92       	push	r15
+     e40:	0f 93       	push	r16
+     e42:	1f 93       	push	r17
+     e44:	cf 93       	push	r28
+     e46:	df 93       	push	r29
+     e48:	7c 01       	movw	r14, r24
+     e4a:	d6 2f       	mov	r29, r22
+	static u8 MasterConnectionState = MSTR_CONN_STATE_INQ;
+	u8 RxSize;
+	u8 LoopIndex;
+	u8 Status;
+	u8 RxStatus;
+	switch(MasterConnectionState)
+     e4c:	80 91 9c 02 	lds	r24, 0x029C	; 0x80029c <MasterConnectionState.1914>
+     e50:	81 30       	cpi	r24, 0x01	; 1
+     e52:	19 f1       	breq	.+70     	; 0xe9a <WMGR_MasterStartConn+0x6a>
+     e54:	38 f0       	brcs	.+14     	; 0xe64 <WMGR_MasterStartConn+0x34>
+     e56:	82 30       	cpi	r24, 0x02	; 2
+     e58:	09 f4       	brne	.+2      	; 0xe5c <WMGR_MasterStartConn+0x2c>
+     e5a:	b4 c0       	rjmp	.+360    	; 0xfc4 <WMGR_MasterStartConn+0x194>
+     e5c:	83 30       	cpi	r24, 0x03	; 3
+     e5e:	09 f4       	brne	.+2      	; 0xe62 <WMGR_MasterStartConn+0x32>
+     e60:	8b c0       	rjmp	.+278    	; 0xf78 <WMGR_MasterStartConn+0x148>
+     e62:	f4 c0       	rjmp	.+488    	; 0x104c <WMGR_MasterStartConn+0x21c>
+	{
+		case MSTR_CONN_STATE_INQ:
+		{
+
+			UART_StartReception(WMGR_DataBuffer,DATA_BUFFER_SIZE,WMGR_DataReceivedCbk);
+     e64:	47 e5       	ldi	r20, 0x57	; 87
+     e66:	56 e0       	ldi	r21, 0x06	; 6
+     e68:	60 e5       	ldi	r22, 0x50	; 80
+     e6a:	70 e0       	ldi	r23, 0x00	; 0
+     e6c:	8f e9       	ldi	r24, 0x9F	; 159
+     e6e:	92 e0       	ldi	r25, 0x02	; 2
+     e70:	54 de       	rcall	.-856    	; 0xb1a <UART_StartReception>
+			MasterConnectionState = MSTR_CONN_STATE_WAIT_INQ_RESP;
+     e72:	81 e0       	ldi	r24, 0x01	; 1
+     e74:	80 93 9c 02 	sts	0x029C, r24	; 0x80029c <MasterConnectionState.1914>
+			WMGR_TimeoutCounter = 0;
+     e78:	10 92 f5 02 	sts	0x02F5, r1	; 0x8002f5 <WMGR_TimeoutCounter>
+     e7c:	10 92 f6 02 	sts	0x02F6, r1	; 0x8002f6 <WMGR_TimeoutCounter+0x1>
+     e80:	10 92 f7 02 	sts	0x02F7, r1	; 0x8002f7 <WMGR_TimeoutCounter+0x2>
+     e84:	10 92 f8 02 	sts	0x02F8, r1	; 0x8002f8 <WMGR_TimeoutCounter+0x3>
+			WMGR_IsDataReceived = 0;
+     e88:	10 92 9d 02 	sts	0x029D, r1	; 0x80029d <WMGR_IsDataReceived>
+			RxStatus = WMGR_RX_STATUS_INPROGRESS;
+			UART_TxBuffer((u8*)"AT+INQ\r\n",8);
+     e8c:	68 e0       	ldi	r22, 0x08	; 8
+     e8e:	70 e0       	ldi	r23, 0x00	; 0
+     e90:	8a e1       	ldi	r24, 0x1A	; 26
+     e92:	92 e0       	ldi	r25, 0x02	; 2
+     e94:	a9 de       	rcall	.-686    	; 0xbe8 <UART_TxBuffer>
+
+			UART_StartReception(WMGR_DataBuffer,DATA_BUFFER_SIZE,WMGR_DataReceivedCbk);
+			MasterConnectionState = MSTR_CONN_STATE_WAIT_INQ_RESP;
+			WMGR_TimeoutCounter = 0;
+			WMGR_IsDataReceived = 0;
+			RxStatus = WMGR_RX_STATUS_INPROGRESS;
+     e96:	81 e0       	ldi	r24, 0x01	; 1
+			UART_TxBuffer((u8*)"AT+INQ\r\n",8);
+			
+		}
+		break;
+     e98:	e0 c0       	rjmp	.+448    	; 0x105a <WMGR_MasterStartConn+0x22a>
+		
+		case MSTR_CONN_STATE_WAIT_INQ_RESP:
+		{
+			
+			RxSize = UART_GetNumOfRxbytes();
+     e9a:	95 de       	rcall	.-726    	; 0xbc6 <UART_GetNumOfRxbytes>
+     e9c:	98 2e       	mov	r9, r24
+			if(RxSize > 0)
+     e9e:	88 23       	and	r24, r24
+     ea0:	09 f4       	brne	.+2      	; 0xea4 <WMGR_MasterStartConn+0x74>
+     ea2:	41 c0       	rjmp	.+130    	; 0xf26 <WMGR_MasterStartConn+0xf6>
+			{
+				
+				/*Search for OK*/
+				for(LoopIndex = 0; LoopIndex < (RxSize - 3)  ; LoopIndex ++)
+     ea4:	99 27       	eor	r25, r25
+     ea6:	8c 01       	movw	r16, r24
+     ea8:	03 50       	subi	r16, 0x03	; 3
+     eaa:	11 09       	sbc	r17, r1
+     eac:	10 16       	cp	r1, r16
+     eae:	11 06       	cpc	r1, r17
+     eb0:	0c f0       	brlt	.+2      	; 0xeb4 <WMGR_MasterStartConn+0x84>
+     eb2:	ce c0       	rjmp	.+412    	; 0x1050 <WMGR_MasterStartConn+0x220>
+     eb4:	80 e0       	ldi	r24, 0x00	; 0
+     eb6:	90 e0       	ldi	r25, 0x00	; 0
+     eb8:	c0 e0       	ldi	r28, 0x00	; 0
+					if(Status == 0)
+					{
+						/*ResPonse Received*/
+						UART_StopRception();
+						WMGR_TimeoutCounter = 0;
+						BLTD_CmdList[START_CONN_ID].CmdParamPtr = MAcAddPtr;
+     eba:	0f 2e       	mov	r0, r31
+     ebc:	ff e0       	ldi	r31, 0x0F	; 15
+     ebe:	af 2e       	mov	r10, r31
+     ec0:	f1 e0       	ldi	r31, 0x01	; 1
+     ec2:	bf 2e       	mov	r11, r31
+     ec4:	f0 2d       	mov	r31, r0
+						BLTD_CmdList[START_CONN_ID].CmdParamSize = MacAddLength;
+     ec6:	0f 2e       	mov	r0, r31
+     ec8:	f1 e1       	ldi	r31, 0x11	; 17
+     eca:	cf 2e       	mov	r12, r31
+     ecc:	f1 e0       	ldi	r31, 0x01	; 1
+     ece:	df 2e       	mov	r13, r31
+     ed0:	f0 2d       	mov	r31, r0
+						WMGR_IsResponseReceived = 0;
+						BLTD_SendCmd(START_CONN_ID);
+						MasterConnectionState = MSTR_CONN_STATE_LINK;
+     ed2:	68 94       	set
+     ed4:	88 24       	eor	r8, r8
+     ed6:	81 f8       	bld	r8, 1
+			{
+				
+				/*Search for OK*/
+				for(LoopIndex = 0; LoopIndex < (RxSize - 3)  ; LoopIndex ++)
+				{
+					Status = UTL_MemCmp(&WMGR_DataBuffer[LoopIndex],(u8*)"OK\r\n",4);
+     ed8:	44 e0       	ldi	r20, 0x04	; 4
+     eda:	50 e0       	ldi	r21, 0x00	; 0
+     edc:	64 e7       	ldi	r22, 0x74	; 116
+     ede:	71 e0       	ldi	r23, 0x01	; 1
+     ee0:	81 56       	subi	r24, 0x61	; 97
+     ee2:	9d 4f       	sbci	r25, 0xFD	; 253
+     ee4:	ad de       	rcall	.-678    	; 0xc40 <UTL_MemCmp>
+					if(Status == 0)
+     ee6:	81 11       	cpse	r24, r1
+     ee8:	16 c0       	rjmp	.+44     	; 0xf16 <WMGR_MasterStartConn+0xe6>
+					{
+						/*ResPonse Received*/
+						UART_StopRception();
+     eea:	72 de       	rcall	.-796    	; 0xbd0 <UART_StopRception>
+						WMGR_TimeoutCounter = 0;
+     eec:	10 92 f5 02 	sts	0x02F5, r1	; 0x8002f5 <WMGR_TimeoutCounter>
+     ef0:	10 92 f6 02 	sts	0x02F6, r1	; 0x8002f6 <WMGR_TimeoutCounter+0x1>
+     ef4:	10 92 f7 02 	sts	0x02F7, r1	; 0x8002f7 <WMGR_TimeoutCounter+0x2>
+     ef8:	10 92 f8 02 	sts	0x02F8, r1	; 0x8002f8 <WMGR_TimeoutCounter+0x3>
+						BLTD_CmdList[START_CONN_ID].CmdParamPtr = MAcAddPtr;
+     efc:	f5 01       	movw	r30, r10
+     efe:	f1 82       	std	Z+1, r15	; 0x01
+     f00:	e0 82       	st	Z, r14
+						BLTD_CmdList[START_CONN_ID].CmdParamSize = MacAddLength;
+     f02:	f6 01       	movw	r30, r12
+     f04:	d0 83       	st	Z, r29
+						WMGR_IsResponseReceived = 0;
+     f06:	10 92 f2 02 	sts	0x02F2, r1	; 0x8002f2 <WMGR_IsResponseReceived>
+						BLTD_SendCmd(START_CONN_ID);
+     f0a:	8b e0       	ldi	r24, 0x0B	; 11
+     f0c:	1c d9       	rcall	.-3528   	; 0x146 <BLTD_SendCmd>
+						MasterConnectionState = MSTR_CONN_STATE_LINK;
+     f0e:	80 92 9c 02 	sts	0x029C, r8	; 0x80029c <MasterConnectionState.1914>
+						LoopIndex = RxSize - 3;
+     f12:	cd ef       	ldi	r28, 0xFD	; 253
+     f14:	c9 0d       	add	r28, r9
+			RxSize = UART_GetNumOfRxbytes();
+			if(RxSize > 0)
+			{
+				
+				/*Search for OK*/
+				for(LoopIndex = 0; LoopIndex < (RxSize - 3)  ; LoopIndex ++)
+     f16:	cf 5f       	subi	r28, 0xFF	; 255
+     f18:	8c 2f       	mov	r24, r28
+     f1a:	90 e0       	ldi	r25, 0x00	; 0
+     f1c:	80 17       	cp	r24, r16
+     f1e:	91 07       	cpc	r25, r17
+     f20:	dc f2       	brlt	.-74     	; 0xed8 <WMGR_MasterStartConn+0xa8>
+						
+					}
+					
+					
+				}
+				RxStatus = WMGR_RX_STATUS_INPROGRESS;
+     f22:	81 e0       	ldi	r24, 0x01	; 1
+     f24:	9a c0       	rjmp	.+308    	; 0x105a <WMGR_MasterStartConn+0x22a>
+			}
+			else
+			{
+				WMGR_TimeoutCounter ++;
+     f26:	80 91 f5 02 	lds	r24, 0x02F5	; 0x8002f5 <WMGR_TimeoutCounter>
+     f2a:	90 91 f6 02 	lds	r25, 0x02F6	; 0x8002f6 <WMGR_TimeoutCounter+0x1>
+     f2e:	a0 91 f7 02 	lds	r26, 0x02F7	; 0x8002f7 <WMGR_TimeoutCounter+0x2>
+     f32:	b0 91 f8 02 	lds	r27, 0x02F8	; 0x8002f8 <WMGR_TimeoutCounter+0x3>
+     f36:	01 96       	adiw	r24, 0x01	; 1
+     f38:	a1 1d       	adc	r26, r1
+     f3a:	b1 1d       	adc	r27, r1
+				if(WMGR_TimeoutCounter > WMGR_WAIT_FOR_INQ_RESP_COUNT)
+     f3c:	89 35       	cpi	r24, 0x59	; 89
+     f3e:	f2 e0       	ldi	r31, 0x02	; 2
+     f40:	9f 07       	cpc	r25, r31
+     f42:	a1 05       	cpc	r26, r1
+     f44:	b1 05       	cpc	r27, r1
+     f46:	50 f4       	brcc	.+20     	; 0xf5c <WMGR_MasterStartConn+0x12c>
+				}
+				RxStatus = WMGR_RX_STATUS_INPROGRESS;
+			}
+			else
+			{
+				WMGR_TimeoutCounter ++;
+     f48:	80 93 f5 02 	sts	0x02F5, r24	; 0x8002f5 <WMGR_TimeoutCounter>
+     f4c:	90 93 f6 02 	sts	0x02F6, r25	; 0x8002f6 <WMGR_TimeoutCounter+0x1>
+     f50:	a0 93 f7 02 	sts	0x02F7, r26	; 0x8002f7 <WMGR_TimeoutCounter+0x2>
+     f54:	b0 93 f8 02 	sts	0x02F8, r27	; 0x8002f8 <WMGR_TimeoutCounter+0x3>
+					
+					
+				}
+				else
+				{
+					RxStatus = WMGR_RX_STATUS_INPROGRESS;
+     f58:	81 e0       	ldi	r24, 0x01	; 1
+     f5a:	7f c0       	rjmp	.+254    	; 0x105a <WMGR_MasterStartConn+0x22a>
+			else
+			{
+				WMGR_TimeoutCounter ++;
+				if(WMGR_TimeoutCounter > WMGR_WAIT_FOR_INQ_RESP_COUNT)
+				{
+					WMGR_TimeoutCounter = 0;
+     f5c:	10 92 f5 02 	sts	0x02F5, r1	; 0x8002f5 <WMGR_TimeoutCounter>
+     f60:	10 92 f6 02 	sts	0x02F6, r1	; 0x8002f6 <WMGR_TimeoutCounter+0x1>
+     f64:	10 92 f7 02 	sts	0x02F7, r1	; 0x8002f7 <WMGR_TimeoutCounter+0x2>
+     f68:	10 92 f8 02 	sts	0x02F8, r1	; 0x8002f8 <WMGR_TimeoutCounter+0x3>
+					MasterConnectionState = MSTR_CONN_STATE_PWR_OFF_INPROGRESS;
+     f6c:	83 e0       	ldi	r24, 0x03	; 3
+     f6e:	80 93 9c 02 	sts	0x029C, r24	; 0x80029c <MasterConnectionState.1914>
+					RxStatus = WMGR_RX_STATUS_INPROGRESS;
+					BLTD_PowerOff();
+     f72:	57 d9       	rcall	.-3410   	; 0x222 <BLTD_PowerOff>
+				WMGR_TimeoutCounter ++;
+				if(WMGR_TimeoutCounter > WMGR_WAIT_FOR_INQ_RESP_COUNT)
+				{
+					WMGR_TimeoutCounter = 0;
+					MasterConnectionState = MSTR_CONN_STATE_PWR_OFF_INPROGRESS;
+					RxStatus = WMGR_RX_STATUS_INPROGRESS;
+     f74:	81 e0       	ldi	r24, 0x01	; 1
+     f76:	71 c0       	rjmp	.+226    	; 0x105a <WMGR_MasterStartConn+0x22a>
+		break;
+		
+		case MSTR_CONN_STATE_PWR_OFF_INPROGRESS:
+		{
+			
+			WMGR_TimeoutCounter ++;
+     f78:	80 91 f5 02 	lds	r24, 0x02F5	; 0x8002f5 <WMGR_TimeoutCounter>
+     f7c:	90 91 f6 02 	lds	r25, 0x02F6	; 0x8002f6 <WMGR_TimeoutCounter+0x1>
+     f80:	a0 91 f7 02 	lds	r26, 0x02F7	; 0x8002f7 <WMGR_TimeoutCounter+0x2>
+     f84:	b0 91 f8 02 	lds	r27, 0x02F8	; 0x8002f8 <WMGR_TimeoutCounter+0x3>
+     f88:	01 96       	adiw	r24, 0x01	; 1
+     f8a:	a1 1d       	adc	r26, r1
+     f8c:	b1 1d       	adc	r27, r1
+     f8e:	80 93 f5 02 	sts	0x02F5, r24	; 0x8002f5 <WMGR_TimeoutCounter>
+     f92:	90 93 f6 02 	sts	0x02F6, r25	; 0x8002f6 <WMGR_TimeoutCounter+0x1>
+     f96:	a0 93 f7 02 	sts	0x02F7, r26	; 0x8002f7 <WMGR_TimeoutCounter+0x2>
+     f9a:	b0 93 f8 02 	sts	0x02F8, r27	; 0x8002f8 <WMGR_TimeoutCounter+0x3>
+			if(WMGR_TimeoutCounter > WMGR_AFTER_POWER_COUNT)
+     f9e:	05 97       	sbiw	r24, 0x05	; 5
+     fa0:	a1 05       	cpc	r26, r1
+     fa2:	b1 05       	cpc	r27, r1
+     fa4:	08 f4       	brcc	.+2      	; 0xfa8 <WMGR_MasterStartConn+0x178>
+     fa6:	56 c0       	rjmp	.+172    	; 0x1054 <WMGR_MasterStartConn+0x224>
+			{
+				UART_StopRception();
+     fa8:	13 de       	rcall	.-986    	; 0xbd0 <UART_StopRception>
+				WMGR_Init();
+     faa:	85 de       	rcall	.-758    	; 0xcb6 <WMGR_Init>
+				WMGR_TimeoutCounter = 0;
+     fac:	10 92 f5 02 	sts	0x02F5, r1	; 0x8002f5 <WMGR_TimeoutCounter>
+     fb0:	10 92 f6 02 	sts	0x02F6, r1	; 0x8002f6 <WMGR_TimeoutCounter+0x1>
+     fb4:	10 92 f7 02 	sts	0x02F7, r1	; 0x8002f7 <WMGR_TimeoutCounter+0x2>
+     fb8:	10 92 f8 02 	sts	0x02F8, r1	; 0x8002f8 <WMGR_TimeoutCounter+0x3>
+				RxStatus = WMGR_RX_STATUS_DISCONN;
+				MasterConnectionState = MSTR_CONN_STATE_INQ;
+     fbc:	10 92 9c 02 	sts	0x029C, r1	; 0x80029c <MasterConnectionState.1914>
+			if(WMGR_TimeoutCounter > WMGR_AFTER_POWER_COUNT)
+			{
+				UART_StopRception();
+				WMGR_Init();
+				WMGR_TimeoutCounter = 0;
+				RxStatus = WMGR_RX_STATUS_DISCONN;
+     fc0:	82 e0       	ldi	r24, 0x02	; 2
+     fc2:	4b c0       	rjmp	.+150    	; 0x105a <WMGR_MasterStartConn+0x22a>
+		}
+		break;
+		case MSTR_CONN_STATE_LINK:
+		{
+			
+			if(WMGR_IsResponseReceived == 1)
+     fc4:	80 91 f2 02 	lds	r24, 0x02F2	; 0x8002f2 <WMGR_IsResponseReceived>
+     fc8:	81 30       	cpi	r24, 0x01	; 1
+     fca:	11 f5       	brne	.+68     	; 0x1010 <WMGR_MasterStartConn+0x1e0>
+			{
+				
+				
+				WMGR_IsResponseReceived = 0;
+     fcc:	10 92 f2 02 	sts	0x02F2, r1	; 0x8002f2 <WMGR_IsResponseReceived>
+				
+				if(WMGR_ResPonseStatus == BLTD_RESP_STATE_VALID)
+     fd0:	80 91 f1 02 	lds	r24, 0x02F1	; 0x8002f1 <WMGR_ResPonseStatus>
+     fd4:	81 11       	cpse	r24, r1
+     fd6:	0d c0       	rjmp	.+26     	; 0xff2 <WMGR_MasterStartConn+0x1c2>
+				{
+					
+					/*Connection OK*/
+					RxStatus = WMGR_RX_STATUS_CONNECTED;
+					MasterConnectionState = MSTR_CONN_STATE_INQ;
+     fd8:	10 92 9c 02 	sts	0x029C, r1	; 0x80029c <MasterConnectionState.1914>
+					WMGR_TimeoutCounter = 0;
+     fdc:	10 92 f5 02 	sts	0x02F5, r1	; 0x8002f5 <WMGR_TimeoutCounter>
+     fe0:	10 92 f6 02 	sts	0x02F6, r1	; 0x8002f6 <WMGR_TimeoutCounter+0x1>
+     fe4:	10 92 f7 02 	sts	0x02F7, r1	; 0x8002f7 <WMGR_TimeoutCounter+0x2>
+     fe8:	10 92 f8 02 	sts	0x02F8, r1	; 0x8002f8 <WMGR_TimeoutCounter+0x3>
+					UART_StopRception();
+     fec:	f1 dd       	rcall	.-1054   	; 0xbd0 <UART_StopRception>
+				
+				if(WMGR_ResPonseStatus == BLTD_RESP_STATE_VALID)
+				{
+					
+					/*Connection OK*/
+					RxStatus = WMGR_RX_STATUS_CONNECTED;
+     fee:	80 e0       	ldi	r24, 0x00	; 0
+     ff0:	34 c0       	rjmp	.+104    	; 0x105a <WMGR_MasterStartConn+0x22a>
+					UART_StopRception();
+				}
+				else
+				{
+					/*Connection NOK*/
+					UART_StopRception();
+     ff2:	ee dd       	rcall	.-1060   	; 0xbd0 <UART_StopRception>
+					RxStatus = WMGR_RX_STATUS_INPROGRESS;
+					MasterConnectionState = MSTR_CONN_STATE_PWR_OFF_INPROGRESS;
+     ff4:	83 e0       	ldi	r24, 0x03	; 3
+     ff6:	80 93 9c 02 	sts	0x029C, r24	; 0x80029c <MasterConnectionState.1914>
+					BLTD_PowerOff();
+     ffa:	13 d9       	rcall	.-3546   	; 0x222 <BLTD_PowerOff>
+					WMGR_TimeoutCounter = 0;
+     ffc:	10 92 f5 02 	sts	0x02F5, r1	; 0x8002f5 <WMGR_TimeoutCounter>
+    1000:	10 92 f6 02 	sts	0x02F6, r1	; 0x8002f6 <WMGR_TimeoutCounter+0x1>
+    1004:	10 92 f7 02 	sts	0x02F7, r1	; 0x8002f7 <WMGR_TimeoutCounter+0x2>
+    1008:	10 92 f8 02 	sts	0x02F8, r1	; 0x8002f8 <WMGR_TimeoutCounter+0x3>
+				}
+				else
+				{
+					/*Connection NOK*/
+					UART_StopRception();
+					RxStatus = WMGR_RX_STATUS_INPROGRESS;
+    100c:	81 e0       	ldi	r24, 0x01	; 1
+    100e:	25 c0       	rjmp	.+74     	; 0x105a <WMGR_MasterStartConn+0x22a>
+
+				}
+			}
+			else
+			{
+				WMGR_TimeoutCounter ++;
+    1010:	80 91 f5 02 	lds	r24, 0x02F5	; 0x8002f5 <WMGR_TimeoutCounter>
+    1014:	90 91 f6 02 	lds	r25, 0x02F6	; 0x8002f6 <WMGR_TimeoutCounter+0x1>
+    1018:	a0 91 f7 02 	lds	r26, 0x02F7	; 0x8002f7 <WMGR_TimeoutCounter+0x2>
+    101c:	b0 91 f8 02 	lds	r27, 0x02F8	; 0x8002f8 <WMGR_TimeoutCounter+0x3>
+    1020:	01 96       	adiw	r24, 0x01	; 1
+    1022:	a1 1d       	adc	r26, r1
+    1024:	b1 1d       	adc	r27, r1
+    1026:	80 93 f5 02 	sts	0x02F5, r24	; 0x8002f5 <WMGR_TimeoutCounter>
+    102a:	90 93 f6 02 	sts	0x02F6, r25	; 0x8002f6 <WMGR_TimeoutCounter+0x1>
+    102e:	a0 93 f7 02 	sts	0x02F7, r26	; 0x8002f7 <WMGR_TimeoutCounter+0x2>
+    1032:	b0 93 f8 02 	sts	0x02F8, r27	; 0x8002f8 <WMGR_TimeoutCounter+0x3>
+				if(WMGR_TimeoutCounter > WMGR_WAIT_RESP_COUNT)
+    1036:	89 35       	cpi	r24, 0x59	; 89
+    1038:	92 40       	sbci	r25, 0x02	; 2
+    103a:	a1 05       	cpc	r26, r1
+    103c:	b1 05       	cpc	r27, r1
+    103e:	60 f0       	brcs	.+24     	; 0x1058 <WMGR_MasterStartConn+0x228>
+				{
+					
+					/*Connection NOK*/
+					UART_StopRception();
+    1040:	c7 dd       	rcall	.-1138   	; 0xbd0 <UART_StopRception>
+		RxStatus = WMGR_RX_STATUS_INPROGRESS;
+		MasterConnectionState = MSTR_CONN_STATE_PWR_OFF_INPROGRESS;
+    1042:	83 e0       	ldi	r24, 0x03	; 3
+    1044:	80 93 9c 02 	sts	0x029C, r24	; 0x80029c <MasterConnectionState.1914>
+				if(WMGR_TimeoutCounter > WMGR_WAIT_RESP_COUNT)
+				{
+					
+					/*Connection NOK*/
+					UART_StopRception();
+		RxStatus = WMGR_RX_STATUS_INPROGRESS;
+    1048:	81 e0       	ldi	r24, 0x01	; 1
+    104a:	07 c0       	rjmp	.+14     	; 0x105a <WMGR_MasterStartConn+0x22a>
+			
+		}
+		break;
+		default:
+		{
+			RxStatus = WMGR_RX_STATUS_DISCONN;
+    104c:	82 e0       	ldi	r24, 0x02	; 2
+    104e:	05 c0       	rjmp	.+10     	; 0x105a <WMGR_MasterStartConn+0x22a>
+						
+					}
+					
+					
+				}
+				RxStatus = WMGR_RX_STATUS_INPROGRESS;
+    1050:	81 e0       	ldi	r24, 0x01	; 1
+    1052:	03 c0       	rjmp	.+6      	; 0x105a <WMGR_MasterStartConn+0x22a>
+				RxStatus = WMGR_RX_STATUS_DISCONN;
+				MasterConnectionState = MSTR_CONN_STATE_INQ;
+			}
+			else
+			{
+				RxStatus = WMGR_RX_STATUS_INPROGRESS;
+    1054:	81 e0       	ldi	r24, 0x01	; 1
+    1056:	01 c0       	rjmp	.+2      	; 0x105a <WMGR_MasterStartConn+0x22a>
+		MasterConnectionState = MSTR_CONN_STATE_PWR_OFF_INPROGRESS;
+				}
+				else
+				{
+					/*Wait for Response*/
+					RxStatus = WMGR_RX_STATUS_INPROGRESS;
+    1058:	81 e0       	ldi	r24, 0x01	; 1
+			RxStatus = WMGR_RX_STATUS_DISCONN;
+		}
+		break;
+	}
+	return RxStatus;
+}
+    105a:	df 91       	pop	r29
+    105c:	cf 91       	pop	r28
+    105e:	1f 91       	pop	r17
+    1060:	0f 91       	pop	r16
+    1062:	ff 90       	pop	r15
+    1064:	ef 90       	pop	r14
+    1066:	df 90       	pop	r13
+    1068:	cf 90       	pop	r12
+    106a:	bf 90       	pop	r11
+    106c:	af 90       	pop	r10
+    106e:	9f 90       	pop	r9
+    1070:	8f 90       	pop	r8
+    1072:	08 95       	ret
+
+00001074 <WMGR_SendData>:
+#endif
+void WMGR_SendData(u8 Speed,u8 DirectionId)
+{
+    1074:	0f 93       	push	r16
+    1076:	1f 93       	push	r17
+    1078:	cf 93       	push	r28
+    107a:	df 93       	push	r29
+    107c:	18 2f       	mov	r17, r24
+	u8 BufferSize = 0;
+	WMGR_DataBuffer [0] = '*';
+    107e:	8a e2       	ldi	r24, 0x2A	; 42
+    1080:	80 93 9f 02 	sts	0x029F, r24	; 0x80029f <WMGR_DataBuffer>
+	BufferSize ++;
+
+if(Speed != 0)
+    1084:	11 23       	and	r17, r17
+    1086:	61 f1       	breq	.+88     	; 0x10e0 <WMGR_SendData+0x6c>
+{
+	UTL_MemCpy(&WMGR_DataBuffer[1],SpeedBuffer[DirectionId].SpeedPtr,SpeedBuffer[DirectionId].StringSize);
+    1088:	c6 2f       	mov	r28, r22
+    108a:	d0 e0       	ldi	r29, 0x00	; 0
+    108c:	cc 0f       	add	r28, r28
+    108e:	dd 1f       	adc	r29, r29
+    1090:	cc 0f       	add	r28, r28
+    1092:	dd 1f       	adc	r29, r29
+    1094:	c5 5d       	subi	r28, 0xD5	; 213
+    1096:	de 4f       	sbci	r29, 0xFE	; 254
+    1098:	4b 81       	ldd	r20, Y+3	; 0x03
+    109a:	50 e0       	ldi	r21, 0x00	; 0
+    109c:	68 81       	ld	r22, Y
+    109e:	79 81       	ldd	r23, Y+1	; 0x01
+    10a0:	80 ea       	ldi	r24, 0xA0	; 160
+    10a2:	92 e0       	ldi	r25, 0x02	; 2
+    10a4:	bf dd       	rcall	.-1154   	; 0xc24 <UTL_MemCpy>
+	WMGR_DataBuffer[SpeedBuffer[DirectionId].StringSize + 1] = (Speed / 10) + '0';
+    10a6:	6b 81       	ldd	r22, Y+3	; 0x03
+    10a8:	e6 2f       	mov	r30, r22
+    10aa:	f0 e0       	ldi	r31, 0x00	; 0
+    10ac:	e1 56       	subi	r30, 0x61	; 97
+    10ae:	fd 4f       	sbci	r31, 0xFD	; 253
+    10b0:	8d ec       	ldi	r24, 0xCD	; 205
+    10b2:	18 9f       	mul	r17, r24
+    10b4:	81 2d       	mov	r24, r1
+    10b6:	11 24       	eor	r1, r1
+    10b8:	86 95       	lsr	r24
+    10ba:	86 95       	lsr	r24
+    10bc:	86 95       	lsr	r24
+    10be:	90 e3       	ldi	r25, 0x30	; 48
+    10c0:	98 0f       	add	r25, r24
+    10c2:	91 83       	std	Z+1, r25	; 0x01
+	WMGR_DataBuffer[SpeedBuffer[DirectionId].StringSize + 2] = (Speed % 10) + '0';
+    10c4:	88 0f       	add	r24, r24
+    10c6:	98 2f       	mov	r25, r24
+    10c8:	99 0f       	add	r25, r25
+    10ca:	99 0f       	add	r25, r25
+    10cc:	89 0f       	add	r24, r25
+    10ce:	18 1b       	sub	r17, r24
+    10d0:	10 5d       	subi	r17, 0xD0	; 208
+    10d2:	12 83       	std	Z+2, r17	; 0x02
+	WMGR_DataBuffer[SpeedBuffer[DirectionId].StringSize + 3] = '%';
+    10d4:	85 e2       	ldi	r24, 0x25	; 37
+    10d6:	83 83       	std	Z+3, r24	; 0x03
+	WMGR_DataBuffer[SpeedBuffer[DirectionId].StringSize + 4] = '\n';
+    10d8:	8a e0       	ldi	r24, 0x0A	; 10
+    10da:	84 83       	std	Z+4, r24	; 0x04
+	BufferSize += SpeedBuffer[DirectionId].StringSize + 4;
+    10dc:	6b 5f       	subi	r22, 0xFB	; 251
+    10de:	1b c0       	rjmp	.+54     	; 0x1116 <WMGR_SendData+0xa2>
+	
+}
+else
+{
+	UTL_MemCpy(&WMGR_DataBuffer[1],SpeedBuffer[0].SpeedPtr,SpeedBuffer[DirectionId].StringSize);
+    10e0:	0b e2       	ldi	r16, 0x2B	; 43
+    10e2:	11 e0       	ldi	r17, 0x01	; 1
+    10e4:	c6 2f       	mov	r28, r22
+    10e6:	d0 e0       	ldi	r29, 0x00	; 0
+    10e8:	cc 0f       	add	r28, r28
+    10ea:	dd 1f       	adc	r29, r29
+    10ec:	cc 0f       	add	r28, r28
+    10ee:	dd 1f       	adc	r29, r29
+    10f0:	c5 5d       	subi	r28, 0xD5	; 213
+    10f2:	de 4f       	sbci	r29, 0xFE	; 254
+    10f4:	4b 81       	ldd	r20, Y+3	; 0x03
+    10f6:	50 e0       	ldi	r21, 0x00	; 0
+    10f8:	f8 01       	movw	r30, r16
+    10fa:	60 81       	ld	r22, Z
+    10fc:	71 81       	ldd	r23, Z+1	; 0x01
+    10fe:	80 ea       	ldi	r24, 0xA0	; 160
+    1100:	92 e0       	ldi	r25, 0x02	; 2
+    1102:	90 dd       	rcall	.-1248   	; 0xc24 <UTL_MemCpy>
+	WMGR_DataBuffer[SpeedBuffer[0].StringSize + 1] = '\n';
+    1104:	f8 01       	movw	r30, r16
+    1106:	63 81       	ldd	r22, Z+3	; 0x03
+    1108:	e6 2f       	mov	r30, r22
+    110a:	f0 e0       	ldi	r31, 0x00	; 0
+    110c:	e1 56       	subi	r30, 0x61	; 97
+    110e:	fd 4f       	sbci	r31, 0xFD	; 253
+    1110:	8a e0       	ldi	r24, 0x0A	; 10
+    1112:	81 83       	std	Z+1, r24	; 0x01
+	BufferSize += SpeedBuffer[0].StringSize + 1;
+    1114:	6e 5f       	subi	r22, 0xFE	; 254
+}
+UART_TxBuffer(WMGR_DataBuffer, BufferSize);
+    1116:	70 e0       	ldi	r23, 0x00	; 0
+    1118:	8f e9       	ldi	r24, 0x9F	; 159
+    111a:	92 e0       	ldi	r25, 0x02	; 2
+    111c:	65 dd       	rcall	.-1334   	; 0xbe8 <UART_TxBuffer>
+    111e:	df 91       	pop	r29
+    1120:	cf 91       	pop	r28
+    1122:	1f 91       	pop	r17
+    1124:	0f 91       	pop	r16
+    1126:	08 95       	ret
+
+00001128 <__udivmodsi4>:
+    1128:	a1 e2       	ldi	r26, 0x21	; 33
+    112a:	1a 2e       	mov	r1, r26
+    112c:	aa 1b       	sub	r26, r26
+    112e:	bb 1b       	sub	r27, r27
+    1130:	fd 01       	movw	r30, r26
+    1132:	0d c0       	rjmp	.+26     	; 0x114e <__udivmodsi4_ep>
+
+00001134 <__udivmodsi4_loop>:
+    1134:	aa 1f       	adc	r26, r26
+    1136:	bb 1f       	adc	r27, r27
+    1138:	ee 1f       	adc	r30, r30
+    113a:	ff 1f       	adc	r31, r31
+    113c:	a2 17       	cp	r26, r18
+    113e:	b3 07       	cpc	r27, r19
+    1140:	e4 07       	cpc	r30, r20
+    1142:	f5 07       	cpc	r31, r21
+    1144:	20 f0       	brcs	.+8      	; 0x114e <__udivmodsi4_ep>
+    1146:	a2 1b       	sub	r26, r18
+    1148:	b3 0b       	sbc	r27, r19
+    114a:	e4 0b       	sbc	r30, r20
+    114c:	f5 0b       	sbc	r31, r21
+
+0000114e <__udivmodsi4_ep>:
+    114e:	66 1f       	adc	r22, r22
+    1150:	77 1f       	adc	r23, r23
+    1152:	88 1f       	adc	r24, r24
+    1154:	99 1f       	adc	r25, r25
+    1156:	1a 94       	dec	r1
+    1158:	69 f7       	brne	.-38     	; 0x1134 <__udivmodsi4_loop>
+    115a:	60 95       	com	r22
+    115c:	70 95       	com	r23
+    115e:	80 95       	com	r24
+    1160:	90 95       	com	r25
+    1162:	9b 01       	movw	r18, r22
+    1164:	ac 01       	movw	r20, r24
+    1166:	bd 01       	movw	r22, r26
+    1168:	cf 01       	movw	r24, r30
+    116a:	08 95       	ret
+
+0000116c <_exit>:
+    116c:	f8 94       	cli
+
+0000116e <__stop_program>:
+    116e:	ff cf       	rjmp	.-2      	; 0x116e <__stop_program>

@@ -1,0 +1,20 @@
+
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "CapApp", "CapApp\CapApp_6_2.cproj", "{C4DA6ED1-2E75-407C-B19A-5960EBE008AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4DA6ED1-2E75-407C-B19A-5960EBE008AF}.Debug|AVR.ActiveCfg = Debug|AVR
+		{C4DA6ED1-2E75-407C-B19A-5960EBE008AF}.Debug|AVR.Build.0 = Debug|AVR
+		{C4DA6ED1-2E75-407C-B19A-5960EBE008AF}.Release|AVR.ActiveCfg = Release|AVR
+		{C4DA6ED1-2E75-407C-B19A-5960EBE008AF}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
